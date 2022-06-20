@@ -1,0 +1,332 @@
+---
+title: "Summarizing Data"
+subtitle: "Statistics with R"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+editor: visual
+---
+
+## Objectives {background-image="image/alicehint.png" background-opacity="0.3"}
+
+-   Frequency distributions
+
+    -   Tabulated frequency distributions
+
+    -   Grouped frequency distributions
+
+    -   Graphical frequency distributions
+
+    -   Idealized distributions
+
+-   Histograms for nominal and ordinal data
+
+-   Throwing shapes
+
+------------------------------------------------------------------------
+
+##### *"... and you think that your job, money, and intelligence are the things that a woman like Alice will value?"*
+
+![](image/aliceoffice.png)
+
+# 🗂Frequency Distributions
+
+## Tabulated Frequency Distributions
+
+"the problem with data is that you usually have too much for your mind to make sense of them."
+
+![](image/lovetable.png){fig-align="center" width="506"}
+
+## Frequency Distribution
+
+"can either be a table or a graph that shows each possible score along with the number of times that score occurred in the data."
+
+![](image/freq_dist.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="50%"}
+**Frequency Distribution**
+
+-   **Frequency:** how many times each score occurs
+
+-   If you add up the frequencies $(\sum{f})$, you get the sample size $(N)$.
+:::
+
+::: {.column width="50%"}
+![](image/freq_dist.png){fig-align="left"}
+
+![](image/freq_dist2.png){fig-align="center" width="329"}
+:::
+:::
+
+## How does this help me to understand whether women are attracted to guys with high salaries?
+
+-   Relative Frequency: how often a response is observed relative to the total number of responses.
+
+-   $$
+    relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;responses} = \frac{f}{N}$$
+
+------------------------------------------------------------------------
+
+![](image/cumu_freq.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+![](image/freq_dist3.png){fig-align="center" width="824"}
+
+## Grouped Frequency Distribution
+
+-   $$
+    interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}=\frac{highest\;score-lowest\;score}{number\;of\;intervals}
+    $$
+-   ![](image/group_freq_dist.png)
+
+## Grouped Frequency Distribution
+
+-   When there is a wide range of scores, use a ***grouped frequency distribution***.
+
+-   To create one, divide the scale of measurement into equal parts known as ***class intervals***.
+
+-   You want enough intervals that you retain the pattern within the data, but not so many that the frequency distribution is unmanageable; between 5 and 15 is typical.
+
+-   The intervals must not overlap; for example, you could not have intervals of 5-7 and 7-9 because both of these intervals contain the value 7.
+
+-   The intervals must contain all values of the scale of measurement. For example, you could not have intervals of 5-7 and 9-11 because the value of 8 is entirely missing.
+
+-   Consider making the interval width a simple number such as 2, 5, 10 or a multiple of 5 or 10.
+
+-   The lower boundary of the interval should be a multiple of the width. For example, if the width is 5, then the intervals should start on 0, or a multiple of 5 such as 5, 10, or 25.
+
+------------------------------------------------------------------------
+
+*"Alice was very satisfied with your relationship ... Prof. Pincus looked little disappointed at the news."*
+
+![](image/group_freq_dist2.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+***THAT IS JUST THE LAB CAT. I DID NOT NOTICE HIM COME IN***
+
+![](image/talking_cat.png)
+
+## Graphical Frequency Distributions
+
+::: columns
+::: {.column width="50%"}
+-   often it is more appealing to display frequency distributions as a **graph** (also known as **chart**).
+
+<!-- -->
+
+-   Visually this can give you a very immediate impression of how scores in your data are distributed.
+:::
+
+::: {.column width="50%"}
+![](image/histo_ras.png){fig-align="center"}
+:::
+:::
+
+## Graphical Frequency Distributions
+
+::: columns
+::: {.column width="50%"}
+-   Graphs come in lots of different shapes and sizes
+
+-   They have a horizontal and vertical line known as the ***axes***.
+:::
+
+::: {.column width="50%"}
+![](image/histo_ras.png){fig-align="center"}
+:::
+:::
+
+## Graphical Frequency Distributions
+
+::: columns
+::: {.column width="50%"}
+-   The horizontal line usually displays a predicator variable, or an independent variable, usually denoted wit the letter *x* it is known as ***x-axis**, or **abscissa**.*
+
+-   The vertical line usually displays an outcome variable, or a dependent variable, usually denoted with the letter *y* it is known as the ***y-axis***, or **ordinate**.
+:::
+
+::: {.column width="50%"}
+![](image/histo_ras.png){fig-align="center"}
+:::
+:::
+
+## Graphical Frequency Distributions
+
+If scale of measurement is interval or ratio, you can use a **histogram** and **frequency polygon** to display the frequency of scores.
+
+::: columns
+::: {.column width="50%"}
+-   Histogram plots the frequencies as bars rising up from the x-axis.![](image/histo_ras.png)
+:::
+
+::: {.column width="50%"}
+-   Polygon plots them as points that are connected by straight lines.![](image/poly_ras.png)
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="50%"}
+-   Graphs (charts) make it easier to spot the patterns of the data.
+
+-   We can use patterns in the data to draw conclusions beyond those data.
+
+-   **Why does the x-axis go up to the 11 when the response scale stopped at 10?**
+:::
+
+::: {.column width="50%"}
+![](image/poly_ras.png){fig-align="center"}
+:::
+:::
+
+------------------------------------------------------------------------
+
+Polygon superimposed on histogram ... the dots of the polygon mark out the midpoint of each bar.
+
+![](image/superimposed.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+"most women are not as satisfied with their relationship as Alice was, many women do not think a high salary is important, but most value kindness, humour and ambition, all of which are qualities that you have?
+
+![](image/ras_plot.png){fig-align="center"}
+
+## Idealized Distributions
+
+-   the beauty of data is that we can use samples to estimate the shape of the distribution of scores in the entire population
+
+-   relative frequency of responses
+
+-   it is reasonable to assume that the relative frequencies in the sample will be similar to those in the population. We do not need to now the actual frequencies in the population, we work instead with relative frequencies.
+
+## Relative Frequency/Density
+
+-   Once we know the relative frequencies ... a smooth curve that shows an idealized relationship between the variable we measured and the relative frequency of responses.
+
+-   The curve represents the relative changes from one score to the next.
+
+-   This curve shows **density**, which is the probability of a given score occurring.
+
+-   The resulting curve is known as a **probability distribution** with same defnition as a **probability density function.**
+
+## Relative Frequency/Density
+
+*"if she \[Alice\] hadn't dumped me \[Zach\] then one of the alternative was that she was in trouble."*
+
+![](image/density_plot.png){fig-align="center"}
+
+## Histograms for Nominal & Ordinal Data
+
+![](image/barplot.png)
+
+## Histograms for Nominal & Ordinal Data
+
+::: columns
+::: {.column width="50%"}
+-   It is a sort of a histogram
+
+-   same information as a histogram - the frequency within categories - but these categories do not make up an interval or ratio scale of measurement.
+
+-   When we display information about a nominal or ordinal variable, it is called a **bar graph**.
+
+-   There are spaces between the bars to indicate that they are independent categories and not point along an interval or ratio scale.
+:::
+
+::: {.column width="50%"}
+![](image/barplot.png){fig-align="center"}
+:::
+:::
+
+# 🔔THROWING SHAPES
+
+------------------------------------------------------------------------
+
+-   you will find that certain shapes of distributions are common in the world ... we can describe certain distributions that are common to lots of different variables.
+
+-   these "common" distributions have names such as the **normal distribution**, *t*-distribution, chi-square distribution, uniform distribution, binomial distribution and *F*-distribution.
+
+-   these idealized distributions have a specific shape that can be described by an equation
+
+## Shape of the Distribution
+
+-   ignore equation, focus upon the properties:
+
+    -   centre of the distribution (known as the **central tendency**).
+
+    -   and the width or spread of the distribution (known as the **variability**).
+
+## Normal Distribution![](image/normal_distribution.png)
+
+## Normal Distribution
+
+::: columns
+::: {.column width="50%"}
+-   It looks like a bell, commonly called as a bell-shaped curve.
+
+-   Majority of the scores lie around the centre of the distribution (so the largest bars on the histogram are all around the central value).
+
+-   The further we move away from the centre, the smaller the bars get, telling us that the more that scores deviate from the centre more unlikely, or infrequent, they are.
+
+-   Many naturally occurring things have this shape of distribution.
+:::
+
+::: {.column width="50%"}
+![](image/normal_distribution.png){fig-align="center"}
+:::
+:::
+
+## A distribution can deviate from normal
+
+-   the curve is **symmetrical:** if we draw a vertical line through the centre of the distribution then it looks the same on both sides.
+
+-   not all distributions are like that: some have **skew**.
+
+![](image/skew.png){fig-align="center"}
+
+## Positively Skewed
+
+the frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores![](image/skew.png)
+
+## Negatively Skewed
+
+the frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.![](image/skew.png)
+
+## Kurtosis
+
+the second way in which distributions can be non-normal is in whether there are too many or too few scores in the ends of the distribution (the *tails* of the distribution)
+
+-   **Positive kurtosis** known as **leptokurtic.**
+
+    -   distributions can tend to look pointy
+
+-   **Negative kurtosis** known as **platykurtic**.
+
+    -   tend to look flatter than normal![](image/kurtosis.png)
+
+------------------------------------------------------------------------
+
+-   there are lots of other things that affect how pointy or flat a distribution looks.
+
+-   In a normal distribution the values of skew and kurtosis are 0 (i.e., the shape of the distribution is as it should be).
+
+-   if a distribution has values of skew or kurtosis above or below 0 then this indicates a deviation from normal.
+
+------------------------------------------------------------------------
+
+**Zach:** *Maybe someone at JIG:SAW will help me?*
+
+**Prof. Pinus**: *unless you want your life destroyed ... some things are best left alone.*
+
+![](image/milton2.png){fig-align="center"}

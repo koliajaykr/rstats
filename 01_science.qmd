@@ -1,0 +1,431 @@
+---
+title: "Statistics with R"
+subtitle: "Ajay Kumar Koli"
+author: "💀"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+editor: visual
+---
+
+# 🚀 PROLOGUE {background="image/prologue.png" background-position="right" background-size="42%"}
+
+# ***ELPIS*** - in 2075![](image/chip.png)
+
+# *ZACH* - the musician.
+
+```{r }
+knitr::include_graphics("image/zach.png")
+```
+
+# *ALICE* - the scientist.
+
+```{r }
+knitr::include_graphics("image/alice.png")
+```
+
+# *MILTON* - the talking cat.
+
+```{r }
+knitr::include_graphics("image/milton.png")
+```
+
+# Why you need Science {background-image="image/science.png" background-opacity=".2"}
+
+## Why you need Science
+
+-   Zach: Cell phone leads to cancer
+
+-   Alice: The headlines are written to grab your attention, I'd look at the ***evidence***.
+
+-   Zach: But X person got it and judges approved it.
+
+-   Alice: Perhaps, but they are not scientists.
+
+    -   Science isn't perfect, and it's not the only way to view the world,
+
+    -   but it does give us a ***system*** for trying to find answers to questions
+
+    -   but the trouble is that you're scared of it and you refuse to engage with it.'
+
+# 🕸 HOW SCIENCE WORKS
+
+## How many T-shirts Zach sold?
+
+::: columns
+::: {.column width="50%"}
+-   Scenario 1
+
+    -   The total number of T-shirts sold
+:::
+
+::: {.column width="50%"}
+::: {.column width="50%"}
+-   Scenario 2
+
+    -   The total number of T-shirts sold +
+
+    -   when a free wristband was given
+:::
+:::
+:::
+
+## The Research Process
+
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   Observe the World
+
+    -   Data
+
+    -   Anecdote
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   **Theory:**
+    -   "is a well-established principle or set of general principles to explain a broad range of observations"
+
+    -   "normally scientists are interested in theories that apply very generally"
+
+    -   "they want their theories to apply to all entities or situations"
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   **Population**: "An entire set of entities is known as population."
+    -   A population can be quite diverse but can also be more specific.
+
+    -   Different types of scientists might focus on different populations.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: callout-note
+## Attention
+
+"We want theories to be general and apply to the entire population rather than applying only to a specific case within that population."
+:::
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   "You can use existing theory, to generate a **hypothesis**, which is a proposed explanation of the specific observation that interests you."
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   "A prediction should be a scientific statement: a statement that can be verified (or not) using data."
+-   "That means that you can break the statement down into things that you can measure, known as **variables**.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Scientific Statements
+
+![](image/statement.png){fig-align="center"}
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   "you want to draw conclusions about the entire population, but it is impractical to collect data from every entity in the population"
+-   "so instead we use a **sample**, which is a smaller set of entities from our population ... representative of the wider population"
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+-   "We can use the data in the sample to compute **statistics**, which are values that describe the sample."
+-   "we can use this value to estimate what the value would have been if we had collected data from the entire population. The value in the population is known as a **parameter**.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## The Research Process
+
+::: columns
+::: {.column width="50%"}
+Two things that you might want to do with data:
+
+-   to describe what happened in the sample that you collected like draw a graph or calculate summary information, known as **descriptive statistics**.
+
+-   use the sample data to estimate what the likely values are in the population, known as **inferential statistics**.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/process.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Sampling Variation
+
+![](image/samperror.png){fig-align="center"}
+
+## Sampling Variation
+
+::: columns
+::: {.column width="50%"}
+These statistics vary from one sample to the next
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/samperror.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Sampling Error
+
+::: columns
+::: {.column width="50%"}
+These statistics sometimes differ from the population parameter.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/samperror.png")
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+### 
+
+Using statistics to answer empirical questions
+
+```{r}
+#| fig.align: center
+knitr::include_graphics("image/answer.png")
+```
+
+## Science as a life skill
+
+-   "Rather than rely on the subjective opinion ... you can evaluate the objective evidence."
+
+-   "scientists are humans ... there will always be subjectivity in how data are interpreted ... the system of science ... enables you to make your own judgements about the evidence"
+
+-   "You can look at the science for yourself. ... You will be using knowledge and skills to make an informed decision."
+
+# 🛠 Research Methods
+
+## Research Methods
+
+-   "we can test a hypothesis in one of two ways:
+
+    -   by observing what naturally happens;
+
+    -   or by manipulating some aspect of the environment and observing the effect it has on the variable that interests us."
+
+## Correlational Research Method
+
+"When you observe what naturally happens in the world without directly interfering with it." There are two ways to do it:
+
+-   **Cross-sectional study:** we could take a snapshot of many variables at a single point in time.
+
+-   **Longitudinal study:** measure variable repeatedly at different time points.
+
+## Correlational Research Method
+
+-   "There is a price to pay, which is that correlational research tells us nothing about whether one variable causes another."
+
+-   "Longitudinal research addresses this issue to some extent, but there is still the problem that other variables that you have not measured, called **confounding variables**, might be influencing both variables."
+
+-   **Tertium quid** is a variable that explains the apparent relationship between two other variables.
+
+## Experimental Research Methods
+
+Comparing two conditions in a controlled way is at the heart of experimental methods.
+
+::: columns
+::: {.column width="50%"}
+-   Condition 1
+
+    -   T-shirt + Free wristband
+:::
+
+::: {.column width="50%"}
+-   Condition 2
+
+    -   T-shirt + No free wristband
+:::
+:::
+
+## Experimental Research Methods
+
+### $$Predictor\;variable\longrightarrow Outcome\;variable$$
+
+-   Predicator variable also called as **independent variabl**e.
+
+-   Outcome variable also called as **dependent variable**.
+
+## Two methods of data collection
+
+-   "if you measure variables without manipulating any of them then it is not an experiment, it is a correlational study."
+
+-   "manipulate the independent variable using different entities known as **between-groups, between-subjects,** or **independent design**."
+
+-   "to manipulate the independent variable using the *same* entities known as a **within-subject, related** or **repeated-measures design.**
+
+## Two types of variation
+
+-   **Unsystematic variation**: differences created by unmeasured or unknown factors.
+
+-   **Systematic variation:** differences created by a specific experimental manipulation.
+
+-   "other things being equal, the unsystematic variance will be greater in independent designs"
+
+-   "other things being equal, repeated-measures designs have more power to detect effects than independent designs."
+
+## Practice, order and randomization
+
+-   Counterbalancing is a technique used to eliminate sources of systematic variation.
+
+    -   Practice effects
+
+    -   Boredom effects
+
+-   **Randomization** is absolutely crucial in experimental research.
+
+-   When you do not randomize participants into different groups it is known as a **quasi-experimental design**.
+
+## Piecing it all together
+
+"research is complicated: there are always trade-offs and compromises"
+
+-   Point estimate
+
+-   Interval estimate
+
+------------------------------------------------------------------------
+
+#### Meta-analysis
+
+```{r}
+#| fig-align: center
+#| out-width: "65%"
+knitr::include_graphics("image/meta.png")
+```
+
+------------------------------------------------------------------------
+
+::: callout-note
+## Why do we need science
+
+**Zach:** "Alice was so scientific. It gave her power. ... she always questioned what she read and saw. ... When she heard these claims she would dispute them and find out more, whereas I accepted it all. ... Science gave Alice the power to see through it all."
+:::
+
+*The grave of our youth is up ahead*
+
+*And life has become a burden*
+
+*We move in circles of suppressed despair*
+
+*Waiting for the sun*
+
+*And turning stones to find evidence*
+
+*But it hides in the recesses of our hearts*
+
+------------------------------------------------------------------------
+
+## *but next morning ...*
+
+```{r}
+#| fig-align: center
+##| out-width: "64%"
+knitr::include_graphics("image/aliceleft.png")
+```

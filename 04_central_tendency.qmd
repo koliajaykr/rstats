@@ -1,0 +1,220 @@
+---
+title: "Fitting Models"
+subtitle: "Central Tendency"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+editor: visual
+---
+
+## Objectives: {background-image="image/zach_bg.png" background-opacity=".3"}
+
+-   Statistical models
+
+-   Central Tendency
+
+-   The 'fit' of the mean: variance
+
+-   Dispersion
+
+## Gene Mixer![](image/gene_mixer.png)
+
+# 🏆STATISTICAL MODEL
+
+## From the Dead
+
+-   Zach and Milton agree to help each other.
+
+-   But Zach suspects that Milton and Pincus are responsible behind the disappearance of Alice.
+
+-   Zach agreed to learn stats from Milton
+
+## Why do we need statistical models?
+
+-   Scientists try to make predictions about something in the real world ...
+
+    -   it might be a psychological, societal, biological or economic process to which they do not have direct access.
+
+-   Scientists cannot access the process directly ...
+
+    -   they gather data and construct small-scale models of the process and use them to predict how these processes operate under more general conditions.
+
+-   We want our small-scale model to resemble the real situation as closely as possible so that the predictions we make about the real world are accurate.
+
+-   The statistical model we build must represent the data collected (the *observed data*) as closely as possible.
+
+-   The degree to which a statistical model represents the data collected is called the **fit** of the model.
+
+------------------------------------------------------------------------
+
+::: callout-note
+## Attention
+
+"Scientists are interested in the true state of the world."
+
+Population $\rightarrow$ Representative sample
+:::
+
+![](image/building.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+Beimeni Centre Building
+
+![](image/building_model.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="50%"}
+-   Architect or engineer will build a model that resembles the real one as closely as possible.
+
+-   Once the model is ready, it can be used to estimate what would happen to the real building.
+:::
+
+::: {.column width="50%"}
+![](image/building_model.png){fig-align="center"}
+:::
+:::
+
+## Sample Size: bigger is better
+
+-   Small sample size
+
+-   Moderate sample size
+
+-   Large sample size
+
+![](image/box_sample.png){fig-align="center"}
+
+## The one and only statistical model
+
+-   "A statistical model is an equation that describes the phenomenon of interest"
+
+-   $$
+    outcome_i=(model)+error_i
+    $$
+
+-   Most statistical models are a variation on this one equation.
+
+-   The model will change depending on what you are trying to achieve.
+
+    -   Ultimately the word "model" is replaced with an equation that you believe summaries the pattern of data.
+
+-   The price of reducing the raw data to a summary is that it will not perfectly reflect every entity in the sample
+
+## The one and only statistical model
+
+-   $$
+    outcome_i=(model)+error_i
+    $$
+
+-   $$
+    RAS_i=(model)+error_i
+    $$
+
+## The one and only statistical model
+
+-   Statistical models usually, but not always, contain variables and parameters.
+
+    -   Parameters are (usually) constant values believed to represent some fundamental truth about the relations between variables in the models.
+
+    -   Unlike variables, which are measured, parameters are estimated from the data.
+
+## Simplest possible model
+
+-   $$
+    outcome_i=(b_0)+error_i
+    $$
+
+-   Confuscious 🧙‍♂️
+
+    -   mean = $\bar{X}$
+
+    -   correlation = $r$ (Greek symbol rho, $\rho$)
+
+    -   linear model = $b$ (Greek symbol beta, $\beta$)
+
+-   $b_0$ means we are predicting the outcome from zero other variables, that is, just from a single parameter.
+
+---
+
+-   $$
+    outcome_i=(b_0+b_1Xi)+error_i
+    $$
+
+-   A lot of time it is more interesting to see whether we can summarize an outcome variable by predicting from scores on another variable.
+
+-   We usually denote predictor variables with the letter $X$.
+
+    -   $i$ = particular entity
+
+    -   $outcome_i$ = outcome value for that particular entity
+
+    -   $X_i$ = score on the predictor variable
+
+    -   $b_1$ = predictor variable has a parameter attached to it which tells use something about the relationship between the predictor ($X_i$) and outcome
+
+    -   $b_0$ = is still there to tell us the overall levels of the outcome if the predictor variable was not in the model
+
+## RAS Statistical Model
+
+-   $outcome_i=(b_0+b_1Xi)+error_i$
+
+-   $relationship\;satisfaction_i=(b_0+b_1length_i)+error_i$
+
+-   $outcome_i=(b_0+b_1X_{1i}+b_2X_{2i})+error_i$
+
+-   $relationship\;satisfaction_i=(b_0+b_1length_i+b_2effort_i)+error_i$
+
+-   "We use the sample data to estimate the value of the model parameters." $b$
+
+-   "We use the sample data to *estimate* what the population parameters are likely to be"
+
+# CENTRAL TENDENCY
+
+## Alices' Relationship Assessment Scores![](image/alice_ras.png)
+
+## Alices' Relationship Assessment Scores
+
+-   32, 30, 28, 30, 29, 31, 29, 31, 11
+
+-   A score that is very different from others is called an **outlier**.
+
+-   Simplest model tries to summarize data in terms of a single parameter.
+
+-   A popular choice would be a parameter that measures **central tendency**: a value that indicates the central point of a distribution of scores.
+
+## The Mode
+
+-   the score that occurs most frequently.
+
+-   The tallest bar in the histogram and in the grouped frequency table, the score with the highest frequency.
+
+## 🤯Your Turn
+
+-   Create a frequency distribution of Alice's RAS scores.
+
+-   ![](image/ras_table.png)
+
+## Downside of Mode
+
+-   It will always be a value that actually occurs in the data.
+
+-   But there could be two modes
+
+-   Bimodal: a distribution with two modes
+
+-   Multimodal: Data sets with more than two modes
+
+-   if the frequencies of certain scores are very similar, then the mode can be influenced by only a small number of cases
+
+-   ![](image/two_modes.png)
+
+## The Median
