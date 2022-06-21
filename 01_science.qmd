@@ -10,30 +10,31 @@ format:
     scrollable: true
     slide-number: true
     transition: fade
+    highlight-style: a11y
+    height: 1080
+    width: 1920
 editor: visual
 ---
 
-# 🚀 PROLOGUE {background="image/prologue.png" background-position="right" background-size="42%"}
+# PROLOGUE
 
-# ***ELPIS*** - in 2075![](image/chip.png)
+![](image/prologue.png){fig-align="center" width="1500"}
+
+# ***ELPIS*** - in 2100
+
+![](image/chip.png){fig-align="center"}
 
 # *ZACH* - the musician.
 
-```{r }
-knitr::include_graphics("image/zach.png")
-```
+![](image/zach.png){fig-align="center"}
 
 # *ALICE* - the scientist.
 
-```{r }
-knitr::include_graphics("image/alice.png")
-```
+![](image/alice.png){fig-align="center"}
 
-# *MILTON* - the talking cat.
+# *Prof. MILTON* - the talking cat.
 
-```{r }
-knitr::include_graphics("image/milton.png")
-```
+![](image/milton.png){fig-align="center"}
 
 # Why you need Science {background-image="image/science.png" background-opacity=".2"}
 
@@ -77,10 +78,7 @@ knitr::include_graphics("image/milton.png")
 
 ## The Research Process
 
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 
 ## The Research Process
 
@@ -94,10 +92,7 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
@@ -114,10 +109,7 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
@@ -134,20 +126,11 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
 ------------------------------------------------------------------------
-
-::: callout-note
-## Attention
-
-"We want theories to be general and apply to the entire population rather than applying only to a specific case within that population."
-:::
 
 ## The Research Process
 
@@ -157,10 +140,7 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
@@ -175,10 +155,7 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
@@ -197,10 +174,7 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
@@ -215,10 +189,7 @@ knitr::include_graphics("image/process.png")
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
@@ -236,16 +207,13 @@ Two things that you might want to do with data:
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/process.png")
-```
+![](image/process.png){fig-align="center"}
 :::
 :::
 
 ------------------------------------------------------------------------
 
-## Sampling Variation
+## All Music Bands
 
 ![](image/samperror.png){fig-align="center"}
 
@@ -257,10 +225,7 @@ These statistics vary from one sample to the next
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/samperror.png")
-```
+![](image/sample_variation.png){fig-align="center"}
 :::
 :::
 
@@ -274,23 +239,15 @@ These statistics sometimes differ from the population parameter.
 :::
 
 ::: {.column width="50%"}
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/samperror.png")
-```
+![](image/sample_error.png){fig-align="center"}
 :::
 :::
 
 ------------------------------------------------------------------------
 
-### 
+## Using statistics to answer empirical questions
 
-Using statistics to answer empirical questions
-
-```{r}
-#| fig.align: center
-knitr::include_graphics("image/answer.png")
-```
+![](image/answer.png){fig-align="center"}
 
 ## Science as a life skill
 
@@ -422,10 +379,6 @@ knitr::include_graphics("image/meta.png")
 
 ------------------------------------------------------------------------
 
-## *but next morning ...*
+## *The very next morning ...*
 
-```{r}
-#| fig-align: center
-##| out-width: "64%"
-knitr::include_graphics("image/aliceleft.png")
-```
+![](image/aliceleft.png){fig-align="center" width="1550"}
