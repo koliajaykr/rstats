@@ -343,9 +343,9 @@ Comparing two conditions in a controlled way is at the heart of experimental met
 
 "research is complicated: there are always trade-offs and compromises"
 
--   Point estimate
+-   **Point estimate:** using a single value, or point, to estimate the effect in the population
 
--   Interval estimate
+-   **Interval estimate:** a range of values between which we think the population value is likely to fall.
 
 ------------------------------------------------------------------------
 

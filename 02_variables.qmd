@@ -1,5 +1,6 @@
 ---
 title: "Reporting Research, Variables, and Measurement"
+subtitle: "Statistic with R"
 author: "Ajay Kumar Koli"
 format: 
   revealjs:
@@ -36,9 +37,11 @@ editor: visual
 
 # 📄 Writing Up Research
 
-## The language of science
+## The Language of Science
 
-![](image/alicepaper.png){fig-align="center" width="15.73in"}
+![](image/alicepaper.png){fig-align="center"}
+
+## The Language of Science
 
 -   **Why?**: the reason why they did the research
 
@@ -48,7 +51,7 @@ editor: visual
 
 -   **Who care?**: and what it means.
 
-## Research Paper Format
+## Research Paper Format ...
 
 -   **Abstract:** this is a summary of the whole study.
 
@@ -58,11 +61,15 @@ editor: visual
 
     -   finish by saying what their hypotheses are.
 
+## Research Paper Format ...
+
 -   **Method:** There is enough detail that someone else could repeat the research, but not so much detail that they die of boredom reading it.
 
     -   information about participants, measures/materials, apparatus, design, procedure, scoring.
 
 -   **Results**: this is where mystery is revealed: what did they find?
+
+## Research Paper Format
 
 -   **Discussion**: summarizing the results, means for their theory, means for the real world, limitations, what still needs to be done.
 
@@ -78,7 +85,7 @@ $$
 1 + 2\times3^2
 $$
 
-### Remember BODMAS
+## Remember BODMAS
 
 -   Brackets
 
@@ -90,7 +97,7 @@ $$
 
 -   Add
 
--   Substraction
+-   Subtraction
 
 ## What's the answer to this?
 
@@ -124,7 +131,7 @@ $$
 
 ## Your Turn
 
-### $$y_i=\frac{\sum_1^nx_{chameleon}}{\left( \sum_1^nx_{human} \right)^2}$$
+#### $$y_i=\frac{\sum_1^nx_{chameleon}}{\left( \sum_1^nx_{human} \right)^2}$$
 
 | Chameleon | Human |
 |-----------|-------|
@@ -136,18 +143,22 @@ $$
 
 ```{r}
 library(countdown)
-countdown::countdown(minutes = 5, top = 0, font_size = "2em" )
+countdown::countdown(minutes = 5, top = 0, font_size = "2em", size = 0.5 )
 ```
 
 ## Your Turn: ANSWER
 
 ### $y_i=\frac{12}{400}=0.03$
 
-# 🎡 Variables And Measurement
-
 ## *Please ... Put. Your. Sausage. Away.*
 
 ![](image/alicefile.png)
+
+## Relationship Assessment Score (RAS)
+
+![](image/scale.png){fig-align="center" width="8.19in"}
+
+# 🎡Variables and Measurement
 
 ## Qualitative and Quantitative Data
 
@@ -155,7 +166,13 @@ countdown::countdown(minutes = 5, top = 0, font_size = "2em" )
 
 Two different approaches to testing hypotheses:
 
--   **Qualitative research**: "to gain support for a theory from what people say or write"
+-   **Qualitative research:** "to gain support for a theory from what people say or write"
+
+-   **Quantitative research:** "measure variables using numbers and then to use statistical methods to analyse these numbers to test your theory."
+
+## **Qualitative Research**: 
+
+-   "to gain support for a theory from what people say or write"
 
     -   an individual interview or a group discussion would be transcribed
 
@@ -163,29 +180,15 @@ Two different approaches to testing hypotheses:
 
     -   analysis itself is based on writing an account of the themes you have identified
 
-## Qualitative and Quantitative Data
-
-"To test hypotheses you need to measure variables"
-
-Two different approaches to testing hypotheses:
-
--   **Quantitative research**: measure variables using numbers and then to use statistical methods to analyse these numbers to test your theory.
-
-## Relationship Assessment Score (RAS)
-
-![](image/ras.png)
-
-*silently Prof. Milton 😺 messaged Zach about the Reverse score*
-
-## Levels of Measurement
-
-![](image/scale.png){fig-align="center" width="8.19in"}
-
 ## Variables
 
 -   "variables are just things that can vary, or have different values"
 
--   some variables can be directly observed (height, weight or age) ... some variables you cannot measure directly (depression, anxiety, life satisfaction, relationship satisfaction)
+    -   some variables can be directly observed (height, weight or age) ...
+
+    -   some variables you cannot measure directly (depression, anxiety, life satisfaction, relationship satisfaction)
+
+## Construct
 
 -   Something that cannot be directly measured is known as **construct**.
 
@@ -193,9 +196,23 @@ Two different approaches to testing hypotheses:
 
     -   Operational definition is a procedure (or set of procedures) for quantifying it.
 
-    -   For example Relationship Assessment Scale.
+    -   For example Relationship Assessment Scale, caste discrimination, service quality etc. .
 
-## Level/Scale of Measurement
+## Relationship Assessment Score
+
+![](image/ras.png)
+
+::: callout-note
+## 😺Message from Milton
+
+reverse phrasing items need to be reverse-scored by subtracting the score given from the sum of the maximum and minimum possible responses.
+:::
+
+## Levels of Measurement
+
+![](image/scale.png){fig-align="center" width="8.19in"}
+
+## Levels/Scales of Measurement
 
 -   "the relationship between what is being measured and the numbers that represent what is being measured is known as the level of measurement."
 
@@ -207,19 +224,13 @@ Two different approaches to testing hypotheses:
 
     -   Ratio scale
 
-## Scale of Measurement
+## **Nominal Scale**
 
 ::: columns
 ::: {.column width="50%"}
--   **Nominal Scale**
+-   Variables on the nominal scale are **categorical variables**, which are variables made up of categories.
 
-    -   Variables on the nominal scale are **categorical variables**, which are variables made up of categories.
-
-    -   **Binary or dichotomous variable** consists of only two categories.
-
-    -   **Coding** means when numbers are used to denote categories.
-
-    -   The only way nominal data can be used is to consider frequencies.
+-   **Coding** means when numbers are used to denote categories.
 :::
 
 ::: {.column width="50%"}
@@ -227,13 +238,11 @@ Two different approaches to testing hypotheses:
 :::
 :::
 
-## Scale of Measurement
+## **Ordinal Scale**
 
 ::: columns
 ::: {.column width="50%"}
--   **Ordinal Scale**
-
-    -   categories that have a logical order
+-   categories that have a logical order
 :::
 
 ::: {.column width="50%"}
@@ -241,13 +250,11 @@ Two different approaches to testing hypotheses:
 :::
 :::
 
-## Scale of Measurement
+## **Interval Scale**
 
 ::: columns
 ::: {.column width="50%"}
--   **Interval Scale**
-
-    -   these are ordered categories, but also require that intervals between categories are equal.
+-   these are ordered categories, but also require that intervals between categories are equal.
 :::
 
 ::: {.column width="50%"}
@@ -255,15 +262,13 @@ Two different approaches to testing hypotheses:
 :::
 :::
 
-## Scale of Measurement
+## **Ratio Scale**
 
 ::: columns
 ::: {.column width="50%"}
--   **Ratio Scale**
+-   these are ordered categories, but also require that intervals between categories are equal ... must also have a meaningful zero point.
 
-    -   these are ordered categories, but also require that intervals between categories are equal ... must also have a meaningful zero point.
-
-    -   Zero means a complete absence of the construct being measured.
+-   Zero means a complete absence of the construct being measured.
 :::
 
 ::: {.column width="50%"}
@@ -273,17 +278,19 @@ Two different approaches to testing hypotheses:
 
 ------------------------------------------------------------------------
 
-##### 😺 Prof. Milton: "The line between discrete and continuous variables can be blurred, though."
+![](image/continuous_discrete.png){fig-align="center"}
 
-![](image/continuous_discrete.png)
+::: callout-note
+## 😺Message from Milton
+
+"The line between discrete and continuous variables can be blurred, though."
+:::
 
 ## Measurement Error
 
 -   "Ideally we want our measure to be calibrated such that values have the same meaning over time and across situations."
 
--   "There will often be discrepancy between the numbers we use to **represent** the thing we're measuring and the **actual value** of the thing we're measuring (i.e., the value we would get if we could measure it directly). This discrepancy is known as measurement error.
-
--   Self-report measures are likely to have relatively large measurement error because factors other than the one we're trying to measure will influence how people respond to questionnaires.
+-   "There will often be discrepancy between the numbers we use to **represent** the thing we're measuring and the **actual value** of the thing we're measuring (i.e., the value we would get if we could measure it directly). This discrepancy is known as measurement error. Like self-report questionnaire.
 
 ## Validity and Reliability
 
