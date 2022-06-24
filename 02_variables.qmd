@@ -150,7 +150,7 @@ countdown::countdown(minutes = 5, top = 0, font_size = "2em", size = 0.5 )
 
 ### $y_i=\frac{12}{400}=0.03$
 
-## *Please ... Put. Your. Sausage. Away.*
+## *Put Your Sausage Away! Dr GENARI*
 
 ![](image/alicefile.png)
 
@@ -170,7 +170,7 @@ Two different approaches to testing hypotheses:
 
 -   **Quantitative research:** "measure variables using numbers and then to use statistical methods to analyse these numbers to test your theory."
 
-## **Qualitative Research**: 
+## **Qualitative Research**:
 
 -   "to gain support for a theory from what people say or write"
 
@@ -332,7 +332,7 @@ ways to keep measurement error low
 
 ## Test-retest Reliability
 
-"to test the same people twice: a reliable instrument should produce similar scores at both points in time. ... However, it is complicated. ... Maybe you **new friend Milton** can help!
+"to test the same people twice: a reliable instrument should produce similar scores at both points in time. ... However, it is complicated. ... Maybe your **new friend Milton** can help!
 
 ## ***JIG:SAW ...***
 
