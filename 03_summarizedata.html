@@ -4,7 +4,7 @@
   <meta name="generator" content="quarto-0.9.358">
 
   <meta name="author" content="Ajay Kumar Koli">
-  <title>Summarizing Data</title>
+  <title>📊Summarizing Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -321,7 +321,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Summarizing Data</h1>
+  <h1 class="title">📊Summarizing Data</h1>
   <p class="subtitle">03 - Statistics with R</p>
   <p class="author">Ajay Kumar Koli</p>
 </section>
@@ -334,12 +334,12 @@
 <li class="fragment"><p>Throwing shapes</p></li>
 </ul>
 </section>
-<section id="office-of-alice" class="slide level2">
-<h2><em>Office of Alice</em></h2>
+<section id="office-of-alice-prof.-pincus" class="slide level2">
+<h2><em>Office of Alice &amp; Prof.&nbsp;Pincus</em></h2>
 
 <img data-src="image/aliceoffice.png" class="r-stretch"></section>
-<section id="prof.-pincus" class="slide level2">
-<h2><em>Prof.&nbsp;Pincus</em></h2>
+<section class="slide level2">
+
 <p>“the problem with data is that you usually have too much for your mind to make sense of them.”</p>
 
 <img data-src="image/lovetable.png" width="506" class="r-stretch quarto-figure-center"></section>
@@ -350,9 +350,18 @@
 </section>
 <section id="frequency-distribution" class="slide level2">
 <h2>Frequency Distribution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p>“it can either be a table or a graph that shows each possible score along with the number of times that score occurred in the data.”</p>
-
-<img data-src="image/freq_dist.png" class="r-stretch quarto-figure-center"></section>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/freq_dist.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section class="slide level2">
 
 <div class="columns">
@@ -361,6 +370,7 @@
 <ul>
 <li class="fragment"><p><strong>Frequency:</strong> how many times each score occurs</p></li>
 <li class="fragment"><p>If you add up the frequencies <span class="math inline">\((\sum{f})\)</span>, you get the sample size <span class="math inline">\((N)\)</span>.</p></li>
+<li class="fragment"><p>We should mention the category even if the frequency is zero.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-left">
@@ -384,14 +394,16 @@
 </section>
 <section id="relative-frequency" class="slide level2">
 <h2>Relative Frequency</h2>
-<ul>
-<li class="fragment"><p><span class="math display">\[
-relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;responses}\\ = \frac{f}{N}\]</span></p></li>
-<li class="fragment"><p><span class="math display">\[
-relative\;frequency = \frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\;responses}\\ = \frac{2}{10}=0.1\]</span></p></li>
-</ul>
-</section>
+<p><span class="math display">\[
+relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;responses}\\ = \frac{f}{N}\]</span></p>
+
+<img data-src="image/freq_dist.png" class="r-stretch quarto-figure-center"></section>
 <section id="relative-frequency-1" class="slide level2">
+<h2>Relative Frequency</h2>
+<p><span class="math display">\[relative\;frequency=\frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\;responses}\\ = \frac{2}{10}=0.1\]</span></p>
+
+<img data-src="image/freq_dist.png" class="r-stretch quarto-figure-center"></section>
+<section id="relative-frequency-2" class="slide level2">
 <h2>Relative Frequency</h2>
 <div class="callout callout-note callout-captioned callout-style-default">
 <div class="callout-body">
@@ -416,7 +428,7 @@ relative\;frequency = \frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\
 </div>
 </div>
 </section>
-<section id="relative-frequency-2" class="slide level2">
+<section id="relative-frequency-3" class="slide level2">
 <h2>Relative Frequency</h2>
 
 <img data-src="image/relative_freq.png" class="r-stretch quarto-figure-center"></section>
@@ -449,23 +461,23 @@ relative\;frequency = \frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\
 <p>“a frequency distribution where we group scores together.”</p>
 
 <img data-src="image/group_freq_dist.png" class="r-stretch"></section>
-<section id="grouped-frequency-distribution-1" class="slide level2">
-<h2>Grouped Frequency Distribution</h2>
+<section id="class-interval" class="slide level2">
+<h2>Class Interval</h2>
 <p>We divide the scale of measurement into equal parts, each one known as <strong>class interval</strong>.</p>
 
 <img data-src="image/class_interval.png" class="r-stretch quarto-figure-center"></section>
-<section id="grouped-frequency-distribution-2" class="slide level2">
-<h2>Grouped Frequency Distribution</h2>
-<p>The quantity of numbers in a class interval is known as the <strong>class interval width.</strong></p>
+<section id="class-interval-width" class="slide level2">
+<h2>Class Interval Width</h2>
+<p>The quantity of numbers in a class interval.</p>
 
 <img data-src="image/class_interval_width.png" class="r-stretch quarto-figure-center"></section>
-<section id="grouped-frequency-distribution-3" class="slide level2">
-<h2>Grouped Frequency Distribution</h2>
+<section id="number-of-intervals" class="slide level2">
+<h2>Number of Intervals</h2>
 <p>Normally, no fewer than 5 intervals, and no more than about 15; so approximately <strong>10 intervals is reasonable</strong>.</p>
 
 <img data-src="image/intervals.png" class="r-stretch quarto-figure-center"></section>
-<section id="grouped-frequency-distribution-4" class="slide level2">
-<h2>Grouped Frequency Distribution</h2>
+<section id="a-good-class-interval" class="slide level2">
+<h2>A Good Class Interval</h2>
 <ul>
 <li class="fragment"><p>Intervals 5-7 and 7-9 ❌</p></li>
 <li class="fragment"><p>Intervals 5-7 and 9-10 ❌</p></li>
@@ -473,15 +485,13 @@ relative\;frequency = \frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\
 <li class="fragment"><p>Interval width should be 2, 5, 10 or multiple of 2, 5, or 10.</p></li>
 </ul>
 </section>
-<section id="grouped-frequency-distribution-5" class="slide level2">
+<section id="grouped-frequency-distribution-1" class="slide level2">
 <h2>Grouped Frequency Distribution</h2>
-<p><span class="math display">\[
-interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\;score-lowest\;score}{number\;of\;intervals}
-\]</span></p>
+<p><span class="math display">\[interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\;score-lowest\;score}{number\;of\;intervals}\]</span></p>
 </section>
 <section class="slide level2">
 
-<p><em>“Alice was very satisfied with your relationship when she filled this questionnaire…Prof.&nbsp;looked little disappointed at the news.”</em></p>
+<p><em>“95% of them rated their relationship lower than Alice”</em></p>
 
 <img data-src="image/group_freq_dist2.png" class="r-stretch quarto-figure-center"></section>
 <section id="your-turn-prepare-grouped-frequency-distribution" class="slide level2">
@@ -533,7 +543,7 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 <h2>Graphical Frequency Distributions</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>The horizontal line usually displays a predicator variable, or an independent variable, usually denoted wit the letter <em>x</em> it is known as <em><strong>x-axis</strong>, or <strong>abscissa</strong>.</em></p>
+<p>The horizontal line usually displays a predicator variable, or an independent variable, usually denoted with the letter <em>x</em> it is known as <em><strong>x-axis</strong>, or <strong>abscissa</strong>.</em></p>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -580,18 +590,14 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 </section>
 <section class="slide level2">
 
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Histogram plots the frequencies as bars rising up from the x-axis.<img data-src="image/histo_ras.png" width="700"></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Polygon plots them as points that are connected by straight lines.<img data-src="image/poly_ras.png"></li>
-</ul>
-</div>
-</div>
-</section>
+<p><strong>Histogram</strong> plots the frequencies as bars rising up from the x-axis.</p>
+
+<img data-src="image/histo_ras.png" width="500" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
+
+<p><strong>Polygon plots</strong> them as points that are connected by straight lines.</p>
+
+<img data-src="image/poly_ras.png" width="500" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
 <div class="columns">
@@ -604,7 +610,7 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="image/poly_ras.png"></p>
+<p><img data-src="image/poly_ras.png" width="500"></p>
 </figure>
 </div>
 </div>
@@ -612,20 +618,44 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 </section>
 <section class="slide level2">
 
-<p>Polygon superimposed on histogram … the dots of the polygon mark out the midpoint of each bar.</p>
+<p>Polygon superimposed on histogram … <strong>the dots</strong> of the polygon mark out the midpoint of each bar.</p>
 
 <img data-src="image/superimposed.png" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
-<p>“most women are not as satisfied with their relationship as Alice was, many women do not think a high salary is important, but most value kindness, humour and ambition, all of which are qualities that you have?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>many women do not think a high salary is important, but most value kindness, humour and ambition, all of which are qualities that you [Zach] have?</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/poly_ras.png" width="500"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
 
-<img data-src="image/ras_plot.png" class="r-stretch quarto-figure-center"></section>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>“most women are not as satisfied with their relationship as Alice was”</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/ras_plot.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="idealized-distributions" class="slide level2">
 <h2>Idealized Distributions</h2>
 <ul>
-<li class="fragment"><p>the beauty of data is that we can use samples to estimate the shape of the distribution of scores in the entire population</p></li>
-<li class="fragment"><p>relative frequency of responses</p></li>
-<li class="fragment"><p>it is reasonable to assume that the relative frequencies in the sample will be similar to those in the population. We do not need to now the actual frequencies in the population, we work instead with relative frequencies.</p></li>
+<li class="fragment"><p>The beauty of data is that we can use samples to estimate the shape of the distribution of scores in the entire population</p></li>
+<li class="fragment"><p>Relative frequency of responses</p></li>
+<li class="fragment"><p>It is reasonable to assume that the relative frequencies in the sample will be similar to those in the population.</p></li>
+<li class="fragment"><p>We do not need to now the actual frequencies in the population, we work instead with relative frequencies.</p></li>
 </ul>
 </section>
 <section id="relative-frequencydensity" class="slide level2">
@@ -639,7 +669,6 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 </section>
 <section id="relative-frequencydensity-1" class="slide level2">
 <h2>Relative Frequency/Density</h2>
-<p><em>“if she [Alice] hadn’t dumped me [Zach] then one of the alternative was that she was in trouble.”</em></p>
 
 <img data-src="image/density_plot.png" class="r-stretch quarto-figure-center"></section>
 <section id="histograms-for-nominal-ordinal-data" class="slide level2">
@@ -653,6 +682,21 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 <ul>
 <li class="fragment"><p>It is a sort of a histogram</p></li>
 <li class="fragment"><p>same information as a histogram - the frequency within categories - but these categories do not make up an interval or ratio scale of measurement.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/barplot.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms-for-nominal-ordinal-data-2" class="slide level2">
+<h2>Histograms for Nominal &amp; Ordinal Data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
 <li class="fragment"><p>When we display information about a nominal or ordinal variable, it is called a <strong>bar graph</strong>.</p></li>
 <li class="fragment"><p>There are spaces between the bars to indicate that they are independent categories and not point along an interval or ratio scale.</p></li>
 </ul>
@@ -670,20 +714,20 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 <h1>🔔THROWING SHAPES</h1>
 
 </section>
-<section class="slide level2">
-
-<ul>
-<li class="fragment"><p>you will find that certain shapes of distributions are common in the world … we can describe certain distributions that are common to lots of different variables.</p></li>
-<li class="fragment"><p>these “common” distributions have names such as the <strong>normal distribution</strong>, <em>t</em>-distribution, chi-square distribution, uniform distribution, binomial distribution and <em>F</em>-distribution.</p></li>
-<li class="fragment"><p>these idealized distributions have a specific shape that can be described by an equation</p></li>
-</ul>
-</section>
 <section id="shape-of-the-distribution" class="slide level2">
 <h2>Shape of the Distribution</h2>
 <ul>
-<li class="fragment"><p>ignore equation, focus upon the properties:</p>
+<li class="fragment"><p>You will find that certain shapes of distributions are common in the world … we can describe certain distributions that are common to lots of different variables.</p></li>
+<li class="fragment"><p>These “common” distributions have names such as the <strong>normal distribution</strong>, <em>t</em>-distribution, chi-square distribution, uniform distribution, binomial distribution and <em>F</em>-distribution.</p></li>
+<li class="fragment"><p>These idealized distributions have a specific shape that can be described by an equation</p></li>
+</ul>
+</section>
+<section id="shape-of-the-distribution-1" class="slide level2">
+<h2>Shape of the Distribution</h2>
 <ul>
-<li class="fragment"><p>centre of the distribution (known as the <strong>central tendency</strong>).</p></li>
+<li class="fragment"><p>Ignore equation, focus upon the properties:</p>
+<ul>
+<li class="fragment"><p>Centre of the distribution (known as the <strong>central tendency</strong>).</p></li>
 <li class="fragment"><p>and the width or spread of the distribution (known as the <strong>variability</strong>).</p></li>
 </ul></li>
 </ul>
@@ -735,41 +779,43 @@ interval\;width=\frac{range\;of\;scores}{number\;of\;intervals}\\=\frac{highest\
 <img data-src="image/skew.png" class="r-stretch quarto-figure-center"></section>
 <section id="positively-skewed" class="slide level2">
 <h2>Positively Skewed</h2>
-<p>the frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores<img data-src="image/skew.png" width="1500"></p>
-</section>
+<p>the frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores</p>
+
+<img data-src="image/skew_positive.png" class="r-stretch quarto-figure-center"></section>
 <section id="negatively-skewed" class="slide level2">
 <h2>Negatively Skewed</h2>
-<p>the frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.<img data-src="image/skew.png" width="1500"></p>
-</section>
+<p>the frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.</p>
+
+<img data-src="image/skew_negative.png" class="r-stretch quarto-figure-center"></section>
 <section id="kurtosis" class="slide level2">
 <h2>Kurtosis</h2>
 <p>the second way in which distributions can be non-normal is in whether there are too many or too few scores in the ends of the distribution (the <em>tails</em> of the distribution)</p>
 
-<img data-src="image/kurtosis.png" class="r-stretch"></section>
+<img data-src="image/kurtosis.png" class="r-stretch quarto-figure-center"></section>
 <section id="positive-kurtosis-known-as-leptokurtic." class="slide level2">
 <h2><strong>Positive kurtosis</strong> known as <strong>Leptokurtic.</strong></h2>
 <p>distributions can tend to look pointy</p>
 
-<img data-src="image/kurtosis.png" class="r-stretch"></section>
+<img data-src="image/kurtosis.png" class="r-stretch quarto-figure-center"></section>
 <section id="negative-kurtosis-known-as-platykurtic." class="slide level2">
 <h2><strong>Negative kurtosis</strong> known as <strong>Platykurtic</strong>.</h2>
-<p>tend to look flatter than normal<img data-src="image/kurtosis.png" width="1500"></p>
-</section>
+<p>tend to look flatter than normal</p>
+
+<img data-src="image/kurtosis.png" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
 <ul>
-<li class="fragment"><p>there are lots of other things that affect how pointy or flat a distribution looks.</p></li>
+<li class="fragment"><p>There are lots of other things that affect how pointy or flat a distribution looks.</p></li>
 <li class="fragment"><p>In a normal distribution the values of skew and kurtosis are 0 (i.e., the shape of the distribution is as it should be).</p></li>
-<li class="fragment"><p>if a distribution has values of skew or kurtosis above or below 0 then this indicates a deviation from normal.</p></li>
+<li class="fragment"><p>If a distribution has values of skew or kurtosis above or below 0 then this indicates a deviation from normal.</p></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p><strong>Zach:</strong> <em>Maybe someone at JIG:SAW will help me?</em></p>
-<p><strong>Prof.&nbsp;Pinus</strong>: <em>unless you want your life destroyed … some things are best left alone.</em></p>
+<p><strong>Prof.&nbsp;Pinus</strong>: JIG:SAW … <em>unless you want your life destroyed … some things are best left alone.</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="image/milton2.png"></p>
+<p><img data-src="image/milton2.png" width="774"></p>
 </figure>
 </div>
 <p><img src="image/logo.png" class="slide-logo"></p>

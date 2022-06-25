@@ -1,6 +1,6 @@
 ---
-title: "Reporting Research, Variables, and Measurement"
-subtitle: "Statistic with R"
+title: "📐Reporting Research, Variables, and Measurement"
+subtitle: "02 - Statistic with R"
 author: "Ajay Kumar Koli"
 format: 
   revealjs:

@@ -1,7 +1,7 @@
 ---
-title: "Statistics with R"
-subtitle: "Ajay Kumar Koli"
-author: "💀"
+title: "💀Statistics with R💀"
+subtitle: "01" 
+author: "Ajay Kumar Koli"
 format: 
   revealjs:
     incremental: true
@@ -11,8 +11,8 @@ format:
     slide-number: true
     transition: fade
     highlight-style: a11y
-    height: 1080
-    width: 1920
+    #height: 1080
+    #width: 1920
 editor: visual
 ---
 
@@ -48,11 +48,13 @@ editor: visual
 
 -   Alice: Perhaps, but they are not scientists.
 
-    -   Science isn't perfect, and it's not the only way to view the world,
+## As per Alice:
 
-    -   but it does give us a ***system*** for trying to find answers to questions
+-   Science isn't perfect, and it's not the only way to view the world,
 
-    -   but the trouble is that you're scared of it and you refuse to engage with it.'
+-   But it does give us a ***system*** for trying to find answers to questions
+
+-   But the trouble is that you're scared of it and you refuse to engage with it.'
 
 # 🕸 HOW SCIENCE WORKS
 
@@ -80,7 +82,7 @@ editor: visual
 
 ![](image/process.png){fig-align="center"}
 
-## The Research Process
+## Generate Research Question
 
 ::: columns
 ::: {.column width="50%"}
@@ -96,16 +98,13 @@ editor: visual
 :::
 :::
 
-## The Research Process
+## Theory
 
 ::: columns
 ::: {.column width="50%"}
--   **Theory:**
-    -   "is a well-established principle or set of general principles to explain a broad range of observations"
+-   "is a well-established principle or set of general principles to explain a broad range of observations"
 
-    -   "normally scientists are interested in theories that apply very generally"
-
-    -   "they want their theories to apply to all entities or situations"
+-   "normally scientists are interested in theories that apply very generally"
 :::
 
 ::: {.column width="50%"}
@@ -115,11 +114,11 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-## The Research Process
+## Population
 
 ::: columns
 ::: {.column width="50%"}
--   **Population**: "An entire set of entities is known as population."
+-   "An entire set of entities is known as population."
     -   A population can be quite diverse but can also be more specific.
 
     -   Different types of scientists might focus on different populations.
@@ -132,11 +131,11 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-## The Research Process
+## Hypothesis
 
 ::: columns
 ::: {.column width="50%"}
--   "You can use existing theory, to generate a **hypothesis**, which is a proposed explanation of the specific observation that interests you."
+"You can use existing theory, to generate a **hypothesis**, which is a proposed explanation of the specific observation that interests you."
 :::
 
 ::: {.column width="50%"}
@@ -146,7 +145,7 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-## The Research Process
+## Variables
 
 ::: columns
 ::: {.column width="50%"}
@@ -165,12 +164,12 @@ editor: visual
 
 ![](image/statement.png){fig-align="center"}
 
-## The Research Process
+## Sample
 
 ::: columns
 ::: {.column width="50%"}
 -   "you want to draw conclusions about the entire population, but it is impractical to collect data from every entity in the population"
--   "so instead we use a **sample**, which is a smaller set of entities from our population ... representative of the wider population"
+-   "so instead we use a **sample**, which is representative of the wider population"
 :::
 
 ::: {.column width="50%"}
@@ -180,12 +179,23 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-## The Research Process
+## Statistics
 
 ::: columns
 ::: {.column width="50%"}
--   "We can use the data in the sample to compute **statistics**, which are values that describe the sample."
--   "we can use this value to estimate what the value would have been if we had collected data from the entire population. The value in the population is known as a **parameter**.
+"We can use the data in the sample to compute **statistics**, which are values that describe the sample."
+:::
+
+::: {.column width="50%"}
+![](image/process.png){fig-align="center"}
+:::
+:::
+
+## Parameters
+
+::: columns
+::: {.column width="50%"}
+"we can use this \[statistics\] value to estimate what the value would have been if we had collected data from the entire population. The value in the population is known as a **parameter**.
 :::
 
 ::: {.column width="50%"}
@@ -195,15 +205,25 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-## The Research Process
+## Descriptive Statistics
 
 ::: columns
 ::: {.column width="50%"}
-Two things that you might want to do with data:
+to describe what happened in the sample that you collected like draw a graph or calculate summary information, known as **descriptive statistics**.
+:::
 
--   to describe what happened in the sample that you collected like draw a graph or calculate summary information, known as **descriptive statistics**.
+::: {.column width="50%"}
+![](image/process.png){fig-align="center"}
+:::
+:::
 
--   use the sample data to estimate what the likely values are in the population, known as **inferential statistics**.
+------------------------------------------------------------------------
+
+## **Inferential Statistics**
+
+::: columns
+::: {.column width="50%"}
+use the sample data to estimate what the likely values are in the population, known as **inferential statistics**.
 :::
 
 ::: {.column width="50%"}
@@ -245,7 +265,7 @@ These statistics sometimes differ from the population parameter.
 
 ------------------------------------------------------------------------
 
-## Using statistics to answer empirical questions
+## Using Statistics to Answer Empirical Questions
 
 ![](image/answer.png){fig-align="center"}
 
@@ -309,7 +329,7 @@ Comparing two conditions in a controlled way is at the heart of experimental met
 
 -   Outcome variable also called as **dependent variable**.
 
-## Two methods of data collection
+## Two Ways to Manipulate 
 
 -   "if you measure variables without manipulating any of them then it is not an experiment, it is a correlational study."
 
