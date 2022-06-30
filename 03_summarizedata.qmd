@@ -10,6 +10,7 @@ format:
     scrollable: true
     slide-number: true
     transition: fade
+    chalkboard: true
 editor: visual
 ---
 
@@ -80,7 +81,7 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 
 ## Relative Frequency
 
-$$relative\;frequency=\frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\;responses}\\ = \frac{2}{10}=0.1$$
+$$relative\;frequency=\frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\;responses}\\ = \frac{2}{20}=0.1$$
 
 ![](image/freq_dist.png){fig-align="center"}
 
@@ -259,7 +260,7 @@ If scale of measurement is interval or ratio, you can use a **histogram** and **
 
 ![](image/histo_ras.png){fig-align="center" width="500"}
 
----
+------------------------------------------------------------------------
 
 **Polygon plots** them as points that are connected by straight lines.
 
@@ -299,7 +300,7 @@ many women do not think a high salary is important, but most value kindness, hum
 :::
 :::
 
----
+------------------------------------------------------------------------
 
 ::: columns
 ::: {.column width="50%"}
@@ -319,7 +320,7 @@ many women do not think a high salary is important, but most value kindness, hum
 
 -   It is reasonable to assume that the relative frequencies in the sample will be similar to those in the population.
 
--   We do not need to now the actual frequencies in the population, we work instead with relative frequencies.
+-   We do not need to know the actual frequencies in the population, we work instead with relative frequencies.
 
 ## Relative Frequency/Density
 
@@ -345,7 +346,7 @@ many women do not think a high salary is important, but most value kindness, hum
 ::: {.column width="50%"}
 -   It is a sort of a histogram
 
--   same information as a histogram - the frequency within categories - but these categories do not make up an interval or ratio scale of measurement.
+-   Same information as a histogram - the frequency within categories - but these categories do not make up an interval or ratio scale of measurement.
 :::
 
 ::: {.column width="50%"}
@@ -358,7 +359,17 @@ many women do not think a high salary is important, but most value kindness, hum
 ::: columns
 ::: {.column width="50%"}
 -   When we display information about a nominal or ordinal variable, it is called a **bar graph**.
+:::
 
+::: {.column width="50%"}
+![](image/barplot.png){fig-align="center"}
+:::
+:::
+
+## Histograms for Nominal & Ordinal Data
+
+::: columns
+::: {.column width="50%"}
 -   There are spaces between the bars to indicate that they are independent categories and not point along an interval or ratio scale.
 :::
 
@@ -419,41 +430,45 @@ many women do not think a high salary is important, but most value kindness, hum
 
 ## A distribution can deviate from normal
 
--   the curve is **symmetrical:** if we draw a vertical line through the centre of the distribution then it looks the same on both sides.
+The curve is **symmetrical:** if we draw a vertical line through the centre of the distribution then it looks the same on both sides.
 
--   not all distributions are like that: some have **skew**.
+![](image/normal_distribution.png){fig-align="center"}
+
+## A distribution can deviate from normal
+
+Not all distributions are like that: some have **skew**.
 
 ![](image/skew.png){fig-align="center"}
 
 ## Positively Skewed
 
-the frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores
+The frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores
 
 ![](image/skew_positive.png){fig-align="center"}
 
 ## Negatively Skewed
 
-the frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.
+The frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.
 
 ![](image/skew_negative.png){fig-align="center"}
 
 ## Kurtosis
 
-the second way in which distributions can be non-normal is in whether there are too many or too few scores in the ends of the distribution (the *tails* of the distribution)
+The second way in which distributions can be non-normal is in whether there are too many or too few scores in the ends of the distribution (the *tails* of the distribution)
 
 ![](image/kurtosis.png){fig-align="center"}
 
 ## **Positive kurtosis** known as **Leptokurtic.**
 
-distributions can tend to look pointy
+Distributions can tend to look pointy
 
-![](image/kurtosis.png){fig-align="center"}
+![](image/kurtosis_lepto.png){fig-align="center"}
 
 ## **Negative kurtosis** known as **Platykurtic**.
 
-tend to look flatter than normal
+Tend to look flatter than normal
 
-![](image/kurtosis.png){fig-align="center"}
+![](image/kurtosis_platy.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -463,8 +478,10 @@ tend to look flatter than normal
 
 -   If a distribution has values of skew or kurtosis above or below 0 then this indicates a deviation from normal.
 
-------------------------------------------------------------------------
+## Skewness & Kurtosis
 
-**Prof. Pinus**: JIG:SAW ... *unless you want your life destroyed ... some things are best left alone.*
+![](image/skew_kurtosis.jpg){fig-align="center"}
 
-![](image/milton2.png){fig-align="center" width="774"}
+## JIG:SAW
+
+![](image/milton2.png){fig-align="center"}

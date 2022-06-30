@@ -4,7 +4,7 @@
   <meta name="generator" content="quarto-0.9.358">
 
   <meta name="author" content="Ajay Kumar Koli">
-  <title>Fitting Models</title>
+  <title>Fitting Models [Central Tendency]</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,8 @@
   <link href="04_central_tendency_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="04_central_tendency_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="04_central_tendency_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="04_central_tendency_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="04_central_tendency_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="04_central_tendency_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -321,12 +323,12 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Fitting Models</h1>
-  <p class="subtitle">Central Tendency</p>
+  <h1 class="title">Fitting Models<br>[Central Tendency]</h1>
+  <p class="subtitle">04 - Statistics with R</p>
   <p class="author">Ajay Kumar Koli</p>
 </section>
 
-<section id="objectives" class="slide level2" data-background-image="image/zach_bg.png" data-background-opacity=".3">
+<section id="objectives" class="slide level2" data-background-image="image/building_model.png" data-background-opacity=".2">
 <h2>Objectives:</h2>
 <ul>
 <li class="fragment"><p>Statistical models</p></li>
@@ -334,14 +336,6 @@
 <li class="fragment"><p>The ‘fit’ of the mean: variance</p></li>
 <li class="fragment"><p>Dispersion</p></li>
 </ul>
-</section>
-<section id="gene-mixer" class="slide level2">
-<h2>Gene Mixer</h2>
-<img data-src="image/gene_mixer.png" class="r-stretch"></section>
-<section>
-<section id="statistical-model" class="title-slide slide level1 center">
-<h1>🏆STATISTICAL MODEL</h1>
-
 </section>
 <section id="from-the-dead" class="slide level2">
 <h2>From the Dead</h2>
@@ -351,8 +345,17 @@
 <li class="fragment"><p>Zach agreed to learn stats from Milton</p></li>
 </ul>
 </section>
+<section id="gene-mixer" class="slide level2">
+<h2><em>Gene Mixer</em></h2>
+
+<img data-src="image/gene_mixer.png" class="r-stretch"></section>
+<section>
+<section id="statistical-model" class="title-slide slide level1 center">
+<h1>STATISTICAL MODEL</h1>
+
+</section>
 <section id="why-do-we-need-statistical-models" class="slide level2">
-<h2>Why do we need statistical models?</h2>
+<h2>Why do we need statistical models?…</h2>
 <ul>
 <li class="fragment"><p>Scientists try to make predictions about something in the real world …</p>
 <ul>
@@ -362,29 +365,16 @@
 <ul>
 <li class="fragment">they gather data and construct small-scale models of the process and use them to predict how these processes operate under more general conditions.</li>
 </ul></li>
+</ul>
+</section>
+<section id="why-do-we-need-statistical-models-1" class="slide level2">
+<h2>Why do we need statistical models?…</h2>
+<ul>
 <li class="fragment"><p>We want our small-scale model to resemble the real situation as closely as possible so that the predictions we make about the real world are accurate.</p></li>
 <li class="fragment"><p>The statistical model we build must represent the data collected (the <em>observed data</em>) as closely as possible.</p></li>
 <li class="fragment"><p>The degree to which a statistical model represents the data collected is called the <strong>fit</strong> of the model.</p></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<div class="callout callout-note callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Attention</strong></p>
-</div>
-<div class="callout-content">
-<p>“Scientists are interested in the true state of the world.”</p>
-<p>Population <span class="math inline">\(\rightarrow\)</span> Representative sample</p>
-</div>
-</div>
-</div>
-
-<img data-src="image/building.png" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
 <p>Beimeni Centre Building</p>
@@ -399,66 +389,56 @@
 <li class="fragment"><p>Once the model is ready, it can be used to estimate what would happen to the real building.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="image/building_model.png"></p>
-</figure>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="image/building_model.png" style="width:90.0%"></p>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="sample-size-bigger-is-better" class="slide level2">
-<h2>Sample Size: bigger is better</h2>
-<ul>
-<li class="fragment"><p>Small sample size</p></li>
-<li class="fragment"><p>Moderate sample size</p></li>
-<li class="fragment"><p>Large sample size</p></li>
-</ul>
+<h2>Sample Size: Bigger is Better</h2>
 
 <img data-src="image/box_sample.png" class="r-stretch quarto-figure-center"></section>
 <section id="the-one-and-only-statistical-model" class="slide level2">
-<h2>The one and only statistical model</h2>
+<h2>The one and only statistical model…</h2>
+<p><span class="math display">\[outcome_i=(model)+error_i\]</span></p>
 <ul>
 <li class="fragment"><p>“A statistical model is an equation that describes the phenomenon of interest”</p></li>
-<li class="fragment"><p><span class="math display">\[
-outcome_i=(model)+error_i
-\]</span></p></li>
 <li class="fragment"><p>Most statistical models are a variation on this one equation.</p></li>
 <li class="fragment"><p>The model will change depending on what you are trying to achieve.</p>
 <ul>
 <li class="fragment">Ultimately the word “model” is replaced with an equation that you believe summaries the pattern of data.</li>
 </ul></li>
-<li class="fragment"><p>The price of reducing the raw data to a summary is that it will not perfectly reflect every entity in the sample</p></li>
 </ul>
 </section>
 <section id="the-one-and-only-statistical-model-1" class="slide level2">
-<h2>The one and only statistical model</h2>
-<ul>
-<li class="fragment"><p><span class="math display">\[
+<h2>The one and only statistical model…</h2>
+<p><span class="math display">\[
 outcome_i=(model)+error_i
-\]</span></p></li>
-<li class="fragment"><p><span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 RAS_i=(model)+error_i
-\]</span></p></li>
-</ul>
+\]</span></p>
 </section>
 <section id="the-one-and-only-statistical-model-2" class="slide level2">
 <h2>The one and only statistical model</h2>
 <ul>
 <li class="fragment"><p>Statistical models usually, but not always, contain variables and parameters.</p>
 <ul>
-<li class="fragment"><p>Parameters are (usually) constant values believed to represent some fundamental truth about the relations between variables in the models.</p></li>
+<li class="fragment"><p><strong>Parameters</strong> are (usually) constant values believed to represent some fundamental truth about the relations between variables in the models.</p></li>
 <li class="fragment"><p>Unlike variables, which are measured, parameters are estimated from the data.</p></li>
 </ul></li>
 </ul>
 </section>
 <section id="simplest-possible-model" class="slide level2">
-<h2>Simplest possible model</h2>
-<ul>
-<li class="fragment"><p><span class="math display">\[
+<h2>Simplest Possible Model</h2>
+<p><span class="math display">\[
 outcome_i=(b_0)+error_i
-\]</span></p></li>
-<li class="fragment"><p>Confuscious 🧙‍♂️</p>
+\]</span></p>
+<ul>
+<li class="fragment"><p>Confusius 🧙‍♂️</p>
 <ul>
 <li class="fragment"><p>mean = <span class="math inline">\(\bar{X}\)</span></p></li>
 <li class="fragment"><p>correlation = <span class="math inline">\(r\)</span> (Greek symbol rho, <span class="math inline">\(\rho\)</span>)</p></li>
@@ -469,30 +449,40 @@ outcome_i=(b_0)+error_i
 </section>
 <section class="slide level2">
 
+<p><span class="math display">\[
+outcome_i=(b_0+b_1X_i)+error_i
+\]</span></p>
 <ul>
-<li class="fragment"><p><span class="math display">\[
-outcome_i=(b_0+b_1Xi)+error_i
-\]</span></p></li>
-<li class="fragment"><p>A lot of time it is more interesting to see whether we can summarize an outcome variable by predicting from scores on another variable.</p></li>
-<li class="fragment"><p>We usually denote predictor variables with the letter <span class="math inline">\(X\)</span>.</p>
+<li class="fragment">A lot of time it is more interesting to see whether we can summarize an outcome variable by predicting from scores on another variable.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><span class="math display">\[
+outcome_i=(b_0+b_1X_i)+error_i
+\]</span></p>
 <ul>
 <li class="fragment"><p><span class="math inline">\(i\)</span> = particular entity</p></li>
 <li class="fragment"><p><span class="math inline">\(outcome_i\)</span> = outcome value for that particular entity</p></li>
 <li class="fragment"><p><span class="math inline">\(X_i\)</span> = score on the predictor variable</p></li>
 <li class="fragment"><p><span class="math inline">\(b_1\)</span> = predictor variable has a parameter attached to it which tells use something about the relationship between the predictor (<span class="math inline">\(X_i\)</span>) and outcome</p></li>
 <li class="fragment"><p><span class="math inline">\(b_0\)</span> = is still there to tell us the overall levels of the outcome if the predictor variable was not in the model</p></li>
-</ul></li>
 </ul>
 </section>
 <section id="ras-statistical-model" class="slide level2">
 <h2>RAS Statistical Model</h2>
 <ul>
-<li class="fragment"><p><span class="math inline">\(outcome_i=(b_0+b_1Xi)+error_i\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(outcome_i=(b_0+b_1X_i)+error_i\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(relationship\;satisfaction_i=(b_0+b_1length_i)+error_i\)</span></p></li>
+</ul>
+</section>
+<section id="ras-statistical-model-1" class="slide level2">
+<h2>RAS Statistical Model</h2>
+<ul>
 <li class="fragment"><p><span class="math inline">\(outcome_i=(b_0+b_1X_{1i}+b_2X_{2i})+error_i\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(relationship\;satisfaction_i=(b_0+b_1length_i+b_2effort_i)+error_i\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(relationship\\satisfaction_i=(b_0+b_1length_i+b_2effort_i)+error_i\)</span></p></li>
 <li class="fragment"><p>“We use the sample data to estimate the value of the model parameters.” <span class="math inline">\(b\)</span></p></li>
-<li class="fragment"><p>“We use the sample data to <em>estimate</em> what the population parameters are likely to be”</p></li>
+<li class="fragment"><p>“We use the sample data to <em>estimate (best guess)</em> what the population parameters are likely to be”</p></li>
 </ul>
 </section></section>
 <section>
@@ -502,7 +492,8 @@ outcome_i=(b_0+b_1Xi)+error_i
 </section>
 <section id="alices-relationship-assessment-scores" class="slide level2">
 <h2>Alices’ Relationship Assessment Scores</h2>
-<img data-src="image/alice_ras.png" class="r-stretch"></section>
+
+<img data-src="image/alice_ras.png" class="r-stretch quarto-figure-center"></section>
 <section id="alices-relationship-assessment-scores-1" class="slide level2">
 <h2>Alices’ Relationship Assessment Scores</h2>
 <ul>
@@ -515,30 +506,268 @@ outcome_i=(b_0+b_1Xi)+error_i
 <section id="the-mode" class="slide level2">
 <h2>The Mode</h2>
 <ul>
-<li class="fragment"><p>the score that occurs most frequently.</p></li>
+<li class="fragment"><p>The score that occurs most frequently.</p></li>
 <li class="fragment"><p>The tallest bar in the histogram and in the grouped frequency table, the score with the highest frequency.</p></li>
-</ul>
-</section>
-<section id="your-turn" class="slide level2">
-<h2>🤯Your Turn</h2>
-<ul>
-<li class="fragment"><p>Create a frequency distribution of Alice’s RAS scores.</p></li>
-<li class="fragment"><p><img data-src="image/ras_table.png"></p></li>
 </ul>
 </section>
 <section id="downside-of-mode" class="slide level2">
 <h2>Downside of Mode</h2>
 <ul>
-<li class="fragment"><p>It will always be a value that actually occurs in the data.</p></li>
-<li class="fragment"><p>But there could be two modes</p></li>
-<li class="fragment"><p>Bimodal: a distribution with two modes</p></li>
-<li class="fragment"><p>Multimodal: Data sets with more than two modes</p></li>
-<li class="fragment"><p>if the frequencies of certain scores are very similar, then the mode can be influenced by only a small number of cases</p></li>
-<li class="fragment"><p><img data-src="image/two_modes.png"></p></li>
+<li class="fragment"><p><strong>Bimodal</strong>: a distribution with two modes</p></li>
+<li class="fragment"><p><strong>Multimodal</strong>: Data sets with more than two modes</p></li>
 </ul>
+
+<img data-src="image/two_modes.png" class="r-stretch quarto-figure-center"></section>
+<section id="your-turn" class="slide level2">
+<h2>🤯Your Turn</h2>
+<p>Calculate mode of Alice’s RAS scores: 32, 30, 28, 30, 29, 31, 29, 31, 11</p>
+
+<img data-src="image/ras_table.png" class="r-stretch quarto-figure-center"></section>
+<section id="section" class="slide level2">
+<h2></h2>
 </section>
 <section id="the-median" class="slide level2">
 <h2>The Median</h2>
+<p>“the middle score when the scores are arranged in ascending order”</p>
+<ul>
+<li class="fragment"><p>32, 30, 28, 30, 29, 31, 29, 31, 11</p></li>
+<li class="fragment"><p>position of the middle score<span class="math inline">\(= \frac{(n+1)}{2}\)</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(n\)</span> = number of observations</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-median-1" class="slide level2">
+<h2>The Median</h2>
+
+<img data-src="image/median_even.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-median-2" class="slide level2">
+<h2>The Median</h2>
+
+<img data-src="image/median_odd.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-mean" class="slide level2">
+<h2>The Mean</h2>
+<p>also called as arithmetic mean or average</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p>Population mean</p></li>
+<li class="fragment"><p><span class="math display">\[
+\mu=\frac{\sum^n_{i=1}x_i}{N}
+\]</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p>Sample mean</p></li>
+<li class="fragment"><p><span class="math display">\[
+\bar{X}(or M)=\frac{\sum^n_{i=1}x_i}{n}
+\]</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>🙄“A population of scores doesn’t have to be scores from different entities, and neither does a sample.”</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\sum^n_{i=1}x_i=32+30+28+30+30+\\29+31+29+31+11=281\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\bar{X}=\frac{\sum^n_{i=1}}{n}=\frac{281}{10}=28.1\)</span></p></li>
+</ul>
+</section>
+<section id="statistical-model-1" class="slide level2">
+<h2>Statistical Model</h2>
+<ul>
+<li class="fragment"><p>Alice’s mean assessment of your relationship is 28.1</p></li>
+<li class="fragment"><p>The fact that we are fitting a statistical model. … We have reduced the data to a summary that does not perfectly represent the scores we observed.</p></li>
+</ul>
+</section>
+<section id="statistical-model-2" class="slide level2">
+<h2>Statistical Model</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p><span class="math display">\[
+outcome_i=(b)+error_i
+\]</span></p></li>
+<li class="fragment"><p><span class="math display">\[
+RAS_i=\bar{X}+error_i
+\]</span></p></li>
+<li class="fragment"><p><span class="math display">\[
+RAS_i=28.1+error_i
+\]</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/alice_ras.png"></p>
+</figure>
+</div>
+</div></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="your-turn-1" class="slide level2">
+<h2>🤯Your Turn</h2>
+<p>Measure mean after removing outlier value from the Alice’s RAS scores: 32, 30, 28, 30, 29, 31, 29, 31, 11</p>
+</section>
+<section id="your-turn-answer" class="slide level2">
+<h2>Your Turn Answer</h2>
+<p>Answer is 30, after removing score 11</p>
+
+<img data-src="image/mean_outlier.png" class="r-stretch quarto-figure-center"></section>
+<section id="message-from-milton" class="slide level2">
+<h2>😺Message from Milton</h2>
+
+<img data-src="image/mean_balancing.png" class="r-stretch quarto-figure-center"></section>
+<section id="message-from-milton-1" class="slide level2">
+<h2>😺Message from Milton</h2>
+
+<img data-src="image/mean_magic.png" width="820" class="r-stretch quarto-figure-center"></section>
+<section id="the-mean-1" class="slide level2">
+<h2>The Mean</h2>
+<ul>
+<li class="fragment"><p>The mean divides the data in two, which makes it a reasonable summary of the data as a whole</p></li>
+<li class="fragment"><p>The outlier has made the mean less representative of the data.</p></li>
+<li class="fragment"><p>The mean defines it in terms of distance from the centre.</p></li>
+<li class="fragment"><p>It uses every score in the data, and so it representative.</p></li>
+<li class="fragment"><p>It tends to be quite stable across samples (less true of the median)</p></li>
+</ul>
+</section>
+<section id="the-median-3" class="slide level2">
+<h2>The Median</h2>
+<ul>
+<li class="fragment"><p>The median measures it as the score at the centre, and</p>
+<ul>
+<li class="fragment"><p>It aims to split the data into two equal halves.</p></li>
+<li class="fragment"><p>It balance the data so that half of the scores are above it and half below.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-mode-1" class="slide level2">
+<h2>The Mode</h2>
+<ul>
+<li class="fragment">The mode measures it as the most frequent score.</li>
+</ul>
+</section>
+<section id="message-from-milton-2" class="slide level2">
+<h2>😺Message from Milton</h2>
+<ul>
+<li class="fragment"><p>Which measure of central tendency to use, you need to think the type of data you have</p>
+<ul>
+<li class="fragment"><p><strong>Nominal variable</strong> = Mode</p></li>
+<li class="fragment"><p><strong>Ordinal variable</strong> = Median (because it based upon the scores being ordered)</p>
+<ul>
+<li class="fragment">It is less influenced by extreme scores</li>
+</ul></li>
+<li class="fragment"><p><strong>Interval or Ratio</strong> = Mean (because it is based on distances between scores and it assumes that the distance between scores is the same at all points along the scale).</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="but-suddenly" class="slide level2">
+<h2><em>But suddenly …</em></h2>
+
+<img data-src="image/chippers.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-fit-of-the-mean" class="slide level2">
+<h2>The Fit of the mean</h2>
+<p>We can assess how well the mean, or any other model, “fits” the data by looking at the errors in prediction.”</p>
+<p><span class="math display">\[
+outcome_i=(model)+error_i\\error_i=outcome_i-model\\error_i=RAS-\mu
+\]</span></p>
+</section>
+<section id="the-fit-of-the-mean-1" class="slide level2">
+<h2>The fit of the mean</h2>
+<p>Alice’s first week score is 32 but model value is 28.1. So, our model (mean in present case) underestimated the RAS score for week one.</p>
+<p><span class="math display">\[
+error_{week1}=outcome_{week1}-model\\error_{week1}=RAS_{week1}-\mu\\error_{week1}=32-28.1\\=3.9
+\]</span></p>
+</section>
+<section id="confusius" class="slide level2">
+<h2>Confusius 🧙‍♂️</h2>
+<p>“Error in prediction from a model is sometimes known as error, and sometimes as <strong>deviance</strong> or deviation and other times as <strong>residual</strong>.”</p>
+<ul>
+<li class="fragment"><p>Deviance is the value of the outcome minus the value predicted from the model</p></li>
+<li class="fragment"><p><span class="math display">\[
+error_i=outcome_i-model_i\\deviance_i=x_i=\mu
+\]</span></p></li>
+</ul>
+</section>
+<section id="how-much-error-there-is-overall" class="slide level2">
+<h2>How much error there is overall?</h2>
+<p>“if we want to know the total error or total deviance then we could add up the deviances for each data point”</p>
+<ul>
+<li class="fragment"><p><span class="math display">\[
+total\;error=\sum^n_{i=1}(outcome_i-model_i)
+\]</span></p></li>
+<li class="fragment"><p><span class="math display">\[
+total\;deviance=\sum^n_{i=1}(x_i-\mu)
+\]</span></p></li>
+</ul>
+</section>
+<section id="your-turn-2" class="slide level2">
+<h2>🤯Your Turn</h2>
+<p>Calculate error in the Alice’s RAS score of each week, exclude 11</p>
+</section>
+<section id="errors-or-deviances" class="slide level2">
+<h2>Errors or Deviances</h2>
+
+<img data-src="image/ras_error.png" width="725" class="r-stretch quarto-figure-center"></section>
+<section id="sum-of-errors" class="slide level2">
+<h2>Sum of Errors</h2>
+<p><span class="math display">\[
+sum\;of\;errors=\sum^n_{i=1}(outcome_i-model_i)\\=(32-30)+(30-30)+(28-30)+(30-30)+\\(30-30)+(29-30)+(31-30)+(29-30)+\\(31-30)\\=2+0+(-2)+0+0+(-1)+1+(-1)+1\\=2-2-1+1-1+1\\=0
+\]</span></p>
+</section>
+<section id="sum-of-squared-errors" class="slide level2">
+<h2>Sum of Squared Errors</h2>
+<p>“we square the deviances … we can add these squared deviances up to get the <strong>sum of squared errors</strong>, <span class="math inline">\(SS\)</span> (<em>sum of squares</em>)</p>
+</section>
+<section id="sum-of-squared-errors-1" class="slide level2">
+<h2>Sum of Squared Errors</h2>
+<p><span class="math display">\[
+sum\;of\;squared\;errors(SS)=\sum^n_{i=1}(outcome_i-model_i)^2\\sum\;of\;squared\;errors(SS)=\sum^n_{i=1}(x_i-\mu)^2
+\]</span></p>
+</section>
+<section id="ss-of-alices-ras-score" class="slide level2">
+<h2><em>SS</em> of Alice’s RAS score</h2>
+
+<img data-src="image/ras_squared_errors.png" width="900" class="r-stretch quarto-figure-center"></section>
+<section id="sum-of-squared-errors-ss" class="slide level2">
+<h2>Sum of Squared Errors (<em>SS</em>)</h2>
+<p>“its size will depend on how many scores we have in the data. … it is a nuisance if we want to compare the total error across samples of different sizes”</p>
+<ul>
+<li class="fragment">An easy solution is to divide by the number of scores (<em>N</em>).</li>
+</ul>
+</section>
+<section id="variance" class="slide level2">
+<h2>Variance</h2>
+<p>“when the model is mean, the mean squared error has a special name, the <strong>variance</strong>.</p>
+<ul>
+<li class="fragment">The symbol of variance in the population is <span class="math inline">\(\sigma^2\)</span>.</li>
+</ul>
+</section>
+<section id="variance-1" class="slide level2">
+<h2>Variance</h2>
+<p><span class="math display">\[
+mean\;squared\;error=\frac{SS}{N}=\frac{\sum^n_{i=1}(outcome_i-model_i)^2}{N}\\variance(\sigma^2)=\frac{SS}{N}=\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}
+\]</span></p>
+</section>
+<section id="variance-2" class="slide level2">
+<h2>Variance</h2>
+<p><span class="math display">\[
+\sigma=variance=\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}\\=\frac{12}{9}\\=1.33
+\]</span></p>
+<ul>
+<li class="fragment">For Alice’s RAS scores, we would say that the average error of the mean was 1.33 RAS units squared. … convert it back to the original scale of measurement and take square root of the variance.</li>
+</ul>
+</section>
+<section id="standard-deviation" class="slide level2">
+<h2>Standard Deviation</h2>
+<p><span class="math display">\[
+\sigma=\sqrt{variance}=\sqrt{\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}}\\\sqrt{1.33}\\=1.15
+\]</span></p>
 
 <img src="image/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://nalanda-academy.org/">Nalanda Academy</a></p>
@@ -554,6 +783,7 @@ outcome_i=(b_0+b_1Xi)+error_i
   <script src="04_central_tendency_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="04_central_tendency_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="04_central_tendency_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="04_central_tendency_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="04_central_tendency_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -575,7 +805,8 @@ outcome_i=(b_0+b_1Xi)+error_i
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -746,7 +977,7 @@ outcome_i=(b_0+b_1Xi)+error_i
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -755,6 +986,48 @@ outcome_i=(b_0+b_1Xi)+error_i
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

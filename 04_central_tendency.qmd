@@ -1,6 +1,6 @@
 ---
-title: "Fitting Models"
-subtitle: "Central Tendency"
+title: "Fitting Models<br>[Central Tendency]"
+subtitle: "04 - Statistics with R"
 author: "Ajay Kumar Koli"
 format: 
   revealjs:
@@ -10,10 +10,11 @@ format:
     scrollable: true
     slide-number: true
     transition: fade
+    chalkboard: true
 editor: visual
 ---
 
-## Objectives: {background-image="image/zach_bg.png" background-opacity=".3"}
+## Objectives: {background-image="image/building_model.png" background-opacity=".2"}
 
 -   Statistical models
 
@@ -23,10 +24,6 @@ editor: visual
 
 -   Dispersion
 
-## Gene Mixer![](image/gene_mixer.png)
-
-# 🏆STATISTICAL MODEL
-
 ## From the Dead
 
 -   Zach and Milton agree to help each other.
@@ -35,7 +32,13 @@ editor: visual
 
 -   Zach agreed to learn stats from Milton
 
-## Why do we need statistical models?
+## *Gene Mixer*
+
+![](image/gene_mixer.png)
+
+# STATISTICAL MODEL
+
+## Why do we need statistical models?...
 
 -   Scientists try to make predictions about something in the real world ...
 
@@ -45,23 +48,13 @@ editor: visual
 
     -   they gather data and construct small-scale models of the process and use them to predict how these processes operate under more general conditions.
 
+## Why do we need statistical models?...
+
 -   We want our small-scale model to resemble the real situation as closely as possible so that the predictions we make about the real world are accurate.
 
 -   The statistical model we build must represent the data collected (the *observed data*) as closely as possible.
 
 -   The degree to which a statistical model represents the data collected is called the **fit** of the model.
-
-------------------------------------------------------------------------
-
-::: callout-note
-## Attention
-
-"Scientists are interested in the true state of the world."
-
-Population $\rightarrow$ Representative sample
-:::
-
-![](image/building.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -79,27 +72,23 @@ Beimeni Centre Building
 :::
 
 ::: {.column width="50%"}
-![](image/building_model.png){fig-align="center"}
+```{r}
+#| out-width: "90%"
+knitr::include_graphics("image/building_model.png")
+
+```
 :::
 :::
 
-## Sample Size: bigger is better
-
--   Small sample size
-
--   Moderate sample size
-
--   Large sample size
+## Sample Size: Bigger is Better
 
 ![](image/box_sample.png){fig-align="center"}
 
-## The one and only statistical model
+## The one and only statistical model...
+
+$$outcome_i=(model)+error_i$$
 
 -   "A statistical model is an equation that describes the phenomenon of interest"
-
--   $$
-    outcome_i=(model)+error_i
-    $$
 
 -   Most statistical models are a variation on this one equation.
 
@@ -107,33 +96,31 @@ Beimeni Centre Building
 
     -   Ultimately the word "model" is replaced with an equation that you believe summaries the pattern of data.
 
--   The price of reducing the raw data to a summary is that it will not perfectly reflect every entity in the sample
+## The one and only statistical model...
 
-## The one and only statistical model
+$$
+outcome_i=(model)+error_i
+$$
 
--   $$
-    outcome_i=(model)+error_i
-    $$
-
--   $$
-    RAS_i=(model)+error_i
-    $$
+$$
+RAS_i=(model)+error_i
+$$
 
 ## The one and only statistical model
 
 -   Statistical models usually, but not always, contain variables and parameters.
 
-    -   Parameters are (usually) constant values believed to represent some fundamental truth about the relations between variables in the models.
+    -   **Parameters** are (usually) constant values believed to represent some fundamental truth about the relations between variables in the models.
 
     -   Unlike variables, which are measured, parameters are estimated from the data.
 
-## Simplest possible model
+## Simplest Possible Model
 
--   $$
-    outcome_i=(b_0)+error_i
-    $$
+$$
+outcome_i=(b_0)+error_i
+$$
 
--   Confuscious 🧙‍♂️
+-   Confusius 🧙‍♂️
 
     -   mean = $\bar{X}$
 
@@ -145,41 +132,49 @@ Beimeni Centre Building
 
 ------------------------------------------------------------------------
 
--   $$
-    outcome_i=(b_0+b_1Xi)+error_i
-    $$
+$$
+outcome_i=(b_0+b_1X_i)+error_i
+$$
 
 -   A lot of time it is more interesting to see whether we can summarize an outcome variable by predicting from scores on another variable.
 
--   We usually denote predictor variables with the letter $X$.
+------------------------------------------------------------------------
 
-    -   $i$ = particular entity
+$$
+outcome_i=(b_0+b_1X_i)+error_i
+$$
 
-    -   $outcome_i$ = outcome value for that particular entity
+-   $i$ = particular entity
 
-    -   $X_i$ = score on the predictor variable
+-   $outcome_i$ = outcome value for that particular entity
 
-    -   $b_1$ = predictor variable has a parameter attached to it which tells use something about the relationship between the predictor ($X_i$) and outcome
+-   $X_i$ = score on the predictor variable
 
-    -   $b_0$ = is still there to tell us the overall levels of the outcome if the predictor variable was not in the model
+-   $b_1$ = predictor variable has a parameter attached to it which tells use something about the relationship between the predictor ($X_i$) and outcome
+
+-   $b_0$ = is still there to tell us the overall levels of the outcome if the predictor variable was not in the model
 
 ## RAS Statistical Model
 
--   $outcome_i=(b_0+b_1Xi)+error_i$
+-   $outcome_i=(b_0+b_1X_i)+error_i$
 
 -   $relationship\;satisfaction_i=(b_0+b_1length_i)+error_i$
 
+## RAS Statistical Model
+
 -   $outcome_i=(b_0+b_1X_{1i}+b_2X_{2i})+error_i$
 
--   $relationship\;satisfaction_i=(b_0+b_1length_i+b_2effort_i)+error_i$
+-   $relationship\\satisfaction_i=(b_0+b_1length_i+b_2effort_i)+error_i$
 
 -   "We use the sample data to estimate the value of the model parameters." $b$
 
--   "We use the sample data to *estimate* what the population parameters are likely to be"
+-   "We use the sample data to *estimate (best guess)* what the population parameters are likely to be"
 
 # CENTRAL TENDENCY
 
-## Alices' Relationship Assessment Scores![](image/alice_ras.png)
+## Alices' Relationship Assessment Scores
+
+![](image/alice_ras.png){fig-align="center"}
 
 ## Alices' Relationship Assessment Scores
 
@@ -193,28 +188,258 @@ Beimeni Centre Building
 
 ## The Mode
 
--   the score that occurs most frequently.
+-   The score that occurs most frequently.
 
 -   The tallest bar in the histogram and in the grouped frequency table, the score with the highest frequency.
 
-## 🤯Your Turn
-
--   Create a frequency distribution of Alice's RAS scores.
-
--   ![](image/ras_table.png)
-
 ## Downside of Mode
 
--   It will always be a value that actually occurs in the data.
+-   **Bimodal**: a distribution with two modes
 
--   But there could be two modes
+-   **Multimodal**: Data sets with more than two modes
 
--   Bimodal: a distribution with two modes
+![](image/two_modes.png){fig-align="center"}
 
--   Multimodal: Data sets with more than two modes
+## 🤯Your Turn
 
--   if the frequencies of certain scores are very similar, then the mode can be influenced by only a small number of cases
+Calculate mode of Alice's RAS scores: 32, 30, 28, 30, 29, 31, 29, 31, 11
 
--   ![](image/two_modes.png)
+![](image/ras_table.png){fig-align="center"}
+
+## 
 
 ## The Median
+
+"the middle score when the scores are arranged in ascending order"
+
+-   32, 30, 28, 30, 29, 31, 29, 31, 11
+
+-   position of the middle score$= \frac{(n+1)}{2}$
+
+    -   $n$ = number of observations
+
+## The Median
+
+![](image/median_even.png){fig-align="center"}
+
+## The Median
+
+![](image/median_odd.png){fig-align="center"}
+
+## The Mean
+
+also called as arithmetic mean or average
+
+::: columns
+::: {.column width="50%"}
+-   Population mean
+
+-   $$
+    \mu=\frac{\sum^n_{i=1}x_i}{N}
+    $$
+:::
+
+::: {.column width="50%"}
+-   Sample mean
+
+-   $$
+    \bar{X}(or M)=\frac{\sum^n_{i=1}x_i}{n}
+    $$
+:::
+:::
+
+------------------------------------------------------------------------
+
+🙄"A population of scores doesn't have to be scores from different entities, and neither does a sample."
+
+-   $\sum^n_{i=1}x_i=32+30+28+30+30+\\29+31+29+31+11=281$
+
+-   $\bar{X}=\frac{\sum^n_{i=1}}{n}=\frac{281}{10}=28.1$
+
+## Statistical Model
+
+-   Alice's mean assessment of your relationship is 28.1
+
+-   The fact that we are fitting a statistical model. ... We have reduced the data to a summary that does not perfectly represent the scores we observed.
+
+## Statistical Model
+
+::: columns
+::: {.column width="50%"}
+-   $$
+    outcome_i=(b)+error_i
+    $$
+
+-   $$
+    RAS_i=\bar{X}+error_i
+    $$
+
+-   $$
+    RAS_i=28.1+error_i
+    $$
+:::
+
+::: {.column width="50%"}
+-   <div>
+
+    ![](image/alice_ras.png){fig-align="center"}
+
+    </div>
+:::
+:::
+
+## 🤯Your Turn
+
+Measure mean after removing outlier value from the Alice's RAS scores: 32, 30, 28, 30, 29, 31, 29, 31, 11
+
+## Your Turn Answer
+
+Answer is 30, after removing score 11
+
+![](image/mean_outlier.png){fig-align="center"}
+
+## 😺Message from Milton
+
+![](image/mean_balancing.png){fig-align="center"}
+
+## 😺Message from Milton
+
+![](image/mean_magic.png){fig-align="center" width="820"}
+
+## The Mean
+
+-   The mean divides the data in two, which makes it a reasonable summary of the data as a whole
+
+-   The outlier has made the mean less representative of the data.
+
+-   The mean defines it in terms of distance from the centre.
+
+-   It uses every score in the data, and so it representative.
+
+-   It tends to be quite stable across samples (less true of the median)
+
+## The Median
+
+-   The median measures it as the score at the centre, and
+
+    -   It aims to split the data into two equal halves.
+
+    -   It balance the data so that half of the scores are above it and half below.
+
+## The Mode
+
+-   The mode measures it as the most frequent score.
+
+## 😺Message from Milton
+
+-   Which measure of central tendency to use, you need to think the type of data you have
+
+    -   **Nominal variable** = Mode
+
+    -   **Ordinal variable** = Median (because it based upon the scores being ordered)
+
+        -   It is less influenced by extreme scores
+
+    -   **Interval or Ratio** = Mean (because it is based on distances between scores and it assumes that the distance between scores is the same at all points along the scale).
+
+## *But suddenly ...*
+
+![](image/chippers.png){fig-align="center"}
+
+## The Fit of the mean
+
+We can assess how well the mean, or any other model, "fits" the data by looking at the errors in prediction."
+
+$$
+outcome_i=(model)+error_i\\error_i=outcome_i-model\\error_i=RAS-\mu
+$$
+
+## The fit of the mean
+
+Alice's first week score is 32 but model value is 28.1. So, our model (mean in present case) underestimated the RAS score for week one.
+
+$$
+error_{week1}=outcome_{week1}-model\\error_{week1}=RAS_{week1}-\mu\\error_{week1}=32-28.1\\=3.9
+$$
+
+## Confusius 🧙‍♂️
+
+"Error in prediction from a model is sometimes known as error, and sometimes as **deviance** or deviation and other times as **residual**."
+
+-   Deviance is the value of the outcome minus the value predicted from the model
+
+-   $$
+    error_i=outcome_i-model_i\\deviance_i=x_i=\mu
+    $$
+
+## How much error there is overall?
+
+"if we want to know the total error or total deviance then we could add up the deviances for each data point"
+
+-   $$
+    total\;error=\sum^n_{i=1}(outcome_i-model_i)
+    $$
+
+-   $$
+    total\;deviance=\sum^n_{i=1}(x_i-\mu)
+    $$
+
+## 🤯Your Turn
+
+Calculate error in the Alice's RAS score of each week, exclude 11
+
+## Errors or Deviances
+
+![](image/ras_error.png){fig-align="center" width="725"}
+
+## Sum of Errors
+
+$$
+sum\;of\;errors=\sum^n_{i=1}(outcome_i-model_i)\\=(32-30)+(30-30)+(28-30)+(30-30)+\\(30-30)+(29-30)+(31-30)+(29-30)+\\(31-30)\\=2+0+(-2)+0+0+(-1)+1+(-1)+1\\=2-2-1+1-1+1\\=0
+$$
+
+## Sum of Squared Errors
+
+"we square the deviances ... we can add these squared deviances up to get the **sum of squared errors**, $SS$ (*sum of squares*)
+
+## Sum of Squared Errors
+
+$$
+sum\;of\;squared\;errors(SS)=\sum^n_{i=1}(outcome_i-model_i)^2\\sum\;of\;squared\;errors(SS)=\sum^n_{i=1}(x_i-\mu)^2
+$$
+
+## *SS* of Alice's RAS score
+
+![](image/ras_squared_errors.png){fig-align="center" width="900"}
+
+## Sum of Squared Errors (*SS*)
+
+"its size will depend on how many scores we have in the data. ... it is a nuisance if we want to compare the total error across samples of different sizes"
+
+-   An easy solution is to divide by the number of scores (*N*).
+
+## Variance
+
+"when the model is mean, the mean squared error has a special name, the **variance**.
+
+-   The symbol of variance in the population is $\sigma^2$.
+
+## Variance
+
+$$
+mean\;squared\;error=\frac{SS}{N}=\frac{\sum^n_{i=1}(outcome_i-model_i)^2}{N}\\variance(\sigma^2)=\frac{SS}{N}=\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}
+$$
+
+## Variance
+
+$$
+\sigma=variance=\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}\\=\frac{12}{9}\\=1.33
+$$
+
+-   For Alice's RAS scores, we would say that the average error of the mean was 1.33 RAS units squared. ... convert it back to the original scale of measurement and take square root of the variance.
+
+## Standard Deviation
+
+$$
+\sigma=\sqrt{variance}=\sqrt{\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}}\\\sqrt{1.33}\\=1.15
+$$

@@ -29,6 +29,8 @@
   <link href="03_summarizedata_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="03_summarizedata_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="03_summarizedata_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="03_summarizedata_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="03_summarizedata_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="03_summarizedata_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -400,7 +402,7 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 <img data-src="image/freq_dist.png" class="r-stretch quarto-figure-center"></section>
 <section id="relative-frequency-1" class="slide level2">
 <h2>Relative Frequency</h2>
-<p><span class="math display">\[relative\;frequency=\frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\;responses}\\ = \frac{2}{10}=0.1\]</span></p>
+<p><span class="math display">\[relative\;frequency=\frac{frequency\;of\;a\;rating\;of\;10}{total\;number\;of\;responses}\\ = \frac{2}{20}=0.1\]</span></p>
 
 <img data-src="image/freq_dist.png" class="r-stretch quarto-figure-center"></section>
 <section id="relative-frequency-2" class="slide level2">
@@ -655,7 +657,7 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 <li class="fragment"><p>The beauty of data is that we can use samples to estimate the shape of the distribution of scores in the entire population</p></li>
 <li class="fragment"><p>Relative frequency of responses</p></li>
 <li class="fragment"><p>It is reasonable to assume that the relative frequencies in the sample will be similar to those in the population.</p></li>
-<li class="fragment"><p>We do not need to now the actual frequencies in the population, we work instead with relative frequencies.</p></li>
+<li class="fragment"><p>We do not need to know the actual frequencies in the population, we work instead with relative frequencies.</p></li>
 </ul>
 </section>
 <section id="relative-frequencydensity" class="slide level2">
@@ -681,7 +683,7 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 <div class="column" style="width:50%;">
 <ul>
 <li class="fragment"><p>It is a sort of a histogram</p></li>
-<li class="fragment"><p>same information as a histogram - the frequency within categories - but these categories do not make up an interval or ratio scale of measurement.</p></li>
+<li class="fragment"><p>Same information as a histogram - the frequency within categories - but these categories do not make up an interval or ratio scale of measurement.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -697,8 +699,23 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li class="fragment"><p>When we display information about a nominal or ordinal variable, it is called a <strong>bar graph</strong>.</p></li>
-<li class="fragment"><p>There are spaces between the bars to indicate that they are independent categories and not point along an interval or ratio scale.</p></li>
+<li class="fragment">When we display information about a nominal or ordinal variable, it is called a <strong>bar graph</strong>.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/barplot.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="histograms-for-nominal-ordinal-data-3" class="slide level2">
+<h2>Histograms for Nominal &amp; Ordinal Data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment">There are spaces between the bars to indicate that they are independent categories and not point along an interval or ratio scale.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -771,37 +788,39 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 </section>
 <section id="a-distribution-can-deviate-from-normal" class="slide level2">
 <h2>A distribution can deviate from normal</h2>
-<ul>
-<li class="fragment"><p>the curve is <strong>symmetrical:</strong> if we draw a vertical line through the centre of the distribution then it looks the same on both sides.</p></li>
-<li class="fragment"><p>not all distributions are like that: some have <strong>skew</strong>.</p></li>
-</ul>
+<p>The curve is <strong>symmetrical:</strong> if we draw a vertical line through the centre of the distribution then it looks the same on both sides.</p>
+
+<img data-src="image/normal_distribution.png" class="r-stretch quarto-figure-center"></section>
+<section id="a-distribution-can-deviate-from-normal-1" class="slide level2">
+<h2>A distribution can deviate from normal</h2>
+<p>Not all distributions are like that: some have <strong>skew</strong>.</p>
 
 <img data-src="image/skew.png" class="r-stretch quarto-figure-center"></section>
 <section id="positively-skewed" class="slide level2">
 <h2>Positively Skewed</h2>
-<p>the frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores</p>
+<p>The frequent scores are clustered at the lower end and the tail points towards the higher or more positive scores</p>
 
 <img data-src="image/skew_positive.png" class="r-stretch quarto-figure-center"></section>
 <section id="negatively-skewed" class="slide level2">
 <h2>Negatively Skewed</h2>
-<p>the frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.</p>
+<p>The frequent scores are clustered at the higher end and the tail points towards the lower or more negative scores.</p>
 
 <img data-src="image/skew_negative.png" class="r-stretch quarto-figure-center"></section>
 <section id="kurtosis" class="slide level2">
 <h2>Kurtosis</h2>
-<p>the second way in which distributions can be non-normal is in whether there are too many or too few scores in the ends of the distribution (the <em>tails</em> of the distribution)</p>
+<p>The second way in which distributions can be non-normal is in whether there are too many or too few scores in the ends of the distribution (the <em>tails</em> of the distribution)</p>
 
 <img data-src="image/kurtosis.png" class="r-stretch quarto-figure-center"></section>
 <section id="positive-kurtosis-known-as-leptokurtic." class="slide level2">
 <h2><strong>Positive kurtosis</strong> known as <strong>Leptokurtic.</strong></h2>
-<p>distributions can tend to look pointy</p>
+<p>Distributions can tend to look pointy</p>
 
-<img data-src="image/kurtosis.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="image/kurtosis_lepto.png" class="r-stretch quarto-figure-center"></section>
 <section id="negative-kurtosis-known-as-platykurtic." class="slide level2">
 <h2><strong>Negative kurtosis</strong> known as <strong>Platykurtic</strong>.</h2>
-<p>tend to look flatter than normal</p>
+<p>Tend to look flatter than normal</p>
 
-<img data-src="image/kurtosis.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="image/kurtosis_platy.png" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
 <ul>
@@ -810,12 +829,15 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 <li class="fragment"><p>If a distribution has values of skew or kurtosis above or below 0 then this indicates a deviation from normal.</p></li>
 </ul>
 </section>
-<section class="slide level2">
+<section id="skewness-kurtosis" class="slide level2">
+<h2>Skewness &amp; Kurtosis</h2>
 
-<p><strong>Prof.&nbsp;Pinus</strong>: JIG:SAW … <em>unless you want your life destroyed … some things are best left alone.</em></p>
+<img data-src="image/skew_kurtosis.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="jigsaw" class="slide level2">
+<h2>JIG:SAW</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="image/milton2.png" width="774"></p>
+<p><img data-src="image/milton2.png"></p>
 </figure>
 </div>
 <p><img src="image/logo.png" class="slide-logo"></p>
@@ -833,6 +855,7 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
   <script src="03_summarizedata_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="03_summarizedata_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="03_summarizedata_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="03_summarizedata_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="03_summarizedata_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -854,7 +877,8 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1025,7 +1049,7 @@ relative\;frequency = \frac{frequency\;of\;response}{total\;number\;of\;response
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
