@@ -4,7 +4,7 @@
   <meta name="generator" content="quarto-0.9.358">
 
   <meta name="author" content="Ajay Kumar Koli">
-  <title>Fitting Models [Central Tendency]</title>
+  <title>🏋🏽‍♀️Fitting Models [Central Tendency]</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -323,12 +323,12 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Fitting Models<br>[Central Tendency]</h1>
+  <h1 class="title">🏋🏽‍♀️Fitting Models<br>[Central Tendency]</h1>
   <p class="subtitle">04 - Statistics with R</p>
   <p class="author">Ajay Kumar Koli</p>
 </section>
 
-<section id="objectives" class="slide level2" data-background-image="image/building_model.png" data-background-opacity=".2">
+<section id="objectives" class="slide level2" data-background-image="image/building_model.png" data-background-opacity=".1">
 <h2>Objectives:</h2>
 <ul>
 <li class="fragment"><p>Statistical models</p></li>
@@ -375,11 +375,6 @@
 <li class="fragment"><p>The degree to which a statistical model represents the data collected is called the <strong>fit</strong> of the model.</p></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<p>Beimeni Centre Building</p>
-
-<img data-src="image/building_model.png" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
 <div class="columns">
@@ -487,7 +482,7 @@ outcome_i=(b_0+b_1X_i)+error_i
 </section></section>
 <section>
 <section id="central-tendency" class="title-slide slide level1 center">
-<h1>CENTRAL TENDENCY</h1>
+<h1>🏋🏽‍♀️CENTRAL TENDENCY</h1>
 
 </section>
 <section id="alices-relationship-assessment-scores" class="slide level2">
@@ -497,7 +492,7 @@ outcome_i=(b_0+b_1X_i)+error_i
 <section id="alices-relationship-assessment-scores-1" class="slide level2">
 <h2>Alices’ Relationship Assessment Scores</h2>
 <ul>
-<li class="fragment"><p>32, 30, 28, 30, 29, 31, 29, 31, 11</p></li>
+<li class="fragment"><p>32, 30, 28, 30, 30, 29, 31, 29, 31, 11</p></li>
 <li class="fragment"><p>A score that is very different from others is called an <strong>outlier</strong>.</p></li>
 <li class="fragment"><p>Simplest model tries to summarize data in terms of a single parameter.</p></li>
 <li class="fragment"><p>A popular choice would be a parameter that measures <strong>central tendency</strong>: a value that indicates the central point of a distribution of scores.</p></li>
@@ -520,17 +515,17 @@ outcome_i=(b_0+b_1X_i)+error_i
 <img data-src="image/two_modes.png" class="r-stretch quarto-figure-center"></section>
 <section id="your-turn" class="slide level2">
 <h2>🤯Your Turn</h2>
-<p>Calculate mode of Alice’s RAS scores: 32, 30, 28, 30, 29, 31, 29, 31, 11</p>
+<p>Calculate mode of Alice’s RAS scores: 32, 30, 28, 30, 30, 29, 31, 29, 31, 11</p>
+</section>
+<section id="your-turn---answer" class="slide level2">
+<h2>🤯Your Turn - Answer</h2>
 
 <img data-src="image/ras_table.png" class="r-stretch quarto-figure-center"></section>
-<section id="section" class="slide level2">
-<h2></h2>
-</section>
 <section id="the-median" class="slide level2">
 <h2>The Median</h2>
 <p>“the middle score when the scores are arranged in ascending order”</p>
 <ul>
-<li class="fragment"><p>32, 30, 28, 30, 29, 31, 29, 31, 11</p></li>
+<li class="fragment"><p>32, 30, 28, 30, 30, 29, 31, 29, 31, 11</p></li>
 <li class="fragment"><p>position of the middle score<span class="math inline">\(= \frac{(n+1)}{2}\)</span></p>
 <ul>
 <li class="fragment"><span class="math inline">\(n\)</span> = number of observations</li>
@@ -566,12 +561,14 @@ outcome_i=(b_0+b_1X_i)+error_i
 </div>
 </div>
 </section>
-<section class="slide level2">
-
-<p>🙄“A population of scores doesn’t have to be scores from different entities, and neither does a sample.”</p>
+<section id="a-population-of-scores-doesnt-have-to-be-scores-from-different-entities-and-neither-does-a-sample." class="slide level2">
+<h2>🙄“A population of scores doesn’t have to be scores from different entities, and neither does a sample.”</h2>
+</section>
+<section id="the-mean-1" class="slide level2">
+<h2>The Mean</h2>
 <ul>
-<li class="fragment"><p><span class="math inline">\(\sum^n_{i=1}x_i=32+30+28+30+30+\\29+31+29+31+11=281\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\bar{X}=\frac{\sum^n_{i=1}}{n}=\frac{281}{10}=28.1\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\sum^n_{i=1}x_i=32+30+28+30+30+\\29+31+29+31+11=281\]</span></p></li>
+<li class="fragment"><p><span class="math display">\[\bar{X}=\frac{\sum^n_{i=1}x_i}{n}=\frac{281}{10}=28.1\]</span></p></li>
 </ul>
 </section>
 <section id="statistical-model-1" class="slide level2">
@@ -626,7 +623,7 @@ RAS_i=28.1+error_i
 <h2>😺Message from Milton</h2>
 
 <img data-src="image/mean_magic.png" width="820" class="r-stretch quarto-figure-center"></section>
-<section id="the-mean-1" class="slide level2">
+<section id="the-mean-2" class="slide level2">
 <h2>The Mean</h2>
 <ul>
 <li class="fragment"><p>The mean divides the data in two, which makes it a reasonable summary of the data as a whole</p></li>
@@ -669,7 +666,12 @@ RAS_i=28.1+error_i
 <section id="but-suddenly" class="slide level2">
 <h2><em>But suddenly …</em></h2>
 
-<img data-src="image/chippers.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="image/chippers.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="the-fit-of-the-mean-variance" class="title-slide slide level1 center" data-background-image="image/chippers.png" data-background-opacity="0.1" data-background-size="200%">
+<h1>The Fit of the Mean: Variance</h1>
+
+</section>
 <section id="the-fit-of-the-mean" class="slide level2">
 <h2>The Fit of the mean</h2>
 <p>We can assess how well the mean, or any other model, “fits” the data by looking at the errors in prediction.”</p>
@@ -686,7 +688,7 @@ error_{week1}=outcome_{week1}-model\\error_{week1}=RAS_{week1}-\mu\\error_{week1
 </section>
 <section id="confusius" class="slide level2">
 <h2>Confusius 🧙‍♂️</h2>
-<p>“Error in prediction from a model is sometimes known as error, and sometimes as <strong>deviance</strong> or deviation and other times as <strong>residual</strong>.”</p>
+<p>“Error in prediction from a model is sometimes known as <strong>error</strong>, and sometimes as <strong>deviance</strong> or <strong>deviation</strong> and other times as <strong>residual</strong>.”</p>
 <ul>
 <li class="fragment"><p>Deviance is the value of the outcome minus the value predicted from the model</p></li>
 <li class="fragment"><p><span class="math display">\[
@@ -717,7 +719,8 @@ total\;deviance=\sum^n_{i=1}(x_i-\mu)
 <section id="sum-of-errors" class="slide level2">
 <h2>Sum of Errors</h2>
 <p><span class="math display">\[
-sum\;of\;errors=\sum^n_{i=1}(outcome_i-model_i)\\=(32-30)+(30-30)+(28-30)+(30-30)+\\(30-30)+(29-30)+(31-30)+(29-30)+\\(31-30)\\=2+0+(-2)+0+0+(-1)+1+(-1)+1\\=2-2-1+1-1+1\\=0
+sum\;of\;errors=\sum^n_{i=1}(outcome_i-model_i)\\=(32-30)+(30-30)+(28-30)+(30-30)\\+(30-30)+(29-30)+(31-30)+(29-30)+\\(31-30)\\
+=2+0+(-2)+0+0+(-1)+1+(-1)+1\\=2-2-1+1-1+1\\=0
 \]</span></p>
 </section>
 <section id="sum-of-squared-errors" class="slide level2">
@@ -768,8 +771,177 @@ mean\;squared\;error=\frac{SS}{N}=\frac{\sum^n_{i=1}(outcome_i-model_i)^2}{N}\\v
 <p><span class="math display">\[
 \sigma=\sqrt{variance}=\sqrt{\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}}\\\sqrt{1.33}\\=1.15
 \]</span></p>
+</section>
+<section id="estimating-the-fit-of-the-mean-from-a-sample" class="slide level2">
+<h2>Estimating the Fit of the Mean from a Sample</h2>
+<p>“if we use the equation that I just mentioned we will underestimate the variance and standard deviation of the population”</p>
+</section>
+<section id="population" class="slide level2">
+<h2>Population</h2>
 
-<img src="image/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<img data-src="image/variance_overestimate.png" class="r-stretch quarto-figure-center"></section>
+<section id="biased-estimator" class="slide level2">
+<h2>Biased Estimator</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>A biased estimator is a statistic taken from a random sample that does not equal its corresponding population parameter.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/variance_estimate_sample.png" width="374"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="unbiased-estimator" class="slide level2">
+<h2>Unbiased Estimator</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>It is a statistic from a sample that does equal the corresponding population parameter.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/variance_estimate_sample.png" width="374"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2>⌚️</h2>
+<ul>
+<li class="fragment"><p>sample variance is always biased in exactly the same way … we can correct it to make it unbiased.</p></li>
+<li class="fragment"><p>if we are using the sample to estimate the population variance then we divide by <span class="math inline">\(N-1\)</span>, rather than by <span class="math inline">\(N\)</span>.</p></li>
+</ul>
+</section>
+<section id="n---1" class="slide level2">
+<h2><span class="math inline">\(N - 1\)</span></h2>
+<p><span class="math display">\[
+mean\;squared\;error=\frac{SS}{n-1}\\=\frac{\sum^n_{i=1}(outcome_i-model_i)^2}{n-1}
+\]</span></p>
+</section>
+<section id="variance-3" class="slide level2">
+<h2>Variance</h2>
+<p><span class="math display">\[
+variance(s^2)=\frac{SS}{n-1}=\frac{\sum^n_{i=1}(x_i-\bar{X}_i)^2}{n-1}\\=\frac{12}{8}\\=1.5
+\]</span></p>
+<ul>
+<li class="fragment"><p>Replace population mean <span class="math inline">\(\mu\)</span> with the sample mean <span class="math inline">\(\bar{X}(M)\)</span></p></li>
+<li class="fragment"><p>Replace population variance <span class="math inline">\(\sigma^2\)</span> with sample variance <span class="math inline">\(s^2\)</span></p></li>
+<li class="fragment"><p>We use <span class="math inline">\(n\)</span> instead of <span class="math inline">\(N\)</span>.</p></li>
+</ul>
+</section>
+<section id="standard-deviation-1" class="slide level2">
+<h2>Standard Deviation</h2>
+<p><span class="math display">\[
+s=\sqrt{variance}=\sqrt{\frac{\sum^n_{i=1}(x_i-\bar{X})^2}{n-1}}\\=\sqrt{1.5}\\=1.22
+\]</span></p>
+</section>
+<section id="why-n-1" class="slide level2">
+<h2>Why <span class="math inline">\(N-1\)</span>?</h2>
+
+<img data-src="image/degree-of-freedom.png" class="r-stretch quarto-figure-center"></section>
+<section id="why-n-1-1" class="slide level2">
+<h2>Why <span class="math inline">\(N-1\)</span>?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The point is that on average the estimate is better, not necessarily for a particular sample.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/degree-of-freedom.png" width="367"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="degrees-of-freedom" class="slide level2">
+<h2>Degrees of Freedom</h2>
+<p>“are the number of scores that are free to vary”</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(n-1\)</span> is known as the <strong>degrees of freedom</strong> for the sample.</p></li>
+<li class="fragment"><p>assuming that the sample and population means are the same, we fixing a parameter</p></li>
+<li class="fragment"><p>if we hold one parameter constant then the degrees of freedom must be one less than the number of scores used to calculate the parameter.</p></li>
+</ul>
+</section>
+<section id="degrees-of-freedom-1" class="slide level2">
+<h2>Degrees of Freedom</h2>
+
+<img data-src="image/degree-of-freedom2.png" width="679" class="r-stretch quarto-figure-center"></section>
+<section id="outliers-and-variance" class="slide level2">
+<h2>Outliers and Variance</h2>
+<ul>
+<li class="fragment"><p>The variance with the outlier is 37.43</p></li>
+<li class="fragment"><p>The variance without the outlier is 1.5</p></li>
+<li class="fragment"><p>Due to the outliers, variance is more biased than the mean.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="dispersion" class="title-slide slide level1 center">
+<h1>DISPERSION</h1>
+
+</section>
+<section id="the-standard-deviation-as-an-indicator-of-dispersion" class="slide level2">
+<h2>The Standard Deviation as an indicator of dispersion</h2>
+<ul>
+<li class="fragment"><p>Sum of square, variance and standard deviation, they all represent the same thing but</p>
+<ul>
+<li class="fragment"><p>One is a total</p></li>
+<li class="fragment"><p>One is an average, and</p></li>
+<li class="fragment"><p>One is the average converted back to the original units of measurement.</p></li>
+</ul></li>
+<li class="fragment"><p>“Fit” as the dispersion or spread of data around the mean.</p></li>
+</ul>
+</section>
+<section id="the-standard-deviation-as-an-indicator-of-dispersion-1" class="slide level2">
+<h2>The Standard Deviation as an indicator of dispersion</h2>
+<ul>
+<li class="fragment"><p>A small standard deviation (relative to the value of the mean) indicates that data points are close to the mean.</p></li>
+<li class="fragment"><p>A large standard deviation (relative to the mean) indicates that the data points are distant from the mean.</p></li>
+<li class="fragment"><p>A standard deviation of <span class="math inline">\(0\)</span> would mean that all of the scores were the same.</p></li>
+</ul>
+</section>
+<section id="same-m-but-different-sd" class="slide level2">
+<h2>Same <em>M</em> but different <em>SD</em></h2>
+
+<img data-src="image/dispersion_ras.png" width="907" class="r-stretch quarto-figure-center"></section>
+<section id="same-m-but-different-sd-1" class="slide level2">
+<h2>Same <em>M</em> but different <em>SD</em></h2>
+<ul>
+<li class="fragment"><p>If the mean “fits” the data well then most of the scores will cluster close to the mean and the resulting standard deviation will be small relative to the mean.</p></li>
+<li class="fragment"><p>When the mean is a worse “fit” of the data, the scores will cluster more widely around the mean and the standard deviation will be larger.</p></li>
+</ul>
+</section>
+<section id="sd-larger-distribution-fatter" class="slide level2">
+<h2><em>SD</em> larger, Distribution fatter</h2>
+
+<img data-src="image/sd-large-small.png" width="907" class="r-stretch quarto-figure-center"></section>
+<section id="the-range-and-interquartile-range" class="slide level2">
+<h2>The Range and Interquartile Range</h2>
+<ul>
+<li class="fragment"><p><strong>Range:</strong> Take the largest score and subtract it from the smallest score</p></li>
+<li class="fragment"><p>But range value is influenced by the outliers.</p></li>
+<li class="fragment"><p><strong>Interquartile Range</strong>: Cut off the top and bottom 25% of scores and calculate the range of the middle 50% of scores.</p>
+<ul>
+<li class="fragment">The interquartile range does not change if you exclude the extreme score.</li>
+</ul></li>
+</ul>
+</section>
+<section id="interquartile-range" class="slide level2">
+<h2><strong>Interquartile Range</strong></h2>
+
+<img data-src="image/iqrange.png" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
+
+<h3 id="alices-average-ras-score-barx30-sd1.22-was-higher-than-the-national-average"><em>Alice’s average RAS score,</em> <span class="math inline">\(\bar{X}=30\)</span>, <span class="math inline">\(SD=1.22\)</span>, was higher than the national average</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/jigsaw-poster.png" width="860"></p>
+</figure>
+</div>
+<p><img src="image/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://nalanda-academy.org/">Nalanda Academy</a></p>
 </div>
 </section></section>

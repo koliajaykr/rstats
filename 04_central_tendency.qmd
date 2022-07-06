@@ -1,5 +1,5 @@
 ---
-title: "Fitting Models<br>[Central Tendency]"
+title: "🏋🏽‍♀️Fitting Models<br>[Central Tendency]"
 subtitle: "04 - Statistics with R"
 author: "Ajay Kumar Koli"
 format: 
@@ -14,7 +14,7 @@ format:
 editor: visual
 ---
 
-## Objectives: {background-image="image/building_model.png" background-opacity=".2"}
+## Objectives: {background-image="image/building_model.png" background-opacity=".1"}
 
 -   Statistical models
 
@@ -55,12 +55,6 @@ editor: visual
 -   The statistical model we build must represent the data collected (the *observed data*) as closely as possible.
 
 -   The degree to which a statistical model represents the data collected is called the **fit** of the model.
-
-------------------------------------------------------------------------
-
-Beimeni Centre Building
-
-![](image/building_model.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -170,7 +164,7 @@ $$
 
 -   "We use the sample data to *estimate (best guess)* what the population parameters are likely to be"
 
-# CENTRAL TENDENCY
+# 🏋🏽‍♀️CENTRAL TENDENCY
 
 ## Alices' Relationship Assessment Scores
 
@@ -178,7 +172,7 @@ $$
 
 ## Alices' Relationship Assessment Scores
 
--   32, 30, 28, 30, 29, 31, 29, 31, 11
+-   32, 30, 28, 30, 30, 29, 31, 29, 31, 11
 
 -   A score that is very different from others is called an **outlier**.
 
@@ -202,17 +196,17 @@ $$
 
 ## 🤯Your Turn
 
-Calculate mode of Alice's RAS scores: 32, 30, 28, 30, 29, 31, 29, 31, 11
+Calculate mode of Alice's RAS scores: 32, 30, 28, 30, 30, 29, 31, 29, 31, 11
+
+## 🤯Your Turn - Answer
 
 ![](image/ras_table.png){fig-align="center"}
-
-## 
 
 ## The Median
 
 "the middle score when the scores are arranged in ascending order"
 
--   32, 30, 28, 30, 29, 31, 29, 31, 11
+-   32, 30, 28, 30, 30, 29, 31, 29, 31, 11
 
 -   position of the middle score$= \frac{(n+1)}{2}$
 
@@ -250,11 +244,13 @@ also called as arithmetic mean or average
 
 ------------------------------------------------------------------------
 
-🙄"A population of scores doesn't have to be scores from different entities, and neither does a sample."
+## 🙄"A population of scores doesn't have to be scores from different entities, and neither does a sample."
 
--   $\sum^n_{i=1}x_i=32+30+28+30+30+\\29+31+29+31+11=281$
+## The Mean
 
--   $\bar{X}=\frac{\sum^n_{i=1}}{n}=\frac{281}{10}=28.1$
+-   $$\sum^n_{i=1}x_i=32+30+28+30+30+\\29+31+29+31+11=281$$
+
+-   $$\bar{X}=\frac{\sum^n_{i=1}x_i}{n}=\frac{281}{10}=28.1$$
 
 ## Statistical Model
 
@@ -346,6 +342,8 @@ Answer is 30, after removing score 11
 
 ![](image/chippers.png){fig-align="center"}
 
+# The Fit of the Mean: Variance {background-image="image/chippers.png" background-opacity="0.1" background-size="200%"}
+
 ## The Fit of the mean
 
 We can assess how well the mean, or any other model, "fits" the data by looking at the errors in prediction."
@@ -364,7 +362,7 @@ $$
 
 ## Confusius 🧙‍♂️
 
-"Error in prediction from a model is sometimes known as error, and sometimes as **deviance** or deviation and other times as **residual**."
+"Error in prediction from a model is sometimes known as **error**, and sometimes as **deviance** or **deviation** and other times as **residual**."
 
 -   Deviance is the value of the outcome minus the value predicted from the model
 
@@ -395,7 +393,8 @@ Calculate error in the Alice's RAS score of each week, exclude 11
 ## Sum of Errors
 
 $$
-sum\;of\;errors=\sum^n_{i=1}(outcome_i-model_i)\\=(32-30)+(30-30)+(28-30)+(30-30)+\\(30-30)+(29-30)+(31-30)+(29-30)+\\(31-30)\\=2+0+(-2)+0+0+(-1)+1+(-1)+1\\=2-2-1+1-1+1\\=0
+sum\;of\;errors=\sum^n_{i=1}(outcome_i-model_i)\\=(32-30)+(30-30)+(28-30)+(30-30)\\+(30-30)+(29-30)+(31-30)+(29-30)+\\(31-30)\\
+=2+0+(-2)+0+0+(-1)+1+(-1)+1\\=2-2-1+1-1+1\\=0
 $$
 
 ## Sum of Squared Errors
@@ -443,3 +442,160 @@ $$
 $$
 \sigma=\sqrt{variance}=\sqrt{\frac{\sum^n_{i=1}(x_i-\mu)^2}{N}}\\\sqrt{1.33}\\=1.15
 $$
+
+## Estimating the Fit of the Mean from a Sample
+
+"if we use the equation that I just mentioned we will underestimate the variance and standard deviation of the population"
+
+## Population
+
+![](image/variance_overestimate.png){fig-align="center"}
+
+## Biased Estimator
+
+::: columns
+::: {.column width="50%"}
+A biased estimator is a statistic taken from a random sample that does not equal its corresponding population parameter.
+:::
+
+::: {.column width="50%"}
+![](image/variance_estimate_sample.png){fig-align="center" width="374"}
+:::
+:::
+
+## Unbiased Estimator
+
+::: columns
+::: {.column width="50%"}
+It is a statistic from a sample that does equal the corresponding population parameter.
+:::
+
+::: {.column width="50%"}
+![](image/variance_estimate_sample.png){fig-align="center" width="374"}
+:::
+:::
+
+## ⌚️
+
+-   sample variance is always biased in exactly the same way ... we can correct it to make it unbiased.
+
+-   if we are using the sample to estimate the population variance then we divide by $N-1$, rather than by $N$.
+
+## $N - 1$
+
+$$
+mean\;squared\;error=\frac{SS}{n-1}\\=\frac{\sum^n_{i=1}(outcome_i-model_i)^2}{n-1}
+$$
+
+## Variance
+
+$$
+variance(s^2)=\frac{SS}{n-1}=\frac{\sum^n_{i=1}(x_i-\bar{X}_i)^2}{n-1}\\=\frac{12}{8}\\=1.5
+$$
+
+-   Replace population mean $\mu$ with the sample mean $\bar{X}(M)$
+
+-   Replace population variance $\sigma^2$ with sample variance $s^2$
+
+-   We use $n$ instead of $N$.
+
+## Standard Deviation
+
+$$
+s=\sqrt{variance}=\sqrt{\frac{\sum^n_{i=1}(x_i-\bar{X})^2}{n-1}}\\=\sqrt{1.5}\\=1.22
+$$
+
+## Why $N-1$?
+
+![](image/degree-of-freedom.png){fig-align="center"}
+
+## Why $N-1$?
+
+::: columns
+::: {.column width="50%"}
+The point is that on average the estimate is better, not necessarily for a particular sample.
+:::
+
+::: {.column width="50%"}
+
+![](image/degree-of-freedom.png){fig-align="center" width="367"}
+:::
+:::
+
+## Degrees of Freedom
+
+"are the number of scores that are free to vary"
+
+-   $n-1$ is known as the **degrees of freedom** for the sample.
+
+-   assuming that the sample and population means are the same, we fixing a parameter
+
+-   if we hold one parameter constant then the degrees of freedom must be one less than the number of scores used to calculate the parameter.
+
+## Degrees of Freedom
+
+![](image/degree-of-freedom2.png){fig-align="center" width="679"}
+
+## Outliers and Variance
+
+-   The variance with the outlier is 37.43
+
+-   The variance without the outlier is 1.5
+
+-   Due to the outliers, variance is more biased than the mean.
+
+# DISPERSION
+
+## The Standard Deviation as an indicator of dispersion
+
+-   Sum of square, variance and standard deviation, they all represent the same thing but
+
+    -   One is a total
+
+    -   One is an average, and
+
+    -   One is the average converted back to the original units of measurement.
+
+-   "Fit" as the dispersion or spread of data around the mean.
+
+## The Standard Deviation as an indicator of dispersion
+
+-   A small standard deviation (relative to the value of the mean) indicates that data points are close to the mean.
+
+-   A large standard deviation (relative to the mean) indicates that the data points are distant from the mean.
+
+-   A standard deviation of $0$ would mean that all of the scores were the same.
+
+## Same *M* but different *SD*
+
+![](image/dispersion_ras.png){fig-align="center" width="907"}
+
+## Same *M* but different *SD*
+
+-   If the mean "fits" the data well then most of the scores will cluster close to the mean and the resulting standard deviation will be small relative to the mean.
+
+-   When the mean is a worse "fit" of the data, the scores will cluster more widely around the mean and the standard deviation will be larger.
+
+## *SD* larger, Distribution fatter
+
+![](image/sd-large-small.png){fig-align="center" width="907"}
+
+## The Range and Interquartile Range
+
+-   **Range:** Take the largest score and subtract it from the smallest score
+
+-   But range value is influenced by the outliers.
+
+-   **Interquartile Range**: Cut off the top and bottom 25% of scores and calculate the range of the middle 50% of scores.
+
+    -   The interquartile range does not change if you exclude the extreme score.
+
+## **Interquartile Range**
+
+![](image/iqrange.png){fig-align="center"}
+
+---
+
+### *Alice's average RAS score,* $\bar{X}=30$, $SD=1.22$, was higher than the national average
+
+![](image/jigsaw-poster.png){fig-align="center" width="860"}
