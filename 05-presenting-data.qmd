@@ -1,0 +1,159 @@
+---
+title: "📈Presenting Data📉"
+subtitle: "05 - Statistics with R"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+    chalkboard: true
+editor: visual
+---
+
+## Objectives: {background-image="image/jigsaw-poster.png" background-opacity=".1"}
+
+-   Types of graphs
+
+-   The art of presenting data
+
+-   Bar graphs
+
+-   Line graphs
+
+-   Box-plots (box-whisker diagrams)
+
+-   Graphing relationships: the scatter-plot
+
+-   Pie charts
+
+## *Celia at the JIG:SAW Recruitment*
+
+![](image/celia.png){fig-align="center"}
+
+# TYPES OF GRAPHS
+
+------------------------------------------------------------------------
+
+Types of Graphs
+
+![](image/graphs-types.png){fig-align="center" width="445"}
+
+# THE ART OF PRESENTING DATA
+
+## *Dr. Tuff*
+
+![](image/tuff.png){fig-align="center"}
+
+## What makes a good graph?
+
+![](image/graph-bad.png){fig-align="center"}
+
+## Good graph as per Edward Tufte:
+
+1.  Show the data.
+
+2.  Direct the reader to think about the data being presented rather than some other aspect of the graph.
+
+3.  Avoid distorting the data
+
+4.  Present many numbers with minimum ink
+
+5.  Make large data sets coherent
+
+6.  Encourage the reader to compare different pieces of data
+
+7.  Reveal the underlying message of the data
+
+## 😺Message from Milton
+
+![](image/graph-deceive.png){fig-align="center"}
+
+## Chartjunks
+
+::: columns
+::: {.column width="50%"}
+-   The bars have unnecessary patterns on them.
+
+-   By plotting three variables, created a 3-D monstrosity, difficult to read the y-axis values.
+
+-   The y-axis is misleading, does not start at zero, badly labelled.
+:::
+
+::: {.column width="50%"}
+![](image/graph-bad.png){fig-align="center"}
+:::
+:::
+
+## Bad vs. Good Graph
+
+![](image/graph-good.png){fig-align="center"}
+
+# Bar Graphs
+
+## Bad Bar Graph
+
+![](image/bar-graph-bad.png){fig-align="center"}
+
+## Good Bar Graph
+
+![](image/bar-graph-good.png){fig-align="center"}
+
+# Line Graph
+
+## Bad Line Graph
+
+![](image/line-graph-bad.png){fig-align="center"}
+
+## Good Line Graph
+
+![](image/line-graph-good.png){fig-align="center"}
+
+# Boxplots (box-whisker diagrams)
+
+## Bad Boxplots
+
+![](image/boxplot-bad.png){fig-align="center"}
+
+## Boxplot
+
+![](image/boxplot.png){fig-align="center"}
+
+## Good Boxplots
+
+![](image/boxplot-good.png){fig-align="center"}
+
+# The Scatterplot
+
+## Graphing Relationships: the Scatterplot
+
+-   A graph that plot each person's score on one variable against their score on another.
+
+-   Highlights whether there might be a relationship between the variables.
+
+## Bad Scatterplot
+
+![](image/scatterplot-bad.png){fig-align="center"}
+
+## Good Scatterplot
+
+![](image/scatterplot-good.png){fig-align="center"}
+
+## 😺Message from Milton
+
+![](image/scatterplot-types.png){fig-align="center"}
+
+# Pie Charts
+
+## Pie charts
+
+"pie charts are not proper graphs, they are idiocy fodder of business people and politicians."
+
+![](image/piechart.png){fig-align="center"}
+
+## *RAW DATA*
+
+![](image/jigsaw-break.png){fig-align="center"}

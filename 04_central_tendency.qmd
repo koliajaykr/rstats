@@ -517,7 +517,6 @@ The point is that on average the estimate is better, not necessarily for a parti
 :::
 
 ::: {.column width="50%"}
-
 ![](image/degree-of-freedom.png){fig-align="center" width="367"}
 :::
 :::
@@ -594,7 +593,7 @@ The point is that on average the estimate is better, not necessarily for a parti
 
 ![](image/iqrange.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ### *Alice's average RAS score,* $\bar{X}=30$, $SD=1.22$, was higher than the national average
 
