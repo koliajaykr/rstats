@@ -1,0 +1,174 @@
+---
+title: "Z-SCORES🫦"
+subtitle: "06 - Statistics with R"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+    chalkboard: true
+editor: visual
+---
+
+## Objectives: {background-image="image/jigsaw-poster.png" background-opacity=".1"}
+
+-   Interpreting raw score
+
+-   Standardizing a score
+
+-   Using z-scores to compare distributions
+
+-   Using z-scores to compare scores
+
+-   z-scores for samples
+
+## *Celia ID*
+
+![](image/celia-id.png){fig-align="center"}
+
+## Zach's Score for JIG:SAW Job
+
+-   Creativity 30
+
+-   IQ 125
+
+-   Emotional intelligence 165
+
+# Interpreting Raw Score
+
+## Interpreting Raw Score
+
+"it is useful to interpret a **raw score** within the context of the distribution"
+
+-   Your interpretation of your score is affected by knowing about the average score.
+
+    -   Your score less than average
+
+    -   Your score more than average
+
+    -   Your score is equal to the average
+
+-   But mean/average alone is not enough
+
+## Interpreting Raw Score
+
+![](image/raw-score1.png){fig-align="center"}
+
+# Standardizing A Score
+
+## Standardizing A Score
+
+-   Raw Score is in its original units of measurement
+
+-   Transformation, need to z-score it.
+
+-   Turn the raw score, $X$ into a standardized score, which we call $z$.
+
+## Standardizing A Score
+
+$$
+Population\\z=\frac{X-\mu}{\sigma}
+$$
+
+$$
+Sample\\
+z=\frac{X-\bar{X}}{s}
+$$
+
+## Standardizing A Score
+
+![](image/z-score.png){fig-align="center"}
+
+## Standardizing A Score
+
+-   Scores are sometime expressed in a standard form known as z-scores.
+
+-   To transform a score into a z-score you subtract from it the mean of all scores and divided the result by the standard deviation of all scores.
+
+## Standardizing A Score
+
+-   The sign of the z-score tells us whether the original score was above or below the mean;
+
+-   The value of the z-score tell us how far the score was from the mean in standard deviation units.
+
+-   Therefore, a z-score tell us about the location of a score within the distribution.
+
+## Standardizing A Score
+
+$$
+z=\frac{X-\mu}{\sigma}=\frac{22-18}{10}=0.4
+$$
+
+$$
+z=\frac{X-\mu}{\sigma}=\frac{22-18}{5}=0.8
+$$
+
+-   z-score is larger for the second test so, Zach did good in the second test
+
+# Using z-Scores To Compare Distributions
+
+## Using z-scores To Compare Distributions
+
+-   Zach has 125 IQ, 30 on creativity and 165 on EI (emotional intelligence)
+
+-   
+
+    | Variable   | Mean | Standard Deviation |
+    |------------|------|--------------------|
+    | IQ         | 136  | 39                 |
+    | Creativity | 32   | 19                 |
+    | EI         | 168  | 32                 |
+
+## z-score of Zach
+
+| Variable   | Mean | Standard Deviation | z-score |
+|------------|------|--------------------|---------|
+| IQ         | 136  | 39                 | -0.28   |
+| Creativity | 32   | 19                 | -0.11   |
+| EI         | 168  | 32                 | -0.09   |
+
+## Raw score and z-score
+
+![](image/z-comparable.png){fig-align="center"}
+
+## Standardize Score
+
+![](image/z-standardize.png){fig-align="center"}
+
+## z-score distributions
+
+If you convert an entire distribution of scores to z-scores:
+
+-   The shape of the distribution is unchanged.
+
+-   The transformed distribution will have a mean of 0.
+
+-   The transformed distribution will have a standard deviation of 1.
+
+## z-score distributions
+
+Two distributions of scores that have been converted to z-scores are directly comparable - irrespective of their original units of measurement - because the conversion changes the units of measurement to standard deviations.
+
+## z-score distributions
+
+Once you have converted an entire distribution of scores to z-scores, you can further transform the scores to have any mean or standard deviation you want by multiplying each score by the desired standard deviation and then adding the desired value of the mean.
+
+# USING Z-SCORES TO COMPARE SCORES
+
+## Using z-scores to compare scores
+
+![](image/z-compare.png){fig-align="center"}
+
+# Z-SCORES FOR SAMPLES
+
+## z-scores for samples
+
+![](image/z-sample.png){fig-align="center"}
+
+## Zach's IQ 0.5, creativity 1.78 & EI 0.76
+
+![](image/chap6-end.png){fig-align="center"}
