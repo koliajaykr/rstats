@@ -1,0 +1,201 @@
+---
+title: "💀PROBABILITY💀"
+subtitle: "07 - The Bridge of Death"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+    chalkboard: true
+editor: visual
+---
+
+## Objectives: {background-image="image/bkg-ch7.png" background-opacity=".5"}
+
+-   Probability
+
+    -   Classical
+
+    -   Empirical
+
+-   Probability & frequency distributions
+
+    -   Probability density functions
+
+    -   Probability and the normal distribution
+
+    -   The probability of a score greater than x
+
+-   Conditional probability
+
+## JIGSAW
+
+![](image/jigsaw-bridge.png){fig-align="center"}
+
+# PROBABILITY
+
+```{r}
+#| echo: false
+library(xaringanExtra)
+```
+
+## Probability
+
+-   Classical / Theoretical Probability
+
+-   Empirical Probability
+
+## Key Concepts in Probability
+
+-   Experiment
+
+-   Outcome
+
+-   Sample space
+
+-   Trial
+
+-   Random Sample
+
+    -   Sampling with replacement
+
+    -   Sampling without replacement
+
+-   Event
+
+## Probability Theory
+
+![](image/phone-friends.png){fig-align="center"}
+
+## *Friends*
+
+-   Imagine you have total five friends
+
+-   Select one of these friends. Each selection is known as experiment.
+
+-   **Experiment** "refers to any procedure that can be repeated and that has a well-defined **outcome** or set of outcomes."
+
+-   The complete set of possible outcomes is known as the **sample space**.
+
+-   A particular instance of the experiment is known as a **trial.**
+
+## ***Friends***
+
+-   **Random sample:** "means that each of the five contacts in your phone has an equal chance of being selected"
+
+    -   **Sampling with replacement**: the name that has been selected or "sampled" is replaced back into the sample space.
+
+    -   **Sampling without replacement:** once an item is selected or "sampled" it is not put back into the sample space and it cannot be selected on a subsequent trial.
+
+## *Friends*
+
+-   **Events**: An event is an outcome or set of outcomes of an experiment, and it is something to which we can assign a probability
+
+-   An event can be any outcome that interests you.
+
+    -   Single outcome, selecting Joel
+
+    -   A set of outcomes, selecting a woman, man with glasses, no hair, dark hair.
+
+## Classical Probability
+
+In classical probability, if we assume that every outcome is equally likely then the probability of an event is the frequency with which that event occurs divided by the total number of possible outcomes (the sample space).
+
+$$
+P(x)=\frac{frequency(x)}{sample\;space}=\frac{f(x)}{sample\;space}
+$$
+
+## *Selecting Joel* is your Event
+
+$$
+P(Joel)=\frac{f(Joel)}{sample\;space}=\frac{1}{5}=0.2
+$$
+
+-   A probability value is a proportion, convert them into percentages by multiplying them by 100.
+
+## Probability Interpretation
+
+-   Probability as a scale that ranges from 0 to 1.
+
+-   A probability of 0 means that an event is ***impossible***, and
+
+-   A probability of 1 means that an event is ***certain***
+
+-   A probability of 0.5 means that an event is just as likely to happen as it is to not happen.
+
+## Probability Interpretation
+
+-   A probability between 0.5 to 1 means that an event is more ***likely*** to happen than not, and the closer to 1 it gets, the more likely it is to happen.
+
+-   A probability between 0 and 0.5 means that an event is more ***unlikel***y to happen than to happen, and the closer to 0 it gets, the less likely it is to happen.
+
+## *Selecting a Woman* is your Event
+
+$$
+P(woman)=\frac{f(woman)}{sample\;space}=\frac{2}{5}=0.4
+$$
+
+## YOUR TURN 🧠 {background-color="#FFFACD"}
+
+### What would be the probability of
+
+1.  selecting a male
+
+2.  selecting a bald person
+
+3.  selecting someone with glasses
+
+## **Bernoulli Trail**
+
+-   An experiment or trial that has only two outcomes is known as a Bernoulli trail.
+-   It assumes that each outcome is equally likely.
+
+## Classical Probability
+
+-   The classical probability of an outcome is the theoretical frequency of that outcome divided by the total number of possible outcomes (the sample space).
+
+-   $$
+    P(x)=\frac{frequency(x)}{sample\;space}=\frac{f(x)}{sample\;space}
+    $$
+
+## Empirical Probability
+
+-   The empirical probability of an outcome is the observed frequency of that outcome divided by the total number of observed outcomes (the sample space).
+
+-   It is same as the relative frequency.
+
+-   $$
+    relative\;frequency=\frac{frequency\;of\;outcome}{total\;number\;of\;outcomes}=\frac{f}{N}
+    $$
+
+## Empirical Probability
+
+![](image/emp-probability.png){fig-align="center"}
+
+## Empirical Probability
+
+$$
+empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
+$$
+
+## Probability
+
+-   Probability values vary from 0 (impossible) to 1 (certain), with 0.5 meaning that an event is as likely to happen as it is not to happen. They cannot be negative.
+
+-   Probabilities are proportions, and so can be multiplied by 100 and expressed as percentages:
+
+    -   0% = impossible to occur,
+
+    -   50% = as likely to occur as not,
+
+    -   100% = certain to occur.
+
+# PROBABILITY & FREQUENCY DISTRIBUTIONS {background-image="image/discs-death.png" background-opacity=".1"}
+
+## The Discs of Death
+
+![](image/discs-death.png){fig-align="center"}
