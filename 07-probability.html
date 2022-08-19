@@ -350,11 +350,9 @@
 
 <img data-src="image/jigsaw-bridge.png" class="r-stretch quarto-figure-center"></section>
 <section>
-<section id="probability" class="title-slide slide level1 center">
+<section id="probability" class="title-slide slide level1 center" data-background-image="image/jigsaw-bridge.png" data-background-opacity=".1">
 <h1>PROBABILITY</h1>
-<div class="cell">
 
-</div>
 </section>
 <section id="probability-1" class="slide level2">
 <h2>Probability</h2>
@@ -515,13 +513,75 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 </section>
 <section id="the-discs-of-death" class="slide level2">
 <h2>The Discs of Death</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="image/discs-death.png"></p>
-</figure>
+
+<img data-src="image/discs-death.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-discs-of-death-1" class="slide level2">
+<h2>The Discs of Death</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Red Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=33\)</span>, <span class="math inline">\(\sigma=8\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Blue Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=45\)</span>, <span class="math inline">\(\sigma=2\)</span></li>
+</ul>
 </div>
-<p><img src="image/logo.png" class="slide-logo"></p>
-<div class="footer footer-default">
+</div>
+<ul>
+<li class="fragment"><em>Calculate the probability that each of the two discs exceeds a certain speed.</em></li>
+</ul>
+</section>
+<section id="frequency-distributions" class="slide level2">
+<h2>Frequency Distributions</h2>
+
+<img data-src="image/freq-distributions.png" class="r-stretch quarto-figure-center"></section>
+<section id="frequency-distributions-1" class="slide level2">
+<h2>Frequency Distributions</h2>
+<p>What is the probability of someone scoring 22?</p>
+
+<img data-src="image/freq-distributions.png" class="r-stretch quarto-figure-center"></section>
+<section id="frequency-distributions-2" class="slide level2">
+<h2>Frequency Distributions</h2>
+<p>What if I wanted to know the probability that a score was higher than 22?</p>
+
+<img data-src="image/freq-distributions.png" class="r-stretch quarto-figure-center"><ul>
+<li class="fragment">The key thing is that this demonstrates that the area of any histogram represents probability.</li>
+</ul>
+</section>
+<section id="probability-density-functions" class="slide level2">
+<h2>Probability Density Functions:</h2>
+<h4 id="idealized-versions-of-histograms">Idealized Versions of Histograms</h4>
+
+<img data-src="image/ideal-histogram.png" class="r-stretch quarto-figure-center"></section>
+<section id="probability-density-functions-1" class="slide level2">
+<h2>Probability Density Functions</h2>
+<p>The area under the curve represents probability which is equal to 1 or the probability of all scores summed together is 1.</p>
+
+<img data-src="image/prob-density-function.png" class="r-stretch quarto-figure-center"></section>
+<section id="probability-density-functions-2" class="slide level2">
+<h2>Probability Density Functions</h2>
+
+<img data-src="image/prob-density-fun1.png" class="r-stretch quarto-figure-center"></section>
+<section id="probability-density-functions-3" class="slide level2">
+<h2>Probability Density Functions</h2>
+
+<img data-src="image/prob-density-fun2.png" class="r-stretch quarto-figure-center"></section>
+<section id="probability-and-the-normal-distribution" class="slide level2">
+<h2>Probability and the Normal Distribution</h2>
+<p>Standard Normal Distribution has mean 0 and standard deviation 1.</p>
+<p>We can convert any distribution of raw scores into <span class="math inline">\(z\)</span>-scores.</p>
+</section>
+<section id="areas-under-standard-normal-distribution" class="slide level2">
+<h2>Areas under Standard Normal Distribution</h2>
+
+<img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
+<section id="normal-distribution" class="slide level2">
+<h2>Normal Distribution</h2>
+
+<img src="image/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://nalanda-academy.org/">Nalanda Academy</a></p>
 </div>
 </section></section>
@@ -738,48 +798,6 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

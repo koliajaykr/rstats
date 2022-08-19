@@ -36,12 +36,7 @@ editor: visual
 
 ![](image/jigsaw-bridge.png){fig-align="center"}
 
-# PROBABILITY
-
-```{r}
-#| echo: false
-library(xaringanExtra)
-```
+# PROBABILITY {background-image="image/jigsaw-bridge.png" background-opacity=".1"}
 
 ## Probability
 
@@ -199,3 +194,71 @@ $$
 ## The Discs of Death
 
 ![](image/discs-death.png){fig-align="center"}
+
+## The Discs of Death
+
+::: columns
+::: {.column width="50%"}
+**Red Disc**
+
+-   RPM: $\mu=33$, $\sigma=8$
+:::
+
+::: {.column width="50%"}
+**Blue Disc**
+
+-   RPM: $\mu=45$, $\sigma=2$
+:::
+:::
+
+-   *Calculate the probability that each of the two discs exceeds a certain speed.*
+
+## Frequency Distributions
+
+![](image/freq-distributions.png){fig-align="center"}
+
+## Frequency Distributions
+
+What is the probability of someone scoring 22?
+
+![](image/freq-distributions.png){fig-align="center"}
+
+## Frequency Distributions
+
+What if I wanted to know the probability that a score was higher than 22?
+
+![](image/freq-distributions.png){fig-align="center"}
+
+-   The key thing is that this demonstrates that the area of any histogram represents probability.
+
+## Probability Density Functions:
+
+#### Idealized Versions of Histograms
+
+![](image/ideal-histogram.png){fig-align="center"}
+
+## Probability Density Functions
+
+The area under the curve represents probability which is equal to 1 or the probability of all scores summed together is 1.
+
+![](image/prob-density-function.png){fig-align="center"}
+
+## Probability Density Functions
+
+![](image/prob-density-fun1.png){fig-align="center"}
+
+## Probability Density Functions
+
+![](image/prob-density-fun2.png){fig-align="center"}
+
+## Probability and the Normal Distribution
+
+Standard Normal Distribution has mean 0 and standard deviation 1.
+
+We can convert any distribution of raw scores into $z$-scores.
+
+## Areas under Standard Normal Distribution
+
+![](image/areas-standard-normal-dist.png){fig-align="center"}
+
+## Normal Distribution
