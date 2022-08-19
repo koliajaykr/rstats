@@ -531,11 +531,14 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 </div>
 </div>
 <ul>
-<li class="fragment"><em>Calculate the probability that each of the two discs exceeds a certain speed.</em></li>
+<li class="fragment"><strong><em>Calculate the probability that each of the two discs exceeds a certain speed.</em></strong></li>
 </ul>
 </section>
 <section id="frequency-distributions" class="slide level2">
 <h2>Frequency Distributions</h2>
+<ul>
+<li class="fragment">They tell us about probability.</li>
+</ul>
 
 <img data-src="image/freq-distributions.png" class="r-stretch quarto-figure-center"></section>
 <section id="frequency-distributions-1" class="slide level2">
@@ -547,13 +550,26 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 <h2>Frequency Distributions</h2>
 <p>What if I wanted to know the probability that a score was higher than 22?</p>
 
-<img data-src="image/freq-distributions.png" class="r-stretch quarto-figure-center"><ul>
-<li class="fragment">The key thing is that this demonstrates that the area of any histogram represents probability.</li>
+<img data-src="image/freq-distributions.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-key-thing-is-that-this-demonstrates-that-the-area-of-any-histogram-represents-probability." class="slide level2">
+<h2>💡 The key thing is that this demonstrates that the area of any histogram represents probability.</h2>
+</section>
+<section id="put-histogram-in-hat" class="slide level2">
+<h2>Put Histogram in Hat</h2>
+<ul>
+<li class="fragment"><p>Cut histogram in 100 squares</p></li>
+<li class="fragment"><p>Place in hat:</p>
+<ul>
+<li class="fragment"><p>21 green squares (Probability of green squares or probability that the score is higher than the 22)</p></li>
+<li class="fragment"><p>1 red square</p></li>
+<li class="fragment"><p>78 blue square (Probability of blue squres)</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="probability-density-functions" class="slide level2">
 <h2>Probability Density Functions:</h2>
-<h4 id="idealized-versions-of-histograms">Idealized Versions of Histograms</h4>
+<p>What if there are not 100 squares?</p>
+<h4 id="idealized-versions-of-histograms-using-whole-scores-and-potential-scores">Idealized Versions of Histograms using whole scores and potential scores</h4>
 
 <img data-src="image/ideal-histogram.png" class="r-stretch quarto-figure-center"></section>
 <section id="probability-density-functions-1" class="slide level2">
@@ -571,15 +587,123 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 <img data-src="image/prob-density-fun2.png" class="r-stretch quarto-figure-center"></section>
 <section id="probability-and-the-normal-distribution" class="slide level2">
 <h2>Probability and the Normal Distribution</h2>
-<p>Standard Normal Distribution has mean 0 and standard deviation 1.</p>
-<p>We can convert any distribution of raw scores into <span class="math inline">\(z\)</span>-scores.</p>
+<ul>
+<li class="fragment"><p>Standard Normal Distribution has mean 0 and standard deviation 1.</p></li>
+<li class="fragment"><p>If we think that the distribution is normal then we can convert any distribution of raw scores into <span class="math inline">\(z\)</span>-scores.</p></li>
+</ul>
 </section>
 <section id="areas-under-standard-normal-distribution" class="slide level2">
 <h2>Areas under Standard Normal Distribution</h2>
+<ul>
+<li class="fragment"><p>Normal Distribution</p></li>
+<li class="fragment"><p>Probability density function</p></li>
+<li class="fragment"><p>Standard Normal Distribution</p></li>
+<li class="fragment"><p>Area under it equal a probability of 1</p></li>
+<li class="fragment"><p>We can start to think about how different areas translate into different probabilities.</p></li>
+</ul>
+</section>
+<section id="areas-under-standard-normal-distribution-1" class="slide level2">
+<h2>Areas under Standard Normal Distribution</h2>
 
 <img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
-<section id="normal-distribution" class="slide level2">
-<h2>Normal Distribution</h2>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-above-the-mean" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within one standard deviation <em>above</em> the mean?</h2>
+
+<img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-of-the-mean" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within one standard deviation of the mean?</h2>
+
+<img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-of-the-mean-1" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within one standard deviation of the mean?</h2>
+<ul>
+<li class="fragment"><p>z-scores of -1 and +1</p></li>
+<li class="fragment"><p><span class="math inline">\(34.13\%\;+34.13\%=68.26\%\)</span></p></li>
+</ul>
+<!-- -->
+<ul>
+<li class="fragment">There is a .6826 probability of a score falling within a standard deviation of the mean</li>
+</ul>
+</section>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-2-standard-deviations-of-the-mean" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?</h2>
+<ul>
+<li class="fragment"><p>Z-scores of -2 and +2</p></li>
+<li class="fragment"><p><span class="math inline">\(13.59\%+34.13\%\;+34.13\%+13.59\%=68.26\%\)</span></p></li>
+</ul>
+<!-- -->
+<ul>
+<li class="fragment">There is a 95.44% probability of a score falling within 2 standard deviations of the mean</li>
+</ul>
+</section>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-2-standard-deviations-of-the-mean-1" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?</h2>
+
+<img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
+<section id="standard-normal-distribution" class="slide level2">
+<h2>Standard Normal Distribution</h2>
+<ul>
+<li class="fragment"><p>68% of scores fall within 1 standard deviation above or below of the mean</p></li>
+<li class="fragment"><p>95% between two standard deviations,</p></li>
+<li class="fragment"><p>99% between three standard deviations.</p></li>
+</ul>
+</section>
+<section id="standard-normal-distribution-1" class="slide level2">
+<h2>Standard Normal Distribution</h2>
+
+<img data-src="image/stand-normal-dist-table.png" class="r-stretch quarto-figure-center"></section>
+<section id="table-of-standard-normal-distribution" class="slide level2">
+<h2>Table of Standard Normal Distribution</h2>
+
+<img data-src="image/stand-normal-dist-table2.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-discs-of-death-2" class="slide level2">
+<h2>The Discs of Death</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Red Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=33\)</span>, <span class="math inline">\(\sigma=8\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Blue Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=45\)</span>, <span class="math inline">\(\sigma=2\)</span></li>
+</ul>
+</div>
+</div>
+<ul>
+<li class="fragment"><strong><em>Calculate the probability that each of the two discs exceeds a certain speed.</em></strong>
+<ul>
+<li class="fragment">Provided we convert the score into a z-score.</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-probability-of-a-score-greater-than-x" class="slide level2">
+<h2>The Probability of a Score greater than x</h2>
+
+<img data-src="image/disc-z-score.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-discs-of-death-3" class="slide level2">
+<h2>The Discs of Death</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Red Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=33\)</span>, <span class="math inline">\(\sigma=8\)</span></li>
+<li class="fragment">z = 2.13</li>
+<li class="fragment">1.66%</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Blue Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=45\)</span>, <span class="math inline">\(\sigma=2\)</span></li>
+<li class="fragment">z = 2.50</li>
+<li class="fragment">0.62%</li>
+</ul>
+</div>
+</div>
+<ul>
+<li class="fragment"></li>
+</ul>
 
 <img src="image/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://nalanda-academy.org/">Nalanda Academy</a></p>

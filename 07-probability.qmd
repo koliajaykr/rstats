@@ -211,9 +211,11 @@ $$
 :::
 :::
 
--   *Calculate the probability that each of the two discs exceeds a certain speed.*
+-   ***Calculate the probability that each of the two discs exceeds a certain speed.***
 
 ## Frequency Distributions
+
+-   They tell us about probability.
 
 ![](image/freq-distributions.png){fig-align="center"}
 
@@ -229,11 +231,25 @@ What if I wanted to know the probability that a score was higher than 22?
 
 ![](image/freq-distributions.png){fig-align="center"}
 
--   The key thing is that this demonstrates that the area of any histogram represents probability.
+## 💡 The key thing is that this demonstrates that the area of any histogram represents probability.
+
+## Put Histogram in Hat
+
+-   Cut histogram in 100 squares
+
+-   Place in hat:
+
+    -   21 green squares (Probability of green squares or probability that the score is higher than the 22)
+
+    -   1 red square
+
+    -   78 blue square (Probability of blue squres)
 
 ## Probability Density Functions:
 
-#### Idealized Versions of Histograms
+What if there are not 100 squares?
+
+#### Idealized Versions of Histograms using whole scores and potential scores
 
 ![](image/ideal-histogram.png){fig-align="center"}
 
@@ -253,12 +269,117 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 ## Probability and the Normal Distribution
 
-Standard Normal Distribution has mean 0 and standard deviation 1.
+-   Standard Normal Distribution has mean 0 and standard deviation 1.
 
-We can convert any distribution of raw scores into $z$-scores.
+-   If we think that the distribution is normal then we can convert any distribution of raw scores into $z$-scores.
+
+## Areas under Standard Normal Distribution
+
+-   Normal Distribution
+
+-   Probability density function
+
+-   Standard Normal Distribution
+
+-   Area under it equal a probability of 1
+
+-   We can start to think about how different areas translate into different probabilities.
 
 ## Areas under Standard Normal Distribution
 
 ![](image/areas-standard-normal-dist.png){fig-align="center"}
 
-## Normal Distribution
+## What is the probability that if we pick a random score it will fall within one standard deviation *above* the mean?
+
+![](image/areas-standard-normal-dist.png){fig-align="center"}
+
+## What is the probability that if we pick a random score it will fall within one standard deviation of the mean?
+
+![](image/areas-standard-normal-dist.png){fig-align="center"}
+
+## What is the probability that if we pick a random score it will fall within one standard deviation of the mean?
+
+-   z-scores of -1 and +1
+
+-   $34.13\%\;+34.13\%=68.26\%$
+
+```{=html}
+<!-- -->
+```
+-   There is a .6826 probability of a score falling within a standard deviation of the mean
+
+## What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?
+
+-   Z-scores of -2 and +2
+
+-   $13.59\%+34.13\%\;+34.13\%+13.59\%=68.26\%$
+
+```{=html}
+<!-- -->
+```
+-   There is a 95.44% probability of a score falling within 2 standard deviations of the mean
+
+## What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?
+
+![](image/areas-standard-normal-dist.png){fig-align="center"}
+
+## Standard Normal Distribution
+
+-   68% of scores fall within 1 standard deviation above or below of the mean
+
+-   95% between two standard deviations,
+
+-   99% between three standard deviations.
+
+## Standard Normal Distribution
+
+![](image/stand-normal-dist-table.png){fig-align="center"}
+
+## Table of Standard Normal Distribution
+
+![](image/stand-normal-dist-table2.png){fig-align="center"}
+
+## The Discs of Death
+
+::: columns
+::: {.column width="50%"}
+**Red Disc**
+
+-   RPM: $\mu=33$, $\sigma=8$
+:::
+
+::: {.column width="50%"}
+**Blue Disc**
+
+-   RPM: $\mu=45$, $\sigma=2$
+:::
+:::
+
+-   ***Calculate the probability that each of the two discs exceeds a certain speed.***
+    -   Provided we convert the score into a z-score.
+
+## The Probability of a Score greater than x
+
+![](image/disc-z-score.png){fig-align="center"}
+
+## The Discs of Death
+
+::: columns
+::: {.column width="50%"}
+**Red Disc**
+
+-   RPM: $\mu=33$, $\sigma=8$
+-   z = 2.13
+-   1.66%
+:::
+
+::: {.column width="50%"}
+**Blue Disc**
+
+-   RPM: $\mu=45$, $\sigma=2$
+-   z = 2.50
+-   0.62%
+:::
+:::
+
+-   
