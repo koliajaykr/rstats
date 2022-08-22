@@ -556,19 +556,25 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 </section>
 <section id="put-histogram-in-hat" class="slide level2">
 <h2>Put Histogram in Hat</h2>
+<p>Cut histogram in 100 squares &amp; place in a hat</p>
 <ul>
-<li class="fragment"><p>Cut histogram in 100 squares</p></li>
-<li class="fragment"><p>Place in hat:</p>
+<li class="fragment"><p>Probability of 21 green squares.</p>
 <ul>
-<li class="fragment"><p>21 green squares (Probability of green squares or probability that the score is higher than the 22)</p></li>
-<li class="fragment"><p>1 red square</p></li>
-<li class="fragment"><p>78 blue square (Probability of blue squres)</p></li>
+<li class="fragment">Probability that the score is higher than the 22.</li>
 </ul></li>
+<li class="fragment"><p>Probability of 1 red square.</p>
+<ul>
+<li class="fragment">Probability that one 22 score.</li>
+</ul></li>
+<li class="fragment"><p>Probability of 78 blue squares.</p>
+<ul>
+<li class="fragment">Probability that the score is lower than 22.</li>
+</ul></li>
+<li class="fragment"><p><strong><em>What if there are not 100 squares?</em></strong> <strong>🤔</strong></p></li>
 </ul>
 </section>
 <section id="probability-density-functions" class="slide level2">
 <h2>Probability Density Functions:</h2>
-<p>What if there are not 100 squares?</p>
 <h4 id="idealized-versions-of-histograms-using-whole-scores-and-potential-scores">Idealized Versions of Histograms using whole scores and potential scores</h4>
 
 <img data-src="image/ideal-histogram.png" class="r-stretch quarto-figure-center"></section>
@@ -612,9 +618,17 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 <img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
 <section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-of-the-mean" class="slide level2">
 <h2>What is the probability that if we pick a random score it will fall within one standard deviation of the mean?</h2>
+<ul>
+<li class="fragment"><p>z-scores of +1</p></li>
+<li class="fragment"><p><span class="math inline">\(34.13\%\)</span></p></li>
+<li class="fragment"><p>There is a .3413 probability of a score falling within a standard deviation of the mean</p></li>
+</ul>
+</section>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-of-the-mean-1" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within one standard deviation of the mean?</h2>
 
 <img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
-<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-of-the-mean-1" class="slide level2">
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-one-standard-deviation-of-the-mean-2" class="slide level2">
 <h2>What is the probability that if we pick a random score it will fall within one standard deviation of the mean?</h2>
 <ul>
 <li class="fragment"><p>z-scores of -1 and +1</p></li>
@@ -636,8 +650,8 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 <li class="fragment">There is a 95.44% probability of a score falling within 2 standard deviations of the mean</li>
 </ul>
 </section>
-<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-2-standard-deviations-of-the-mean-1" class="slide level2">
-<h2>What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?</h2>
+<section id="what-is-the-probability-that-if-we-pick-a-random-score-it-will-fall-within-3-standard-deviations-of-the-mean" class="slide level2">
+<h2>What is the probability that if we pick a random score it will fall within 3 standard deviations of the mean?</h2>
 
 <img data-src="image/areas-standard-normal-dist.png" class="r-stretch quarto-figure-center"></section>
 <section id="standard-normal-distribution" class="slide level2">
@@ -678,10 +692,6 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 </ul></li>
 </ul>
 </section>
-<section id="the-probability-of-a-score-greater-than-x" class="slide level2">
-<h2>The Probability of a Score greater than x</h2>
-
-<img data-src="image/disc-z-score.png" class="r-stretch quarto-figure-center"></section>
 <section id="the-discs-of-death-3" class="slide level2">
 <h2>The Discs of Death</h2>
 <div class="columns">
@@ -689,7 +699,34 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 <p><strong>Red Disc</strong></p>
 <ul>
 <li class="fragment">RPM: <span class="math inline">\(\mu=33\)</span>, <span class="math inline">\(\sigma=8\)</span></li>
+<li class="fragment"><span class="math display">\[
+z=\frac{X-\mu}{\sigma}\\=\frac{50-33}{8}=2.13
+\]</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Blue Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=45\)</span>, <span class="math inline">\(\sigma=2\)</span></li>
+<li class="fragment"><span class="math display">\[
+z=\frac{X-\mu}{\sigma}\\=\frac{50-45}{8}=2.50
+\]</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="the-probability-of-a-score-greater-than-x" class="slide level2">
+<h2>The Probability of a Score greater than x</h2>
+
+<img data-src="image/disc-z-score.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-discs-of-death-4" class="slide level2">
+<h2>The Discs of Death</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Red Disc</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=33\)</span>, <span class="math inline">\(\sigma=8\)</span></li>
 <li class="fragment">z = 2.13</li>
+<li class="fragment">0.01659</li>
 <li class="fragment">1.66%</li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -697,15 +734,151 @@ empirical\;p(x)=\frac{frequency(x)}{sample\;space}=\frac{f}{N}
 <ul>
 <li class="fragment">RPM: <span class="math inline">\(\mu=45\)</span>, <span class="math inline">\(\sigma=2\)</span></li>
 <li class="fragment">z = 2.50</li>
+<li class="fragment">0.00621</li>
 <li class="fragment">0.62%</li>
 </ul>
 </div>
 </div>
-<ul>
-<li class="fragment"></li>
-</ul>
+</section>
+<section id="the-probability-of-a-score-less-than-x-the-tunnels-of-death" class="slide level2">
+<h2>The Probability of a Score Less Than X: The Tunnels of Death</h2>
 
-<img src="image/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<img data-src="image/tunnel.png" class="r-stretch quarto-figure-center"></section>
+<section id="zach-can-run-5-metres" class="slide level2">
+<h2>Zach can run 5 metres</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Left Tunnel</strong></p>
+<ul>
+<li class="fragment">Average length: <span class="math inline">\(\mu=4.5\)</span>, <span class="math inline">\(\sigma=1.5\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Right Tunnel</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=4\)</span>, <span class="math inline">\(\sigma=1\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="the-tunnels-of-death" class="slide level2">
+<h2>The Tunnels of Death</h2>
+
+<img data-src="image/tunnel-z.png" class="r-stretch quarto-figure-center"></section>
+<section id="zach-can-run-5-metres-1" class="slide level2">
+<h2>Zach can run 5 metres</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Left Tunnel</strong></p>
+<ul>
+<li class="fragment">Average length: <span class="math inline">\(\mu=4.5\)</span>, <span class="math inline">\(\sigma=1.5\)</span></li>
+<li class="fragment">z = 0.33</li>
+<li class="fragment">0.62930</li>
+<li class="fragment">63%</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Right Tunnel</strong></p>
+<ul>
+<li class="fragment">RPM: <span class="math inline">\(\mu=4\)</span>, <span class="math inline">\(\sigma=1\)</span></li>
+<li class="fragment">z = 1</li>
+<li class="fragment">0.84134</li>
+<li class="fragment">84%</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="the-probability-of-a-score-between-two-values-the-catapults-of-death" class="slide level2">
+<h2>The Probability of a Score between Two Values: The Catapults of Death</h2>
+
+<img data-src="image/catapult.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-catapults-of-death" class="slide level2">
+<h2>The Catapults of Death</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Left Catapult</strong></p>
+<ul>
+<li class="fragment">Shot distance: <span class="math inline">\(\mu=103\)</span> <span class="math inline">\(\sigma=2\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Right Catapult</strong></p>
+<ul>
+<li class="fragment">Shot distance: <span class="math inline">\(\mu=97\)</span> <span class="math inline">\(\sigma=5\)</span></li>
+</ul>
+</div>
+</div>
+<ul>
+<li class="fragment"><p>Distance to the net is 100 meters and the net itself is 5 metres wide.</p></li>
+<li class="fragment"><p>Zach and Milton need a catapult that will throw them between 100 and 105 metres.</p></li>
+</ul>
+</section>
+<section id="the-catapults-of-death-1" class="slide level2">
+<h2>The Catapults of Death</h2>
+
+<img data-src="image/catapult-z.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-catapults-of-death-2" class="slide level2">
+<h2>The Catapults of Death</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Left Catapult</strong></p>
+<ul>
+<li class="fragment"><p>Shot distance: <span class="math inline">\(\mu=103\)</span> <span class="math inline">\(\sigma=2\)</span></p></li>
+<li class="fragment"><p>z = -1.5 and z = 1</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Right Catapult</strong></p>
+<ul>
+<li class="fragment"><p>Shot distance: <span class="math inline">\(\mu=97\)</span> <span class="math inline">\(\sigma=5\)</span></p></li>
+<li class="fragment"><p>z = 0.6 and z = 1.6</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="left-catapult" class="slide level2">
+<h2>Left Catapult</h2>
+<h3 id="for-100-meter">For 100 meter</h3>
+<p><span class="math display">\[
+z=\frac{X-\mu}{\sigma}=\frac{100-103}{2}=-1.5
+\]</span></p>
+<h3 id="for-105-meter">For 105 meter</h3>
+<p><span class="math display">\[
+z=\frac{X-\mu}{\sigma}=\frac{105-103}{2}=1
+\]</span></p>
+</section>
+<section id="right-catapult" class="slide level2">
+<h2>Right Catapult</h2>
+<h3 id="for-100-meter-1">For 100 meter</h3>
+<p><span class="math display">\[
+z=\frac{X-\mu}{\sigma}=\frac{100-97}{5}=0.6
+\]</span></p>
+<h3 id="for-105-meter-1">For 105 meter</h3>
+<p><span class="math display">\[
+z=\frac{X-\mu}{\sigma}=\frac{105-97}{5}=1.6
+\]</span></p>
+</section>
+<section id="probability-of-a-score-between-two-values" class="slide level2">
+<h2>Probability of a score between two values</h2>
+<h3 id="left-catapult-1">Left Catapult</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(1-0.067-0.159\\=0.774\\=77.4\%\)</span></li>
+</ul>
+<h3 id="right-catapult-1">Right Catapult</h3>
+<ul>
+<li class="fragment"><span class="math inline">\(1-0.72575-0.05480\\=0.219\\=21.9\%\)</span></li>
+</ul>
+</section></section>
+<section>
+<section id="conditional-probability" class="title-slide slide level1 center">
+<h1>CONDITIONAL PROBABILITY</h1>
+
+</section>
+<section id="deathscotch" class="slide level2">
+<h2>Deathscotch</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="image/death.png"></p>
+</figure>
+</div>
+<p><img src="image/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://nalanda-academy.org/">Nalanda Academy</a></p>
 </div>
 </section></section>

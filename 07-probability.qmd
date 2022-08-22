@@ -235,19 +235,23 @@ What if I wanted to know the probability that a score was higher than 22?
 
 ## Put Histogram in Hat
 
--   Cut histogram in 100 squares
+Cut histogram in 100 squares & place in a hat
 
--   Place in hat:
+-   Probability of 21 green squares.
 
-    -   21 green squares (Probability of green squares or probability that the score is higher than the 22)
+    -   Probability that the score is higher than the 22.
 
-    -   1 red square
+-   Probability of 1 red square.
 
-    -   78 blue square (Probability of blue squres)
+    -   Probability that one 22 score.
+
+-   Probability of 78 blue squares.
+
+    -    Probability that the score is lower than 22.
+
+-   ***What if there are not 100 squares?*** **🤔**
 
 ## Probability Density Functions:
-
-What if there are not 100 squares?
 
 #### Idealized Versions of Histograms using whole scores and potential scores
 
@@ -295,6 +299,14 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 ## What is the probability that if we pick a random score it will fall within one standard deviation of the mean?
 
+-   z-scores of +1
+
+-   $34.13\%$
+
+-   There is a .3413 probability of a score falling within a standard deviation of the mean
+
+## What is the probability that if we pick a random score it will fall within one standard deviation of the mean?
+
 ![](image/areas-standard-normal-dist.png){fig-align="center"}
 
 ## What is the probability that if we pick a random score it will fall within one standard deviation of the mean?
@@ -303,9 +315,8 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 -   $34.13\%\;+34.13\%=68.26\%$
 
-```{=html}
 <!-- -->
-```
+
 -   There is a .6826 probability of a score falling within a standard deviation of the mean
 
 ## What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?
@@ -314,12 +325,11 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 -   $13.59\%+34.13\%\;+34.13\%+13.59\%=68.26\%$
 
-```{=html}
 <!-- -->
-```
+
 -   There is a 95.44% probability of a score falling within 2 standard deviations of the mean
 
-## What is the probability that if we pick a random score it will fall within 2 standard deviations of the mean?
+## What is the probability that if we pick a random score it will fall within 3 standard deviations of the mean?
 
 ![](image/areas-standard-normal-dist.png){fig-align="center"}
 
@@ -358,6 +368,28 @@ The area under the curve represents probability which is equal to 1 or the proba
 -   ***Calculate the probability that each of the two discs exceeds a certain speed.***
     -   Provided we convert the score into a z-score.
 
+## The Discs of Death
+
+::: columns
+::: {.column width="50%"}
+**Red Disc**
+
+-   RPM: $\mu=33$, $\sigma=8$
+-   $$
+    z=\frac{X-\mu}{\sigma}\\=\frac{50-33}{8}=2.13
+    $$
+:::
+
+::: {.column width="50%"}
+**Blue Disc**
+
+-   RPM: $\mu=45$, $\sigma=2$
+-   $$
+    z=\frac{X-\mu}{\sigma}\\=\frac{50-45}{8}=2.50
+    $$
+:::
+:::
+
 ## The Probability of a Score greater than x
 
 ![](image/disc-z-score.png){fig-align="center"}
@@ -370,6 +402,7 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 -   RPM: $\mu=33$, $\sigma=8$
 -   z = 2.13
+-   0.01659
 -   1.66%
 :::
 
@@ -378,8 +411,145 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 -   RPM: $\mu=45$, $\sigma=2$
 -   z = 2.50
+-   0.00621
 -   0.62%
 :::
 :::
 
--   
+## The Probability of a Score Less Than X: The Tunnels of Death
+
+![](image/tunnel.png){fig-align="center"}
+
+## Zach can run 5 metres 
+
+::: columns
+::: {.column width="50%"}
+**Left Tunnel**
+
+-   Average length: $\mu=4.5$, $\sigma=1.5$
+:::
+
+::: {.column width="50%"}
+**Right Tunnel**
+
+-   RPM: $\mu=4$, $\sigma=1$
+:::
+:::
+
+## The Tunnels of Death
+
+![](image/tunnel-z.png){fig-align="center"}
+
+## Zach can run 5 metres 
+
+::: columns
+::: {.column width="50%"}
+**Left Tunnel**
+
+-   Average length: $\mu=4.5$, $\sigma=1.5$
+-   z = 0.33
+-   0.62930
+-   63%
+:::
+
+::: {.column width="50%"}
+**Right Tunnel**
+
+-   RPM: $\mu=4$, $\sigma=1$
+-   z = 1
+-   0.84134
+-   84%
+:::
+:::
+
+## The Probability of a Score between Two Values: The Catapults of Death
+
+![](image/catapult.png){fig-align="center"}
+
+## The Catapults of Death
+
+::: columns
+::: {.column width="50%"}
+**Left Catapult**
+
+-   Shot distance: $\mu=103$ $\sigma=2$
+:::
+
+::: {.column width="50%"}
+**Right Catapult**
+
+-   Shot distance: $\mu=97$ $\sigma=5$
+:::
+:::
+
+-   Distance to the net is 100 meters and the net itself is 5 metres wide.
+
+-   Zach and Milton need a catapult that will throw them between 100 and 105 metres.
+
+## The Catapults of Death
+
+![](image/catapult-z.png){fig-align="center"}
+
+## The Catapults of Death
+
+::: columns
+::: {.column width="50%"}
+**Left Catapult**
+
+-   Shot distance: $\mu=103$ $\sigma=2$
+
+-   z = -1.5 and z = 1
+:::
+
+::: {.column width="50%"}
+**Right Catapult**
+
+-   Shot distance: $\mu=97$ $\sigma=5$
+
+-   z = 0.6 and z = 1.6
+:::
+:::
+
+## Left Catapult 
+
+### For 100 meter
+
+$$
+z=\frac{X-\mu}{\sigma}=\frac{100-103}{2}=-1.5
+$$
+
+### For 105 meter
+
+$$
+z=\frac{X-\mu}{\sigma}=\frac{105-103}{2}=1
+$$
+
+## Right Catapult 
+
+### For 100 meter
+
+$$
+z=\frac{X-\mu}{\sigma}=\frac{100-97}{5}=0.6
+$$
+
+### For 105 meter
+
+$$
+z=\frac{X-\mu}{\sigma}=\frac{105-97}{5}=1.6
+$$
+
+## Probability of a score between two values
+
+### Left Catapult
+
+-   $1-0.067-0.159\\=0.774\\=77.4\%$
+
+### Right Catapult
+
+-   $1-0.72575-0.05480\\=0.219\\=21.9\%$
+
+# CONDITIONAL PROBABILITY
+
+## Deathscotch
+
+![](image/death.png){fig-align="center"}
