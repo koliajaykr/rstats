@@ -455,7 +455,7 @@ The area under the curve represents probability which is equal to 1 or the proba
 ::: {.column width="50%"}
 **Right Tunnel**
 
--   RPM: $\mu=4$, $\sigma=1$
+-   Average length: $\mu=4$, $\sigma=1$
 -   z = 1
 -   0.84134
 -   84%
