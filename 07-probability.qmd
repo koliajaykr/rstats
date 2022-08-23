@@ -323,7 +323,7 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 -   Z-scores of -2 and +2
 
--   $13.59\%+34.13\%\;+34.13\%+13.59\%=68.26\%$
+-   $13.59\%+34.13\%\;+34.13\%+13.59\%=95.44\%$
 
 <!-- -->
 
@@ -548,8 +548,76 @@ $$
 
 -   $1-0.72575-0.05480\\=0.219\\=21.9\%$
 
-# CONDITIONAL PROBABILITY
+# CONDITIONAL PROBABILITY {background-image="image/death.png" background-opacity="0.2"}
 
 ## Deathscotch
 
 ![](image/death.png){fig-align="center"}
+
+## Contingency Table
+
+![](image/cont-table.png){fig-align="center"}
+
+-   ***What is the probability that you would land on a skull?***
+
+    -   35/76 = 0.46 = 46%
+
+## Contingency Table
+
+![](image/cont-table.png){fig-align="center"}
+
+-   ***What is the probability that you would land on a heart?***
+
+    -   41/76 = 0.54 = 54%
+
+## Contingency Table
+
+![](image/cont-table.png){fig-align="center"}
+
+-   ***What would be the probability of landing on both a skull and a heart?***
+
+    -   Zero, as that would be impossible, you can land on one stone.
+
+## Mutually Exclusive/Disjoint Outcomes
+
+-   Because they cannot co-occur. You cannot land on both a heart and a skull.
+
+-   $\cap$ means "and"
+
+-   The probability of *A and B* happening is 0.
+
+-   p(skull and heart) = 0 or
+
+-   p(skull $\cap$ heart) = 0
+
+-   The probability of two events both occurring is known as the probability of the **intersection**.
+
+## Mutually Exclusive Outcomes
+
+-   When you have mutually exclusive outcomes, you can work out the probability that one outcome or another happens, known as the **union**.
+
+-   $\cup$ means "or"
+
+-   A or B happening is the sum of their individual probabilities.
+
+-   $p(A\;\cup\;B)=p(A)+p(B)$ which is 1
+
+-   $p(skull\;\cup\;heart)=p(skull)+p(heart)$
+
+-   $p(skull\;\cup\;heart\;\cup\;p(death))\\=p(skull)+p(heart)+p(death)$
+
+## Conditional Probability 💀
+
+$$
+p(vanish|skull)=\frac{f(vanishing\;skulls)}{f(skulls)}=\frac{7}{35}=0.2
+$$
+
+## Conditional Probability ❤️
+
+$$
+p(vanish|heart)=\frac{f(vanishing\;hearts)}{f(hearts)}=\frac{16}{41}=0.39
+$$
+
+## At JIGSAW
+
+![](image/zombie.png){fig-align="center"}
