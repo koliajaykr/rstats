@@ -1,0 +1,189 @@
+---
+title: "Inferential Statistics"
+subtitle: "08 - Going Beyond the Data"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+    chalkboard: true
+editor: visual
+---
+
+## For Far ...
+
+::: columns
+::: {.column width="50%"}
+-   True state of the world (population)
+
+-   Sample (bigger is better)
+
+-   Fit a Model
+
+-   Parameters (estimated from sample, eg. mean)
+
+-   Static (measured from the sample)
+:::
+
+::: {.column width="50%"}
+-   Error (score minus model value)
+
+-   Squared error
+
+-   Total sum of squared errors
+
+-   Variance (mean square error)
+
+-   Standard deviation (square root of variance)
+:::
+:::
+
+## Alice left me!
+
+![](image/inf-stats.png){fig-align="center"}
+
+## 
+
+## Objectives
+
+-   Estimating parameters
+
+-   How well does a sample represent the population?
+
+    -   Sampling distributions
+
+    -   The standard error
+
+    -   The central limit theorem
+
+-   Confidence intervals
+
+-   Inferential statistics
+
+## Florence Nightangle
+
+![](image/florence.png){fig-align="center"}
+
+# ESTIMATING PARAMETERS
+
+## Guessing the Mean
+
+![](image/guess-mean.png){fig-align="center"}
+
+## The Method of Least Squares
+
+![](image/method-least-squares.png){fig-align="center"}
+
+## The Method of Least Squares
+
+-   It is a way of calculating the value of a parameter such that you get the value that produces the least squared error.
+
+-   The equation of the mean works on this principle - it produces the value that produces the smallest sum of squared errors.
+
+## The Method of Least Squares
+
+-   Values of parameters other than the mean using different equations but common is they have the smallest sum of squared error.
+
+-   Least error is no guarantee of the parameter estimate being accurate or representative of the population.
+
+-   **How well our estimates represent the population? 🤔**
+
+# HOW WELL DOES A SAMPLE REPRESENT THE POPULATION? 
+
+## Sampling Distribution
+
+-   Sampling variation
+
+    -   The extent to which a static (the mean, median, *F*, *t*, etc.) varies in samples taken from the same population.
+
+-   We want to know how representative the estimate in our particular sample is likely to be of the true value in the population.
+
+## Sampling Distribution
+
+-   Sampling error
+
+    -   The difference between the value of a population *parameter*, and the value estimated from the *sample*.
+
+## Sampling Distribution
+
+![](image/stand-error.png){fig-align="center"}
+
+## Sampling Distribution
+
+-   Some samples underestimate the population mean
+
+    -   because they contained people who did less well on the test or who were at the lower extreme of population scores.
+
+## Sampling Distribution
+
+-   Some sample overestimate it
+
+    -   because they contained people who did better on the test or fall at the upper extreme of population scores
+
+## Sampling Distribution
+
+-   Some samples are spot on.
+
+-   A histogram shows us how many times each score occurs.
+
+## Sampling Distribution
+
+-   What do you notice about the distribution - what does it look like and what value is at the middle?
+
+-   **Sampling distribution** is the frequency distribution of sample statistics (i.e., the mean or whatever parameter you are trying to estimate) from the same population.
+
+## Sampling Distribution
+
+-   We do not collect a lot of different samples. Instead we assume that the sample we have collected comes from the sampling distribution.
+
+-   Sampling distribution is like a girifinsect or unicorn.
+
+-   Shape of the standard distribution
+
+## The Standard Error
+
+![](image/standard-error.png){fig-align="center"}
+
+## The Standard Error
+
+"The standard deviation of a sampling distribution is called standard error"
+
+-   When the parameter you want to estimate is the mean, then we are looking for the standard deviation of sample means, which is known as the **standard error of the mean**.
+
+## The Standard Error
+
+-   The standard error tells us how widely sample statistics are spread around the population value.
+
+-   It tells whether estimates from samples are typically representative of the population value.
+
+## How to calculate standard error?
+
+-   Standard distribution is an unicorn
+
+-   $\sigma_{\bar{X}}=\frac{s}{\sqrt{N}}$
+
+-   This equation will work only when sample size is fairly large why because...
+
+    -   should be computed by dividing the ***population*** standard deviation ($\sigma$), for large samples using the ***sample*** standard deviation is a reasonable approximation.
+
+-   Fairly large sample is 30
+
+-   If less than 30, then shape of the distribution will not be normally distributed and the distribution will be $t$-distribution.
+
+## The Central Limit Theorem
+
+![](image/central-limit.png){fig-align="center"}
+
+## The Central Limit Theorem
+
+1.  Bigger samples are better because they give you a more precise (i.e., less variable) estimate of the population value
+
+2.  As the sample sizes got bigger the sampling distributions became more normal ... despite the fact that the population of scores was very non-normal indeed.
+
+3.  **The central limit theorem is: regardless of the shape of the population, estimates in samples of parameters from that population will have a normal distribution provided the samples are "big enough".**
+
+# CONFIDENCE INTERVALS
