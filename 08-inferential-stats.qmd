@@ -134,15 +134,23 @@ editor: visual
 
 -   What do you notice about the distribution - what does it look like and what value is at the middle?
 
+    -   Distribution is normally distributed
+
+    -   Distribution is like a bell shape
+
+    -   Population value is at the center
+
+## Sampling Distribution
+
 -   **Sampling distribution** is the frequency distribution of sample statistics (i.e., the mean or whatever parameter you are trying to estimate) from the same population.
 
 ## Sampling Distribution
 
 -   We do not collect a lot of different samples. Instead we assume that the sample we have collected comes from the sampling distribution.
 
--   Sampling distribution is like a girifinsect or unicorn.
+-   We can never access or make or see a real sampling distribution. It is like a girifinsect or unicorn.
 
--   Shape of the standard distribution
+-   **We can use the sampling distribution to tell us how representative a sample is of the population.**
 
 ## The Standard Error
 
@@ -164,15 +172,19 @@ editor: visual
 
 -   Standard distribution is an unicorn
 
--   $\sigma_{\bar{X}}=\frac{s}{\sqrt{N}}$
+-   Standard error of mean: $\sigma_{\bar{X}}=\frac{s}{\sqrt{N}}$
 
 -   This equation will work only when sample size is fairly large why because...
 
-    -   should be computed by dividing the ***population*** standard deviation ($\sigma$), for large samples using the ***sample*** standard deviation is a reasonable approximation.
+    -   SE should be computed by dividing the ***population*** standard deviation ($\sigma$), for large samples using the ***sample*** standard deviation is a reasonable approximation.
+
+## How to calculate standard error?
 
 -   Fairly large sample is 30
 
 -   If less than 30, then shape of the distribution will not be normally distributed and the distribution will be $t$-distribution.
+
+-   Why sample size matters we need to under the **central limit theorem**?
 
 ## The Central Limit Theorem
 
@@ -180,10 +192,102 @@ editor: visual
 
 ## The Central Limit Theorem
 
+-   With samples of 100 scores
+
+    -   sample means varied between about 47 to 55
+
+-   With samples of 30 scores
+
+    -   sample means varied between about 45 to 60
+
+-   With samples of 5 scores
+
+    -   sample means varied between about 40 to 70
+
+## The Central Limit Theorem
+
 1.  Bigger samples are better because they give you a more precise (i.e., less variable) estimate of the population value
 
 2.  As the sample sizes got bigger the sampling distributions became more normal ... despite the fact that the population of scores was very non-normal indeed.
 
-3.  **The central limit theorem is: regardless of the shape of the population, estimates in samples of parameters from that population will have a normal distribution provided the samples are "big enough".**
+## The Central Limit Theorem
+
+**The central limit theorem is: regardless of the shape of the population, estimates in samples of parameters from that population will have a normal distribution provided the samples are "big enough".**
+
+## So Far...
+
+-   We measure statistic value from the sample to estimate the parameter value of the population
+
+-   These estimates will vary from sample to sample and standard error gives us an idea of the extent to which they do.
+
+-   Large standard errors suggest that sample estimates will vary a lot across samples (low **precision**).
+
+-   Small standard errors suggest that different samples will yield relatively similar estimates (high precision).
+
+-   When we use a single value from the sample to estimate a population parameter, it is known as a point estimate.
 
 # CONFIDENCE INTERVALS
+
+## Confidence Intervals
+
+-   Point estimates (single value to estimate effect in population) and interval estimates (a range of values that contain the population value)
+
+-   Confidence intervals are computed using the standard error.
+
+## Confidence Intervals
+
+if population mean is 50
+
+![](image/conf-interval.png){fig-align="center"}
+
+## Confidence Intervals
+
+![](image/conf-interval-100.png){fig-align="center"}
+
+## Confidence Intervals
+
+1.  The sample means are different from the true mean
+
+2.  Most of the intervals do contain the true mean, a few do not.
+
+3.  The crucial thing is to construct the intervals such that they they us something useful.
+
+    -   95% confidence intervals and sometimes 99% confidence intervals
+
+## Calculating Confidence Intervals
+
+-   We use standard error
+
+    -   Standard error is small = sample estimates are around the true population value.
+
+    -   Standard error is large = different samples produce very different estimates, spread more widely around the true population value.
+
+## Calculating Confidence Intervals
+
+-   We use normal distribution
+
+## Calculating Confidence Intervals
+
+![](image/conf-interval-measure.png){fig-align="center"}
+
+## Calculating Confidence Intervals
+
+![](image/conf-interval-anat.png){fig-align="center"}
+
+-   lower boundary of confidence interval = estimate $-(1.96\times\;SE)$
+
+-   upper boundary of confidence interval = estimate $+(1.96\times\;SE)$
+
+## Calculating Confidence Intervals
+
+$$
+z=\frac{X-\bar{X}}{s}
+$$
+
+$$
+z=\frac{X-\bar{X}}{SE}
+$$
+
+## Your Turn {background-color="#34568B"}
+
+If the mean (estimate) in a sample of people taking the statistics test was 45 and the standard error was 5, what would the 95% confidence interval be?
