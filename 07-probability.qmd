@@ -247,7 +247,7 @@ Cut histogram in 100 squares & place in a hat
 
 -   Probability of 78 blue squares.
 
-    -    Probability that the score is lower than 22.
+    -   Probability that the score is lower than 22.
 
 -   ***What if there are not 100 squares?*** **🤔**
 
@@ -420,7 +420,7 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 ![](image/tunnel.png){fig-align="center"}
 
-## Zach can run 5 metres 
+## Zach can run 5 metres
 
 ::: columns
 ::: {.column width="50%"}
@@ -440,7 +440,7 @@ The area under the curve represents probability which is equal to 1 or the proba
 
 ![](image/tunnel-z.png){fig-align="center"}
 
-## Zach can run 5 metres 
+## Zach can run 5 metres
 
 ::: columns
 ::: {.column width="50%"}
@@ -510,7 +510,7 @@ The area under the curve represents probability which is equal to 1 or the proba
 :::
 :::
 
-## Left Catapult 
+## Left Catapult
 
 ### For 100 meter
 
@@ -524,7 +524,7 @@ $$
 z=\frac{X-\mu}{\sigma}=\frac{105-103}{2}=1
 $$
 
-## Right Catapult 
+## Right Catapult
 
 ### For 100 meter
 

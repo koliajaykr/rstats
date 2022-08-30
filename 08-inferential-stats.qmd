@@ -92,7 +92,7 @@ editor: visual
 
 -   **How well our estimates represent the population? 🤔**
 
-# HOW WELL DOES A SAMPLE REPRESENT THE POPULATION? 
+# HOW WELL DOES A SAMPLE REPRESENT THE POPULATION?
 
 ## Sampling Distribution
 
@@ -170,7 +170,7 @@ editor: visual
 
 ## How to calculate standard error?
 
--   Standard distribution is an unicorn
+-   Sampling distribution is an unicorn
 
 -   Standard error of mean: $\sigma_{\bar{X}}=\frac{s}{\sqrt{N}}$
 

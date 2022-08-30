@@ -4,12 +4,12 @@
   <meta name="generator" content="quarto-0.9.358">
 
   <meta name="author" content="Ajay Kumar Koli">
-  <title>Inferential Statistics</title>
+  <title>Hypothesis Testing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="08-inferential-stats_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="08-inferential-stats_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="10-nhst_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="10-nhst_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -18,20 +18,20 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="08-inferential-stats_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <script src="08-inferential-stats_files/libs/clipboard/clipboard.min.js"></script>
-  <script src="08-inferential-stats_files/libs/quarto-html/tabby.min.js"></script>
-  <script src="08-inferential-stats_files/libs/quarto-html/popper.min.js"></script>
-  <script src="08-inferential-stats_files/libs/quarto-html/tippy.umd.min.js"></script>
-  <link href="08-inferential-stats_files/libs/quarto-html/tippy.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="08-inferential-stats_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="08-inferential-stats_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="10-nhst_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <script src="10-nhst_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="10-nhst_files/libs/quarto-html/tabby.min.js"></script>
+  <script src="10-nhst_files/libs/quarto-html/popper.min.js"></script>
+  <script src="10-nhst_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <link href="10-nhst_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="10-nhst_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="10-nhst_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -323,338 +323,224 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Inferential Statistics</h1>
-  <p class="subtitle">08 - Going Beyond the Data</p>
+  <h1 class="title">Hypothesis Testing</h1>
+  <p class="subtitle">09 - Stats using R</p>
   <p class="author">Ajay Kumar Koli</p>
 </section>
 
-<section id="for-far" class="slide level2">
-<h2>For Far …</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li class="fragment"><p>True state of the world (population)</p></li>
-<li class="fragment"><p>Sample (bigger is better)</p></li>
-<li class="fragment"><p>Fit a Model</p></li>
-<li class="fragment"><p>Parameters (estimated from sample, eg. mean)</p></li>
-<li class="fragment"><p>Static (measured from the sample)</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment"><p>Error (score minus model value)</p></li>
-<li class="fragment"><p>Squared error</p></li>
-<li class="fragment"><p>Total sum of squared errors</p></li>
-<li class="fragment"><p>Variance (mean square error)</p></li>
-<li class="fragment"><p>Standard deviation (square root of variance)</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="alice-left-me" class="slide level2">
-<h2>Alice left me!</h2>
-
-<img data-src="image/inf-stats.png" class="r-stretch quarto-figure-center"></section>
-<section id="section" class="slide level2">
-<h2></h2>
-</section>
-<section id="objectives" class="slide level2">
-<h2>Objectives</h2>
-<ul>
-<li class="fragment"><p>Estimating parameters</p></li>
-<li class="fragment"><p>How well does a sample represent the population?</p>
-<ul>
-<li class="fragment"><p>Sampling distributions</p></li>
-<li class="fragment"><p>The standard error</p></li>
-<li class="fragment"><p>The central limit theorem</p></li>
-</ul></li>
-<li class="fragment"><p>Confidence intervals</p></li>
-<li class="fragment"><p>Inferential statistics</p></li>
-</ul>
-</section>
-<section id="florence-nightangle" class="slide level2">
-<h2>Florence Nightangle</h2>
-
-<img data-src="image/florence.png" class="r-stretch quarto-figure-center"></section>
 <section>
-<section id="estimating-parameters" class="title-slide slide level1 center">
-<h1>ESTIMATING PARAMETERS</h1>
+<section id="null-hypothesis-significance-testing-nhst" class="title-slide slide level1 center" data-background-image="image/nhst.png" data-background-opacity="0.1">
+<h1>NULL HYPOTHESIS SIGNIFICANCE TESTING (NHST)</h1>
 
 </section>
-<section id="guessing-the-mean" class="slide level2">
-<h2>Guessing the Mean</h2>
-
-<img data-src="image/guess-mean.png" class="r-stretch quarto-figure-center"></section>
-<section id="the-method-of-least-squares" class="slide level2">
-<h2>The Method of Least Squares</h2>
-
-<img data-src="image/method-least-squares.png" class="r-stretch quarto-figure-center"></section>
-<section id="the-method-of-least-squares-1" class="slide level2">
-<h2>The Method of Least Squares</h2>
+<section id="nhst" class="slide level2">
+<h2>NHST</h2>
 <ul>
-<li class="fragment"><p>It is a way of calculating the value of a parameter such that you get the value that produces the least squared error.</p></li>
-<li class="fragment"><p>The equation of the mean works on this principle - it produces the value that produces the smallest sum of squared errors.</p></li>
+<li class="fragment"><p>There are different ways to find the truth. We favour the use of probability.</p></li>
+<li class="fragment"><p>Compare competing versions of the truth and tell us the probability of one truth over another.</p></li>
 </ul>
 </section>
-<section id="the-method-of-least-squares-2" class="slide level2">
-<h2>The Method of Least Squares</h2>
+<section id="nhst-1" class="slide level2">
+<h2>NHST</h2>
 <ul>
-<li class="fragment"><p>Values of parameters other than the mean using different equations but common is they have the smallest sum of squared error.</p></li>
-<li class="fragment"><p>Least error is no guarantee of the parameter estimate being accurate or representative of the population.</p></li>
-<li class="fragment"><p><strong>How well our estimates represent the population? 🤔</strong></p></li>
-</ul>
-</section></section>
-<section>
-<section id="how-well-does-a-sample-represent-the-population" class="title-slide slide level1 center">
-<h1>HOW WELL DOES A SAMPLE REPRESENT THE POPULATION?</h1>
-
-</section>
-<section id="sampling-distribution" class="slide level2">
-<h2>Sampling Distribution</h2>
+<li class="fragment"><p>NHST is a chimera<sup>1</sup> of two ideas:</p>
 <ul>
-<li class="fragment"><p>Sampling variation</p>
-<ul>
-<li class="fragment">The extent to which a static (the mean, median, <em>F</em>, <em>t</em>, etc.) varies in samples taken from the same population.</li>
-</ul></li>
-<li class="fragment"><p>We want to know how representative the estimate in our particular sample is likely to be of the true value in the population.</p></li>
-</ul>
-</section>
-<section id="sampling-distribution-1" class="slide level2">
-<h2>Sampling Distribution</h2>
-<ul>
-<li class="fragment"><p>Sampling error</p>
-<ul>
-<li class="fragment">The difference between the value of a population <em>parameter</em>, and the value estimated from the <em>sample</em>.</li>
+<li class="fragment"><p>Evaluating evidence using competing hypotheses</p></li>
+<li class="fragment"><p>Using probabilities to evaluate evidence</p></li>
 </ul></li>
 </ul>
-</section>
-<section id="sampling-distribution-2" class="slide level2">
-<h2>Sampling Distribution</h2>
-
-<img data-src="image/stand-error.png" class="r-stretch quarto-figure-center"></section>
-<section id="sampling-distribution-3" class="slide level2">
-<h2>Sampling Distribution</h2>
+<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p>Chimera means impossible to achieve</p></li></ol></aside></section>
+<section id="types-of-hypothesis" class="slide level2">
+<h2>Types of Hypothesis</h2>
+<p>Neyman and Pearson believed that scientific statements should be split into testable hypotheses.</p>
 <ul>
-<li class="fragment"><p>Some samples underestimate the population mean</p>
-<ul>
-<li class="fragment">because they contained people who did less well on the test or who were at the lower extreme of population scores.</li>
-</ul></li>
+<li class="fragment"><p>Alternative hypothesis or experimental hypothesis</p></li>
+<li class="fragment"><p>Null hypothesis.</p></li>
 </ul>
 </section>
-<section id="sampling-distribution-4" class="slide level2">
-<h2>Sampling Distribution</h2>
+<section id="alternative-hypothesis-h1" class="slide level2">
+<h2><strong>Alternative Hypothesis</strong> (H<sub>1</sub>)</h2>
 <ul>
-<li class="fragment"><p>Some sample overestimate it</p>
-<ul>
-<li class="fragment">because they contained people who did better on the test or fall at the upper extreme of population scores</li>
-</ul></li>
+<li class="fragment">The prediction that there will be an effect.</li>
+<li class="fragment">i.e.&nbsp;that your experimental manipulation will have some effect or that certain variables will relate to each other.</li>
 </ul>
 </section>
-<section id="sampling-distribution-5" class="slide level2">
-<h2>Sampling Distribution</h2>
+<section id="null-hypothesis-h0" class="slide level2">
+<h2><strong>Null Hypothesis</strong> (H<sub>0</sub>)</h2>
 <ul>
-<li class="fragment"><p>Some samples are spot on.</p></li>
-<li class="fragment"><p>A histogram shows us how many times each score occurs.</p></li>
+<li class="fragment">The reverse of the experimental hypothesis that your prediction is wrong and the predicted effect doesn’t exist (i.e., it is zero).</li>
+<li class="fragment">Essentially, this hypothesis is never true, but that does not stop lots of people from pretending that it might be.</li>
 </ul>
-</section>
-<section id="sampling-distribution-6" class="slide level2">
-<h2>Sampling Distribution</h2>
-<ul>
-<li class="fragment"><p>What do you notice about the distribution - what does it look like and what value is at the middle?</p>
-<ul>
-<li class="fragment"><p>Distribution is normally distributed</p></li>
-<li class="fragment"><p>Distribution is like a bell shape</p></li>
-<li class="fragment"><p>Population value is at the center</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="sampling-distribution-7" class="slide level2">
-<h2>Sampling Distribution</h2>
-<ul>
-<li class="fragment"><strong>Sampling distribution</strong> is the frequency distribution of sample statistics (i.e., the mean or whatever parameter you are trying to estimate) from the same population.</li>
-</ul>
-</section>
-<section id="sampling-distribution-8" class="slide level2">
-<h2>Sampling Distribution</h2>
-<ul>
-<li class="fragment"><p>We do not collect a lot of different samples. Instead we assume that the sample we have collected comes from the sampling distribution.</p></li>
-<li class="fragment"><p>We can never access or make or see a real sampling distribution. It is like a girifinsect or unicorn.</p></li>
-<li class="fragment"><p><strong>We can use the sampling distribution to tell us how representative a sample is of the population.</strong></p></li>
-</ul>
-</section>
-<section id="the-standard-error" class="slide level2">
-<h2>The Standard Error</h2>
-
-<img data-src="image/standard-error.png" class="r-stretch quarto-figure-center"></section>
-<section id="the-standard-error-1" class="slide level2">
-<h2>The Standard Error</h2>
-<p>“The standard deviation of a sampling distribution is called standard error”</p>
-<ul>
-<li class="fragment">When the parameter you want to estimate is the mean, then we are looking for the standard deviation of sample means, which is known as the <strong>standard error of the mean</strong>.</li>
-</ul>
-</section>
-<section id="the-standard-error-2" class="slide level2">
-<h2>The Standard Error</h2>
-<ul>
-<li class="fragment"><p>The standard error tells us how widely sample statistics are spread around the population value.</p></li>
-<li class="fragment"><p>It tells whether estimates from samples are typically representative of the population value.</p></li>
-</ul>
-</section>
-<section id="how-to-calculate-standard-error" class="slide level2">
-<h2>How to calculate standard error?</h2>
-<ul>
-<li class="fragment"><p>Sampling distribution is an unicorn</p></li>
-<li class="fragment"><p>Standard error of mean: <span class="math inline">\(\sigma_{\bar{X}}=\frac{s}{\sqrt{N}}\)</span></p></li>
-<li class="fragment"><p>This equation will work only when sample size is fairly large why because…</p>
-<ul>
-<li class="fragment">SE should be computed by dividing the <strong><em>population</em></strong> standard deviation (<span class="math inline">\(\sigma\)</span>), for large samples using the <strong><em>sample</em></strong> standard deviation is a reasonable approximation.</li>
-</ul></li>
-</ul>
-</section>
-<section id="how-to-calculate-standard-error-1" class="slide level2">
-<h2>How to calculate standard error?</h2>
-<ul>
-<li class="fragment"><p>Fairly large sample is 30</p></li>
-<li class="fragment"><p>If less than 30, then shape of the distribution will not be normally distributed and the distribution will be <span class="math inline">\(t\)</span>-distribution.</p></li>
-<li class="fragment"><p>Why sample size matters we need to under the <strong>central limit theorem</strong>?</p></li>
-</ul>
-</section>
-<section id="the-central-limit-theorem" class="slide level2">
-<h2>The Central Limit Theorem</h2>
-
-<img data-src="image/central-limit.png" class="r-stretch quarto-figure-center"></section>
-<section id="the-central-limit-theorem-1" class="slide level2">
-<h2>The Central Limit Theorem</h2>
-<ul>
-<li class="fragment"><p>With samples of 100 scores</p>
-<ul>
-<li class="fragment">sample means varied between about 47 to 55</li>
-</ul></li>
-<li class="fragment"><p>With samples of 30 scores</p>
-<ul>
-<li class="fragment">sample means varied between about 45 to 60</li>
-</ul></li>
-<li class="fragment"><p>With samples of 5 scores</p>
-<ul>
-<li class="fragment">sample means varied between about 40 to 70</li>
-</ul></li>
-</ul>
-</section>
-<section id="the-central-limit-theorem-2" class="slide level2">
-<h2>The Central Limit Theorem</h2>
-<ol type="1">
-<li class="fragment"><p>Bigger samples are better because they give you a more precise (i.e., less variable) estimate of the population value</p></li>
-<li class="fragment"><p>As the sample sizes got bigger the sampling distributions became more normal … despite the fact that the population of scores was very non-normal indeed.</p></li>
-</ol>
-</section>
-<section id="the-central-limit-theorem-3" class="slide level2">
-<h2>The Central Limit Theorem</h2>
-<p><strong>The central limit theorem is: regardless of the shape of the population, estimates in samples of parameters from that population will have a normal distribution provided the samples are “big enough”.</strong></p>
-</section>
-<section id="so-far" class="slide level2">
-<h2>So Far…</h2>
-<ul>
-<li class="fragment"><p>We measure statistic value from the sample to estimate the parameter value of the population</p></li>
-<li class="fragment"><p>These estimates will vary from sample to sample and standard error gives us an idea of the extent to which they do.</p></li>
-<li class="fragment"><p>Large standard errors suggest that sample estimates will vary a lot across samples (low <strong>precision</strong>).</p></li>
-<li class="fragment"><p>Small standard errors suggest that different samples will yield relatively similar estimates (high precision).</p></li>
-<li class="fragment"><p>When we use a single value from the sample to estimate a population parameter, it is known as a point estimate.</p></li>
-</ul>
-</section></section>
-<section>
-<section id="confidence-intervals" class="title-slide slide level1 center">
-<h1>CONFIDENCE INTERVALS</h1>
-
-</section>
-<section id="confidence-intervals-1" class="slide level2">
-<h2>Confidence Intervals</h2>
-<ul>
-<li class="fragment"><p>Point estimates (single value to estimate effect in population) and interval estimates (a range of values that contain the population value)</p></li>
-<li class="fragment"><p>Confidence intervals are computed using the standard error.</p></li>
-</ul>
-</section>
-<section id="confidence-intervals-2" class="slide level2">
-<h2>Confidence Intervals</h2>
-<p>if population mean is 50</p>
-
-<img data-src="image/conf-interval.png" class="r-stretch quarto-figure-center"></section>
-<section id="confidence-intervals-3" class="slide level2">
-<h2>Confidence Intervals</h2>
-
-<img data-src="image/conf-interval-100.png" class="r-stretch quarto-figure-center"></section>
-<section id="confidence-intervals-4" class="slide level2">
-<h2>Confidence Intervals</h2>
-<ol type="1">
-<li class="fragment"><p>The sample means are different from the true mean</p></li>
-<li class="fragment"><p>Most of the intervals do contain the true mean, a few do not.</p></li>
-<li class="fragment"><p>The crucial thing is to construct the intervals such that they they us something useful.</p>
-<ul>
-<li class="fragment">95% confidence intervals and sometimes 99% confidence intervals</li>
-</ul></li>
-</ol>
-</section>
-<section id="calculating-confidence-intervals" class="slide level2">
-<h2>Calculating Confidence Intervals</h2>
-<ul>
-<li class="fragment"><p>We use standard error</p>
-<ul>
-<li class="fragment"><p>Standard error is small = sample estimates are around the true population value.</p></li>
-<li class="fragment"><p>Standard error is large = different samples produce very different estimates, spread more widely around the true population value.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="calculating-confidence-intervals-1" class="slide level2">
-<h2>Calculating Confidence Intervals</h2>
-<ul>
-<li class="fragment">We use normal distribution</li>
-</ul>
-</section>
-<section id="calculating-confidence-intervals-2" class="slide level2">
-<h2>Calculating Confidence Intervals</h2>
-
-<img data-src="image/conf-interval-measure.png" class="r-stretch quarto-figure-center"></section>
-<section id="calculating-confidence-intervals-3" class="slide level2">
-<h2>Calculating Confidence Intervals</h2>
-
-<img data-src="image/conf-interval-anat.png" class="r-stretch quarto-figure-center"><ul>
-<li class="fragment"><p>lower boundary of confidence interval = estimate <span class="math inline">\(-(1.96\times\;SE)\)</span></p></li>
-<li class="fragment"><p>upper boundary of confidence interval = estimate <span class="math inline">\(+(1.96\times\;SE)\)</span></p></li>
-</ul>
-</section>
-<section id="calculating-confidence-intervals-4" class="slide level2">
-<h2>Calculating Confidence Intervals</h2>
-<p><span class="math display">\[
-z=\frac{X-\bar{X}}{s}
-\]</span></p>
-<p><span class="math display">\[
-z=\frac{X-\bar{X}}{SE}
-\]</span></p>
 </section>
 <section id="your-turn" class="slide level2" data-background-color="#34568B">
-<h2>Your Turn</h2>
-<p>If the mean (estimate) in a sample of people taking the statistics test was 45 and the standard error was 5, what would the 95% confidence interval be?</p>
+<h2>YOUR TURN</h2>
+<p>What are the null and alternative hypotheses for the following statements:</p>
+<ul>
+<li class="fragment"><p>JIG:SAW employees are stronger than non-employees.</p></li>
+<li class="fragment"><p>T-shirt sales are affected by giving away a free wristband.</p></li>
+</ul>
+</section>
+<section id="fishers-p-value" class="slide level2">
+<h2>Fisher’s p-value</h2>
+
+<img data-src="image/nhst.png" class="r-stretch quarto-figure-center"></section>
+<section id="fishers-p-value-1" class="slide level2">
+<h2>Fisher’s p-value</h2>
+<ul>
+<li class="fragment"><p>Two boxes randomly arranged</p>
+<ul>
+<li class="fragment">📦 📦</li>
+</ul></li>
+<li class="fragment"><p>Six boxes randomly arranged</p>
+<ul>
+<li class="fragment">📦 📦 📦 📦 📦 📦</li>
+</ul></li>
+</ul>
+</section>
+<section id="fishers-p-value-2" class="slide level2">
+<h2>Fisher’s p-value</h2>
+<ul>
+<li class="fragment"><p><span class="math inline">\(p\)</span>-value, a value of probability at which you are prepared to believe a hypothesis.</p></li>
+<li class="fragment"><p>It is a subjective decision based on the research context.</p></li>
+</ul>
+</section>
+<section id="fishers-p-value-3" class="slide level2">
+<h2>Fisher’s p-value</h2>
+<ul>
+<li class="fragment"><p>A probability of 0.01 (1% chance of guessing the effect) would be strong evidence to support a hypothesis.</p></li>
+<li class="fragment"><p>A probability of 0.20 (20% chance of guessing the effect) would be weak evidence to support a hypothesis.</p></li>
+<li class="fragment"><p>Scientists blindly use a threshold of 0.05 (5% chance of guessing the effect)</p></li>
+</ul>
+</section>
+<section id="nhst-is-a-blend-of" class="slide level2">
+<h2>NHST is a Blend of</h2>
+<ul>
+<li class="fragment"><p>Fisher’s idea of using the probability value <span class="math inline">\(p\)</span> as information about the plausibility of a null hypothesis, and</p></li>
+<li class="fragment"><p>Neyman and Pearson’s idea of test a null hypothesis <em>against</em> an alternative hypothesis.</p></li>
+</ul>
+</section>
+<section id="the-principles-of-nhst" class="slide level2">
+<h2>The Principles of NHST</h2>
+<ul>
+<li class="fragment"><p>Make predictions based on your hypothesis (this must happen before any data are collected).</p></li>
+<li class="fragment"><p>Collect some data</p></li>
+<li class="fragment"><p>Fit a statistical model to the collected data that represents the alternative hypothesis.</p></li>
+<li class="fragment"><p>Calculate the probability (the <span class="math inline">\(p\)</span>-value) of getting that model if the null hypothesis were true.</p></li>
+<li class="fragment"><p>If that probability is very small (the usual criterion is 0.05 or less) then conclude that the model fits the data better than the null hypothesis and gain confidence in the alternative hypothesis. Remember, we can never be completely sure that either hypothesis is correct; we can merely calculate the probability that our model would fit as well as it does if there were no effect in the population (i.e., the null hypothesis is true). As this probability decreases, we gain greater confidence that the alternative hypothesis is correct and that the null hypothesis is not; it does not mean that the alternative hypothesis is the best model of the data, there could be other hypotheses that fit the data even better.</p></li>
+</ul>
+</section>
+<section id="test-statistics" class="slide level2">
+<h2>Test Statistics</h2>
+<p><span class="math display">\[
+outcome_i=(b_0+b_1X_i)+error_i
+\]</span></p>
+<ul>
+<li class="fragment"><p>The parameters (<span class="math inline">\(b\)</span>s) in this equation represent hypotheses.</p></li>
+<li class="fragment"><p>Error is quantified by the standard error (how parameter estimates differ across different samples).</p></li>
+</ul>
+</section>
+<section id="test-statistics-1" class="slide level2">
+<h2>Test Statistics</h2>
+<p><span class="math display">\[
+outcome_i=(b_0+b_1X_i)+error_i
+\]</span></p>
+<ul>
+<li class="fragment"><p>The parameter estimate, <span class="math inline">\(b\)</span>, represents the <strong>signal</strong>.</p>
+<ul>
+<li class="fragment">The size of the effect for the hypothesis you are testing.</li>
+</ul></li>
+<li class="fragment"><p>The standard error tells us the <strong>noise</strong> - the likely error in that estimate.</p></li>
+<li class="fragment"><p>Signal to noise ratio is called a <strong>test statistic</strong>.</p></li>
+</ul>
+</section>
+<section id="test-statistics-2" class="slide level2">
+<h2>Test Statistics</h2>
+<p><span class="math display">\[
+test statistic=\frac{signal}{noise}=\frac{effect}{error}=\frac{parameter\;estimate(b)}{standard\;error\;of\;b}
+\]</span></p>
+<ul>
+<li class="fragment"><p>The test statistic differs for different types of model.</p></li>
+<li class="fragment"><p>The all have an associated probability distribution.</p></li>
+<li class="fragment"><p>You can compute the probability that you would get a test statistic at least as big as the one you have.</p></li>
+</ul>
+</section>
+<section id="test-statistics-3" class="slide level2">
+<h2>Test Statistics</h2>
+<ul>
+<li class="fragment"><p>Different test statistics have different probability distributions</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(t\)</span>-distribution</p></li>
+<li class="fragment"><p>chi-square <span class="math inline">\(\chi^2\)</span> distribution and</p></li>
+<li class="fragment"><p><span class="math inline">\(F\)</span>-distribution</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="test-statistics-4" class="slide level2">
+<h2>Test Statistics</h2>
+<ul>
+<li class="fragment"><p>The probability is the <span class="math inline">\(p\)</span>-value that Fisher described.</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(p\)</span>-value below 0.05 that effect is <strong>significant</strong>.</p></li>
+<li class="fragment"><p><span class="math inline">\(p\)</span>-value above 0.05 that effect is <strong>non-significant</strong>.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="one--and-two-tailed-tests" class="slide level2">
+<h2>One- and Two-Tailed Tests</h2>
+<p>The alternative hypothesis can be directional or non-directional.</p>
+<ul>
+<li class="fragment"><p>A statistical model that tests <strong>directional hypothesis</strong> is called a <strong>one-tailed test</strong>.</p>
+<ul>
+<li class="fragment"><p>A directional hypothesis states the direction of the effect.</p></li>
+<li class="fragment"><p>It specifies whether scores will be higher or lower in certain conditions, or that a relationship between variables is in a specific direction.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="one--and-two-tailed-tests-1" class="slide level2">
+<h2>One- and Two-Tailed Tests</h2>
+<p>The alternative hypothesis can be directional or non-directional.</p>
+<ul>
+<li class="fragment"><p>A statistical model that tests <strong>non-directional hypothesis</strong> is known as a <strong>two-tailed test</strong>.</p>
+<ul>
+<li class="fragment">Non-directional because you state only that there will be a difference, and not which group will score higher than the other.</li>
+</ul></li>
+</ul>
+</section>
+<section id="music-and-gym" class="slide level2">
+<h2>Music and Gym</h2>
+<p>We want to discover whether listening to music while exercising affects your running speed.</p>
+<ul>
+<li class="fragment"><p>If non-directional hypothesis:</p>
+<ol type="1">
+<li class="fragment"><p>People who listen to music while exercising run faster than those who do not, so the difference is positive. <strong><em>Positive relationship</em></strong> between listening music and speed.</p></li>
+<li class="fragment"><p>People who listen to music while exercising run slower than those who do not, so the difference is negative. There is a <strong><em>negative relationship</em></strong> between listening to music and speed.</p></li>
+<li class="fragment"><p>There is no difference in speed between who listen to music and those who do not. There is no relationship between listening to music and speed. This final option is the <strong><em>null hypothesis</em></strong>.</p></li>
+</ol></li>
+</ul>
 
 <img src="image/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://nalanda-academy.org/">Nalanda Academy</a></p>
 </div>
 </section></section>
+
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="08-inferential-stats_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="10-nhst_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="08-inferential-stats_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="10-nhst_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

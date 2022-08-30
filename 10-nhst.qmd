@@ -1,0 +1,189 @@
+---
+title: "Hypothesis Testing"
+subtitle: "09 - Stats using R"
+author: "Ajay Kumar Koli"
+format: 
+  revealjs:
+    incremental: true
+    logo: "image/logo.png"
+    footer: "[Nalanda Academy](<https://nalanda-academy.org/>)"
+    scrollable: true
+    slide-number: true
+    transition: fade
+    chalkboard: true
+editor: visual
+---
+
+# NULL HYPOTHESIS SIGNIFICANCE TESTING (NHST) {background-image="image/nhst.png" background-opacity="0.1"}
+
+## NHST
+
+-   There are different ways to find the truth. We favour the use of probability.
+
+-   Compare competing versions of the truth and tell us the probability of one truth over another.
+
+## NHST
+
+-   NHST is a chimera[^1] of two ideas:
+
+    -   Evaluating evidence using competing hypotheses
+
+    -   Using probabilities to evaluate evidence
+
+[^1]: Chimera means impossible to achieve
+
+## Types of Hypothesis
+
+Neyman and Pearson believed that scientific statements should be split into testable hypotheses.
+
+-   Alternative hypothesis or experimental hypothesis
+
+-   Null hypothesis.
+
+## **Alternative Hypothesis** (H~1~)
+
+-   The prediction that there will be an effect.
+-   i.e. that your experimental manipulation will have some effect or that certain variables will relate to each other.
+
+## **Null Hypothesis** (H~0~)
+
+-   The reverse of the experimental hypothesis that your prediction is wrong and the predicted effect doesn't exist (i.e., it is zero).
+-   Essentially, this hypothesis is never true, but that does not stop lots of people from pretending that it might be.
+
+## YOUR TURN {background-color="#34568B"}
+
+What are the null and alternative hypotheses for the following statements:
+
+-   JIG:SAW employees are stronger than non-employees.
+
+-   T-shirt sales are affected by giving away a free wristband.
+
+## Fisher's p-value
+
+![](image/nhst.png){fig-align="center"}
+
+## Fisher's p-value
+
+-   Two boxes randomly arranged
+
+    -   📦 📦
+
+-   Six boxes randomly arranged
+
+    -   📦 📦 📦 📦 📦 📦
+
+## Fisher's p-value
+
+-   $p$-value, a value of probability at which you are prepared to believe a hypothesis.
+
+-   It is a subjective decision based on the research context.
+
+## Fisher's p-value
+
+-   A probability of 0.01 (1% chance of guessing the effect) would be strong evidence to support a hypothesis.
+
+-   A probability of 0.20 (20% chance of guessing the effect) would be weak evidence to support a hypothesis.
+
+-   Scientists blindly use a threshold of 0.05 (5% chance of guessing the effect)
+
+## NHST is a Blend of
+
+-   Fisher's idea of using the probability value $p$ as information about the plausibility of a null hypothesis, and
+
+-   Neyman and Pearson's idea of test a null hypothesis *against* an alternative hypothesis.
+
+## The Principles of NHST
+
+-   Make predictions based on your hypothesis (this must happen before any data are collected).
+
+-   Collect some data
+
+-   Fit a statistical model to the collected data that represents the alternative hypothesis.
+
+-   Calculate the probability (the $p$-value) of getting that model if the null hypothesis were true.
+
+-   If that probability is very small (the usual criterion is 0.05 or less) then conclude that the model fits the data better than the null hypothesis and gain confidence in the alternative hypothesis. Remember, we can never be completely sure that either hypothesis is correct; we can merely calculate the probability that our model would fit as well as it does if there were no effect in the population (i.e., the null hypothesis is true). As this probability decreases, we gain greater confidence that the alternative hypothesis is correct and that the null hypothesis is not; it does not mean that the alternative hypothesis is the best model of the data, there could be other hypotheses that fit the data even better.
+
+## Test Statistics
+
+$$
+outcome_i=(b_0+b_1X_i)+error_i
+$$
+
+-   The parameters ($b$s) in this equation represent hypotheses.
+
+-   Error is quantified by the standard error (how parameter estimates differ across different samples).
+
+## Test Statistics
+
+$$
+outcome_i=(b_0+b_1X_i)+error_i
+$$
+
+-   The parameter estimate, $b$, represents the **signal**.
+
+    -   The size of the effect for the hypothesis you are testing.
+
+-   The standard error tells us the **noise** - the likely error in that estimate.
+
+-   Signal to noise ratio is called a **test statistic**.
+
+## Test Statistics
+
+$$
+test statistic=\frac{signal}{noise}=\frac{effect}{error}=\frac{parameter\;estimate(b)}{standard\;error\;of\;b}
+$$
+
+-   The test statistic differs for different types of model.
+
+-   The all have an associated probability distribution.
+
+-   You can compute the probability that you would get a test statistic at least as big as the one you have.
+
+## Test Statistics
+
+-   Different test statistics have different probability distributions
+
+    -   $t$-distribution
+
+    -   chi-square $\chi^2$ distribution and
+
+    -   $F$-distribution
+
+## Test Statistics
+
+-   The probability is the $p$-value that Fisher described.
+
+    -   $p$-value below 0.05 that effect is **significant**.
+
+    -   $p$-value above 0.05 that effect is **non-significant**.
+
+## One- and Two-Tailed Tests
+
+The alternative hypothesis can be directional or non-directional.
+
+-   A statistical model that tests **directional hypothesis** is called a **one-tailed test**.
+
+    -   A directional hypothesis states the direction of the effect.
+
+    -   It specifies whether scores will be higher or lower in certain conditions, or that a relationship between variables is in a specific direction.
+
+## One- and Two-Tailed Tests
+
+The alternative hypothesis can be directional or non-directional.
+
+-   A statistical model that tests **non-directional hypothesis** is known as a **two-tailed test**.
+
+    -   Non-directional because you state only that there will be a difference, and not which group will score higher than the other.
+
+## Music and Gym
+
+We want to discover whether listening to music while exercising affects your running speed.
+
+-   If non-directional hypothesis:
+
+    1.  People who listen to music while exercising run faster than those who do not, so the difference is positive. ***Positive relationship*** between listening music and speed.
+
+    2.  People who listen to music while exercising run slower than those who do not, so the difference is negative. There is a ***negative relationship*** between listening to music and speed.
+
+    3.  There is no difference in speed between who listen to music and those who do not. There is no relationship between listening to music and speed. This final option is the ***null hypothesis***.
