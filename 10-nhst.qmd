@@ -187,3 +187,127 @@ We want to discover whether listening to music while exercising affects your run
     2.  People who listen to music while exercising run slower than those who do not, so the difference is negative. There is a ***negative relationship*** between listening to music and speed.
 
     3.  There is no difference in speed between who listen to music and those who do not. There is no relationship between listening to music and speed. This final option is the ***null hypothesis***.
+
+## One- and Two-Tailed Tests
+
+![](image/tail-tests.png){fig-align="center"}
+
+## One-Tailed Test
+
+-   I'm putting all of my eggs into one basket and I look only at one end of the distribution (either the positive or the negative end, depending on the direction of my prediction).
+
+-   If you make a specific prediction then you need a smaller test statistic to find a significant result
+
+## One-Tailed Test
+
+-   If you do a one-tailed test and the results turn out to be in the opposite direction to what you predicted, you must ignore them and accept the null hypothesis.
+
+-   It encourages people to cheat.
+
+## Type I and Type II errors
+
+We look at test statistics and their associated probabilities to tell us whether there is effect or there is no effect in the population.
+
+![](image/pregnant.jpeg){fig-align="center"}
+
+## Type I error
+
+-   When you believe that there is a genuine effect in the population, when in fact there is not.
+
+-   As per conventional criterion the probability of this error is 0.05 (5%) when there is no effect in the population.
+
+-   This value is known as $\alpha$-level.
+
+-   If the $\alpha$-level is set at 0.05 then 5/100 times you will falsely think that population has an effect.
+
+## Type II error
+
+-   When you believe that there is no effect in the population when, in reality, there is.
+
+-   We want the probability of this error to be very small.
+
+-   Cohen suggested, max acceptable probability of a Type II error is 0.2 (20%) - $\beta$-level
+
+# THE GENERAL LINEAR MODEL
+
+## The Linear Model with One Predictor
+
+$$
+outcome_i=(b_0+b_1X_i)+error_i\\
+Y_i=(b_0+b_1X_i)+e_i
+$$
+
+-   $b_1$ and $b_0$ are known as the regression coefficients
+
+-   when more than one predictor $b_1$ as regression coefficient or gradient and $b_0$ as constant or intercept
+
+## The Linear Model with One Predictor
+
+![](image/glm.png){fig-align="center"}
+
+## Zombie Data
+
+```{r}
+#| echo: true
+library(tidyverse)
+
+garlic <- read.csv("data/garlic.csv")
+
+garlic
+```
+
+## Regression Model
+
+```{r}
+#| echo: true
+model1 <- lm(formula = garlic$Latency ~ garlic$Garlic)
+
+summary(model1)
+```
+
+# CORRELATION
+
+## Pearson's Correlation Coefficient, $r$
+
+-   It is a measure of the strength of a relationship between two continuous variables or
+
+-   between one continuous variable and a categorical variable containing two categories.
+
+-   It is a measure that can vary between -1 and 1.
+
+## Correlation Coefficients
+
+![](image/cuddle.png){fig-align="center"}
+
+## Correlation Coefficients
+
+-   $r$ = 0 = no effect
+
+-   $r$ = 0.10 = small effect (1% of the total variance)
+
+-   $r$ = 0.30 = medium effect (9% of the total variance)
+
+-   $r$ = 0.50 = large effect (25% of the variance)
+
+## Correlation($r$) using R
+
+```{r echo=TRUE}
+library(easystats)
+
+result <- correlation::cor_test(garlic, "Latency", "Garlic")
+
+result
+```
+
+## Correlation Plot
+
+```{r}
+#| echo: true
+plot(result)
+```
+
+## Penguin Data
+
+```{r}
+
+```
